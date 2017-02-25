@@ -32,10 +32,10 @@ angular.module('Bosk', ['ionic', 'starter.controllers'])
   })
 
   .state('app.search', {
-    url: '/search',
+    url: '/start',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/page1.html'
       }
     }
   })
@@ -43,7 +43,7 @@ angular.module('Bosk', ['ionic', 'starter.controllers'])
     url: '/about',
     views: {
       'menuContent': {
-        templateUrl: 'templates/about.html',
+        templateUrl: 'templates/aboutus.html',
         controller: 'AboutCtrl'
       }
     }
@@ -52,7 +52,7 @@ angular.module('Bosk', ['ionic', 'starter.controllers'])
       url: '/browse',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/page2.html'
         }
       }
     })
@@ -60,7 +60,7 @@ angular.module('Bosk', ['ionic', 'starter.controllers'])
       url: '/playlists',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
+          templateUrl: 'templates/page3.html',
           controller: 'PlaylistsCtrl'
         }
       }

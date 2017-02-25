@@ -1,1 +1,34 @@
-/* Empty. Add your own CSS if you like */
+ion-content{
+   background-color:  #E3E3E3;
+}
+
+.bar_boja{
+    background-color: #656999;
+}
+.hamb_button{
+    background-color: white;
+}
+   .mapa{
+        height: 30px;
+        width: 30px;
+        background-image: url("/img/map.png");
+      background-repeat : no-repeat; 
+      float:right;
+      
+       
+        
+    } 
+     .trazi{
+         
+          border-left: thick solid #BDBDBD;
+          border-width: 1px;
+         float:right;
+        height: 30px;
+        width: 30px;
+        background-image: url("/img/search.png");
+      background-repeat : no-repeat; 
+        
+    }
+ 
+
+ 

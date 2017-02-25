@@ -1,0 +1,99 @@
+
+    #lokacija
+    {        
+        background-color: #DE0B32;
+        height:50px; 
+        border-color: #DE0B32:  
+    }
+    .card-visina
+    {
+        border-radius: 5px;
+        height: 60px;
+       
+    } 
+    [noScroll] {
+  overflow: hidden;
+}
+
+    .mapa{
+        height: 30px;
+        width: 30px;
+        background-image: url("/img/map.png");
+      background-repeat : no-repeat; 
+      float:right;
+      
+       
+        
+    } 
+     .trazi{
+         
+          border-left: thick solid #BDBDBD;
+          border-width: 1px;
+         float:right;
+        height: 30px;
+        width: 30px;
+        background-image: url("/img/search.png");
+      background-repeat : no-repeat; 
+        
+    }
+ 
+    .change
+    {  
+	background-color:#44c767;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	background-color: #BF0023;
+    border-radius: 3px;
+    margin: 9px;
+    width: 90px;
+    height: 32px;
+    font-weight:normal;
+	border:1px solid #BF0023;
+	display:inline-block;
+	cursor:pointer;
+	color:#D6D6D6;
+	font-family:Arial;
+	font-size:16px;
+	text-decoration:none;
+	text-shadow:0px 1px 20px #2f6627;
+    float: right;}
+ 
+
+.change:active {
+	position:relative;
+	top:1px;
+}
+
+   
+
+    .logo{
+        width:auto;
+        height: 100%;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .strelica{
+        float:right;
+        height: 100%;
+        width: auto;
+         background-image: url("/img/gumb_strelica.png");
+         background-repeat: no-repeat;
+    }
+    .margins{
+        margin: 0px;
+     
+    }
+    .card{
+        
+        color: #696969;
+        font-size:20px; 
+        height: 60px;   
+    }
+    h3{
+        margin: 10px;
+       padding-top: 12px;
+       color: #545454;
+       font-weight:normal;
+    }
+

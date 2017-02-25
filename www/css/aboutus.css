@@ -1,0 +1,32 @@
+ 
+    .sadrzaj{
+        background-color: white;
+        border-radius: 5px;
+
+    }
+    .logo{
+        width:auto;
+        height: 100%;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+    }
+       .mapa{
+        height: 30px;
+        width: 30px;
+        background-image: url("/img/map.png");
+      background-repeat : no-repeat; 
+       border-width: 1px;
+        
+    }
+    .verticalLine {
+  border-left: thick solid #ff0000;
+}
+     .trazi{
+       
+        height: 30px;
+        width: 30px;
+        background-image: url("/img/search.png");
+      background-repeat : no-repeat; 
+        
+    } 
