@@ -15,27 +15,6 @@
   overflow: hidden;
 }
 
-    .mapa{
-        height: 30px;
-        width: 30px;
-        background-image: url("/img/map.png");
-      background-repeat : no-repeat; 
-      float:right;
-      
-       
-        
-    } 
-     .trazi{
-         
-          border-left: thick solid #BDBDBD;
-          border-width: 1px;
-         float:right;
-        height: 30px;
-        width: 30px;
-        background-image: url("/img/search.png");
-      background-repeat : no-repeat; 
-        
-    }
  
     .change
     {  
@@ -96,4 +75,9 @@
        color: #545454;
        font-weight:normal;
     }
+    .style1{
+    background-color:blue;
+    color:white;
+    font-size:44px;
+}
 

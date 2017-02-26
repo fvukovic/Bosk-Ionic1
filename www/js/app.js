@@ -30,12 +30,22 @@ angular.module('Bosk', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
-  .state('app.search', {
+   .state('app.start', {
     url: '/start',
     views: {
       'menuContent': {
-        templateUrl: 'templates/page1.html'
+        templateUrl: 'templates/page1.html', 
+         controller: 'StartCtrl'
+      }
+    }
+  })
+
+  .state('app.search', {
+    url: '/search',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/search.html',
+        controller:  'AboutCtrl'
       }
     }
   })
@@ -43,8 +53,7 @@ angular.module('Bosk', ['ionic', 'starter.controllers'])
     url: '/about',
     views: {
       'menuContent': {
-        templateUrl: 'templates/aboutus.html',
-        controller: 'AboutCtrl'
+        templateUrl: 'templates/aboutus.html', 
       }
     }
   })
@@ -56,11 +65,11 @@ angular.module('Bosk', ['ionic', 'starter.controllers'])
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+    .state('app.page2', {
+      url: '/page2',
       views: {
         'menuContent': {
-          templateUrl: 'templates/page3.html',
+          templateUrl: 'templates/page2.html',
           controller: 'PlaylistsCtrl'
         }
       }
@@ -76,5 +85,5 @@ angular.module('Bosk', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/playlists');
+  $urlRouterProvider.otherwise('/start');
 });
