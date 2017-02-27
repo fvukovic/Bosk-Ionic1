@@ -1,9 +1,9 @@
 
     #lokacija
     {        
-        background-color: #DE0B32;
+        background-color: #E84357;
         height:50px; 
-        border-color: #DE0B32:  
+        border-color: #DE0B32;  
     }
     .card-visina
     {
@@ -15,10 +15,15 @@
   overflow: hidden;
 }
 
- 
+    .current
+    {
+     color:#D6D6D6;
+     font-size: 16px;
+     float:left;
+     margin:10px;
+    }
     .change
-    {  
-	background-color:#44c767;
+    {   
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	background-color: #BF0023;
@@ -45,9 +50,9 @@
 
    
 
-    .logo{
-        width:auto;
-        height: 100%;
+    .logo1{
+        width:auto; 
+        height: auto;
         display:block;
         margin-left:auto;
         margin-right:auto;
@@ -75,9 +80,75 @@
        color: #545454;
        font-weight:normal;
     }
-    .style1{
-    background-color:blue;
-    color:white;
-    font-size:44px;
+  .dodani_buttoni
+  {
+      text-align: center;
+      padding-top: 10px;
+       background-color: #E84357;  
+       	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	background-color: #BF0023;
+    border-radius: 3px;
+    margin: 9px;
+    width: 95%;
+    height: 45px;
+    font-weight:normal;
+	border:1px solid #BF0023;
+	display:inline-block;
+	cursor:pointer;
+	color:#D6D6D6;
+	font-family:Arial;
+	font-size:16px;
+	text-decoration:none;
+	text-shadow:0px 1px 20px #2f6627;
+
+  } 
+.myButton {
+	background-color: #E84357;  
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
 }
+.myButton:hover {
+	background-color: #DE0B32;  
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.exit_text
+{
+    color:white;
+    margin:15px;
+    padding-bottom: 10px;
+    font-size: 15px;
+
+}
+.exit_button
+{
+     background-color: #DE0B32;  
+       	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	background-color: #BF0023;
+    border-radius: 0px;
+    margin: 9px;
+    width: 92%;
+    height: 45px;
+    font-weight:normal;
+	border:1px solid #BF0023;
+	display:inline-block;
+	cursor:pointer;
+	color:#D6D6D6;
+	font-family:Arial;
+	font-size:16px;
+	text-decoration:none;
+	text-shadow:0px 1px 20px #2f6627;
+}
+
+     
 

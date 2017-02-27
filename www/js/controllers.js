@@ -1,6 +1,8 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout,$ionicPopup) {
+
+ 
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -28,7 +30,26 @@ angular.module('starter.controllers', [])
   $scope.login = function() {
     $scope.modal.show();
   };
+    $scope.exitApp=function()
+    {
+      alert();
+      ionic.Platform.exitApp();
+    }
+    $scope.cancel=function()
+    {
+      alert();
+      ionic.Platform.exitApp();
+    }
 
+    $scope.exit = function(){
+  var myPopup = $ionicPopup.show({
+     templateUrl: 'templates/popup.html',
+    title: 'Enter Wi-Fi Password',
+    subTitle: 'Please use normal things',
+    scope: $scope, 
+      })
+
+  }
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
     console.log('Doing login', $scope.loginData);
@@ -41,16 +62,15 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+
+.controller('MyController', function(NgMap) {
+  NgMap.getMap().then(function(map) {
+    console.log(map.getCenter());
+    console.log('markers', map.markers);
+    console.log('shapes', map.shapes);
+  });
 })
 
+ 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });

@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('Bosk', ['ionic', 'starter.controllers'])
+angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -71,6 +71,31 @@ angular.module('Bosk', ['ionic', 'starter.controllers'])
         'menuContent': {
           templateUrl: 'templates/page2.html',
           controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+    .state('app.map', {
+      url: '/map',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/map.html',
+          controller: 'MyController'
+        }
+      }
+    })
+    .state('app.info', {
+      url: '/info',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/info.html', 
+        }
+      }
+    })
+      .state('app.location', {
+      url: '/lokacije',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/locations.html', 
         }
       }
     })

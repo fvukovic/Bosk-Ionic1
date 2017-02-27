@@ -1,18 +1,11 @@
 ion-content{
    background-color:  #E3E3E3;
 }
- .boja{
 
-   background-color: red;
- }
-
- ng-href{
-   background-color: red;
- }
    .mapa{
         height: 30px;
         width: 30px;
-      background-image: url("/img/map.png");
+      background-image: url("img/map.png");
       background-repeat : no-repeat; 
       float:right;
       
@@ -26,7 +19,7 @@ ion-content{
          float:right;
         height: 30px;
         width: 30px;
-        background-image: url("/img/search.png");
+        background-image: url("../img/search.png");
       background-repeat : no-repeat;         
     }
 .visina-menu
@@ -34,29 +27,4 @@ ion-content{
 height: 100;
 }
 
- ion-item{
-     background-color: red;
- }
-a:link {
-    color: red;
-    background-color: red;
-}
-
-/* visited link */
-a:visited {
-     background-color: red;
-    color: green;
-}
-
-/* mouse over link */
-a:hover {
-     background-color: red;
-    color: hotpink;
-}
-
-/* selected link */
-a:active {
-     background-color: red;
-    color: blue;
-}
  
