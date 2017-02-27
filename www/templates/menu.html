@@ -1,23 +1,22 @@
 <ion-side-menus enable-menu-with-back-views="true">
   <ion-side-menu-content class="bar-dark">
-    <ion-nav-bar class="bar-dark"> 
-     
-      <ion-nav-buttons side="right">
-<a href="#/map"> <button style="border-width: 0px;" class="button mapa"></button></a>
-          <a href="#/search"> <button style="border-width: 0px;" class="button   trazi"></button></a>
+    <ion-nav-bar class="bar-dark">
 
-         <button  class="button button-icon button-clear ion-navicon" menu-toggle="left"></button> 
+      <ion-nav-buttons side="right">
+        <a href="#/map" data-tap-disabled="true" class=" button button-icon icon positive" ng-class="{'ion-map':!hasFilters,'ion-close-circled':hasFilters}"></a>
+        <a href="#/search" data-tap-disabled="true" class=" button button-icon icon positive" ng-class="{'ion-search':!hasFilters,'ion-close-circled':hasFilters}"></a>
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
       </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
-  <ion-side-menu  > 
-    <ion-content  class="menu-right-container has-header " >
-      <ion-list class = "list-assertive"  >
-        <ion-item style="background-color: #656999" menu-close  href="#/start">
+  <ion-side-menu side="left">
+    <ion-content class="menu-right-container has-header ">
+      <ion-list class="list-assertive">
+        <ion-item style="background-color: #656999" menu-close href="#/start">
           Start screen
-        </ion-item  >
+        </ion-item>
         <ion-item style="background-color: #656999" menu-close href="#/info">
           Info
         </ion-item>
@@ -28,7 +27,7 @@
           Contact us
         </ion-item>
         <ion-item menu-close ng-click="exit()">
-         Exit application    
+          Exit application
         </ion-item>
       </ion-list>
     </ion-content>
