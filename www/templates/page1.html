@@ -4,7 +4,7 @@
       <p class="current"> Current location :<span style="color: white;"> {{lokacija}}</span> </p>
    <button class="change" ng-click="funkcija()"> <p style="font-weight: bold">{{naslov}}</p> </button> 
     <br>  
-   <a   class="dodani_buttoni" ng-click="" ng-show="!showDiv">Read GPS coordinates</a>
+   <a   class="dodani_buttoni" ng-click="changeLocation()" ng-show="!showDiv" >Read GPS coordinates</a>
    <a ng-show="!showDiv" href="#/lokacije" class="dodani_buttoni">Show a list of locations</a> 
  
    <a    href="#" ng-show="!showDiv" class="myButton">Show results in 100m range</a>

@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout,$ionicPopup) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout,$ionicPopup,$state) {
 
  
 
@@ -13,6 +13,10 @@ angular.module('starter.controllers', [])
 
   // Form data for the login modal
   $scope.loginData = {};
+
+  $scope.openState = function(state) { 
+  $state.go(state); 
+};
 
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
@@ -63,13 +67,83 @@ angular.module('starter.controllers', [])
 
 .controller('MyController', function(NgMap) {
   NgMap.getMap().then(function(map) {
-    console.log(map.getCenter());
-    console.log('markers', map.markers);
-    console.log('shapes', map.shapes);
-     
+    console.log(map.getCenter());   
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
     
   });
   
 })
+.controller('GeoCtrl', function($cordovaGeolocation) {
+console.log("lodam se")
+  var posOptions = {timeout: 10000, enableHighAccuracy: false};
+  $cordovaGeolocation
+    .getCurrentPosition(posOptions)
+    .then(function (position) {
+      var lat  = position.coords.latitude
+      var long = position.coords.longitude
+    }, function(err) {
+      // error
+    });
+
+
+  var watchOptions = {
+    timeout : 3000,
+    enableHighAccuracy: false // may cause errors if true
+  };
+
+  var watch = $cordovaGeolocation.watchPosition(watchOptions);
+  watch.then(
+    null,
+    function(err) {
+      // error
+    },
+    function(position) {
+      var lat  = position.coords.latitude
+      var long = position.coords.longitude
+      console.log(lat);
+  });
+
+
+  watch.clearWatch();
+  // OR
+  $cordovaGeolocation.clearWatch(watch)
+    .then(function(result) {
+      // success
+      }, function (error) {
+      // error
+    });
+});
 
  
