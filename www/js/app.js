@@ -70,7 +70,6 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
       views: {
         'menuContent': {
           templateUrl: 'templates/page2.html',
-          controller: 'PlaylistsCtrl'
         }
       }
     })

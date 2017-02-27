@@ -31,14 +31,12 @@ angular.module('starter.controllers', [])
     $scope.modal.show();
   };
     $scope.exitApp=function()
-    {
-      alert();
+    { 
       ionic.Platform.exitApp();
     }
     $scope.cancel=function()
     {
-      alert();
-      ionic.Platform.exitApp();
+       return 0;
     }
 
     $scope.exit = function(){
@@ -68,9 +66,10 @@ angular.module('starter.controllers', [])
     console.log(map.getCenter());
     console.log('markers', map.markers);
     console.log('shapes', map.shapes);
+     
+    
   });
+  
 })
 
  
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
