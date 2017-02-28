@@ -1,9 +1,9 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout,$ionicPopup,$state) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout,$ionicPopup,$state,$location) {
 
  
-
+$scope.myPopup;
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -36,15 +36,17 @@ angular.module('starter.controllers', [])
   };
     $scope.exitApp=function()
     { 
+      alert();
       ionic.Platform.exitApp();
     }
     $scope.cancel=function()
     {
-       return 0;
-    }
+      alert("close");
+       $scope.myPopup.close();
+        }
 
     $scope.exit = function(){
-  var myPopup = $ionicPopup.show({
+    $scope.myPopup = $ionicPopup.show({
      templateUrl: 'templates/popup.html',
     title: 'Enter Wi-Fi Password',
     subTitle: 'Please use normal things',
@@ -64,7 +66,15 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller('LocCtrl', function($scope,$location){
+    console.log('jessam li se loadao?');
+    $scope.title = 'nesto';
 
+    $scope.odabirLokacije = function(lokacija){ 
+         window.localStorage.setItem( "lokacija", lokacija );
+        $location.path('/start');
+    }
+})
 .controller('MyController', function(NgMap) {
   NgMap.getMap().then(function(map) {
     console.log(map.getCenter());   

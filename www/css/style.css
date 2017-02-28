@@ -12,6 +12,16 @@ ion-content{
        
         
     } 
+    .map-container .scroll{
+    height: 100%;
+}
+.angular-google-map-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
      .trazi{
          
           border-left: thick solid #BDBDBD;
@@ -26,5 +36,6 @@ ion-content{
 {
 height: 100;
 }
+.scroll{height: 100%;}
 
  

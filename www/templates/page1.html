@@ -1,7 +1,7 @@
-<ion-view >
+<ion-view ng-controller="StartCtrl">
   <ion-content>
-    <div id="lokacija" ng-style="myStyle">
-      <p class="current"> Current location :<span style="color: white;"> {{lokacija}}</span> </p>
+    <div id="lokacija" ng-style="myStyle"  ng-init="doSomething()">
+      <p class="current"> Current location :<span style="color: white;" ng-bind="'  '+lokacija"> {{lokacija}} </span> </p>
    <button class="change" ng-click="funkcija()"> <p style="font-weight: bold">{{naslov}}</p> </button> 
     <br>  
    <a   class="dodani_buttoni" ng-click="changeLocation()" ng-show="!showDiv" >Read GPS coordinates</a>
@@ -13,20 +13,20 @@
    <a href="#" ng-show="!showDiv" class="myButton">Show results in 5000m range</a> 
     <a href="#" ng-show="!showDiv" class="myButton">Show results in any range</a>     <br>
  </div>
-     <a href="">
+     <a href="#/hotels">
      <div class="card">
        <h3 style="float:left"> Hotels</h3> 
        <img class = "strelica" src="img/gumb_strelica.png">
 
      </div>
      </a>
-       <a href="">
+       <a href="#/restaurants">
      <div class="card">
        <h3 style="float:left"> Restaurants</h3> 
        <img class = "strelica" src="img/gumb_strelica.png">
      </div>
      </a>
-       <a href="">
+       <a href="#/stores">
      <div class="card">
        <h3 style="float:left"> Stores</h3> 
        <img class = "strelica" src="img/gumb_strelica.png">
