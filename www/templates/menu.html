@@ -1,13 +1,15 @@
 <ion-side-menus  enable-menu-with-back-views="true">
+  
   <ion-side-menu-content class="bar-dark">
-    <ion-nav-bar class="bar-dark">
-
-      <ion-nav-buttons side="right">
-        <a href="#/map" style="margin-top:-3px" data-tap-disabled="true" class=" button button-icon icon positive" ng-class="{'ion-map':!hasFilters,'ion-close-circled':hasFilters}"></a>
-        <a href="#/search"  style="margin-top:-3px" data-tap-disabled="true" class=" button button-icon icon positive" ng-class="{'ion-search':!hasFilters,'ion-close-circled':hasFilters}"></a>
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
-      </ion-nav-buttons>
-    </ion-nav-bar>
+    <ion-header-bar align-title="center"   class="bar-dark" style="height: 50px" class="bar-positive">
+  <div class="buttons"> 
+  </div>
+  <h1 class="title" style="padding-top: 5px;"><img class="title-image" src="img/bijeli_logo.png" width="180px;" height="100%" /></h1>
+  <div class="buttons" >
+     <div style="border-radius:50%;background-color: #9698d1;  background-size:cover; width:37px; height:90%;margin-right: 10px">
+   <button class="button button-icon button-clear ion-navicon" style= "width: 50%; margin: 0 auto; margin-left:3px;" menu-toggle="left"></button></div>
+  </div>
+</ion-header-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 

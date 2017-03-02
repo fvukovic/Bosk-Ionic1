@@ -17,10 +17,11 @@
 
     .current
     {
-     color:#D6D6D6;
+     color:white;
      font-size: 16px;
      float:left;
      margin:10px;
+     margin-top: 15px;
     }
     .change
     {   
@@ -28,7 +29,7 @@
 	-webkit-border-radius:3px;
 	background-color: #BF0023;
     border-radius: 3px;
-    margin: 9px;
+    margin: 11px;
     width: 90px;
     height: 32px;
     font-weight:normal;
@@ -68,16 +69,15 @@
      
     }
     .card{
-        
+         position: relative;
         color: #696969;
         font-size:20px; 
         height: 60px;   
     }
-    h3{
-        margin: 10px;
-       padding-top: 12px;
+    h3{ 
        color: #545454;
        font-weight:normal;
+       padding-bottom: -10px;
     }
   .dodani_buttoni
   {
