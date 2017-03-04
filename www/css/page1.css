@@ -1,10 +1,28 @@
-
-    #lokacija
+    a{
+        text-decoration:none;
+    }
+   a:link
+    {
+text-decoration:none;
+    }
+    a:active{
+text-decoration:none;
+    }
+    a:visited
+    {
+text-decoration:none;
+    }
+    a:hover
+    {
+text-decoration:none;
+    }
+    .lokacija 
     {        
         background-color: #E84357;
         height:50px; 
         border-color: #DE0B32;  
     }
+       
     .card-visina
     {
         border-radius: 5px;
@@ -24,7 +42,7 @@
      margin-top: 15px;
     }
     .change
-    {   
+    {  float:right 
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	background-color: #BF0023;
@@ -52,10 +70,9 @@
    
 
     .logo1{
-  display: table-cell;
-    margin-top:70px;
-    text-align: center;
-    vertical-align: middle;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
     }
     .strelica{
         float:right;
@@ -158,6 +175,19 @@
   font-size: 30px; 
   position: fixed; 
   height:67px;
+  bottom: 0px; /* Adjust to where you want it */
+  left:0px; /* Adjust to where you want it */ 
+ }
+      .float-button1 { 
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; 
+  padding: 6px;
+  font-size: 30px; 
+  position: fixed; 
+  height:53px;
+  width:10px;
+  margin:15px;
   bottom: 0px; /* Adjust to where you want it */
   left:0px; /* Adjust to where you want it */ 
  }

@@ -30,9 +30,19 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-   .state('app.start', {
+   .state('app.start', { 
      cache: false,
     url: '/start',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/open.html', 
+         controller:'OpenCtrl'
+      }
+    }
+  })
+  .state('app.startScreen', {
+     cache: false,
+    url: '/startScreen',
     views: {
       'menuContent': {
         templateUrl: 'templates/page1.html', 
@@ -55,7 +65,7 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
     views: {
       'menuContent': {
         templateUrl: 'templates/hotels.html',
-        controller:  'AboutCtrl'
+        controller:  'HotelsCtrl'
       }
     }
   })
@@ -106,11 +116,12 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
       }
     })
     .state('app.map', {
+      cache:false,
       url: '/map',
       views: {
         'menuContent': {
           templateUrl: 'templates/map.html',
-          controller: 'MyController'
+          controller: 'MyController',
         }
       }
     })

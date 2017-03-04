@@ -15,6 +15,15 @@ border-radius: 5px;
 color: white;
 font-size: 15px;
 }
+.fixed-outside{
+  position: absolute;
+  bottom: 0;
+  color:white;
+  width: 100%;
+  height:  120px;
+  text-align:center;
+}
+
 #send{
    background-color:  #ED0037;
    margin-top: 7px;

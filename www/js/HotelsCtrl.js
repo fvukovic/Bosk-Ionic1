@@ -1,5 +1,5 @@
 angular.module('Bosk')
-    .controller('StartCtrl', function ($scope, $ionicPlatform) {
+    .controller('HotelsCtrl', function ($scope) {
         $scope.visina = "49px";
         $scope.naslov = "Change";
         $scope.showDiv = true;
@@ -10,10 +10,10 @@ angular.module('Bosk')
         } else {
             $scope.lokacija = window.localStorage.getItem("lokacija");
         }
- 
+
 
         $scope.funkcija = function () {             
-            var element = angular.element(document.querySelector('#lokacija2'));
+            var element = angular.element(document.querySelector('#lokacija'));
             var height = element[0].offsetHeight;
             if (height < 100) {
                 $scope.visina = "400px";
