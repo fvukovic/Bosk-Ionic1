@@ -1,16 +1,19 @@
+<ion-view  >
   <ion-content content scroll="false" >
  
+    <div id="lokacija1" class="lokacija" ng-style="myStyle"  ng-init="doSomething()">
       <p class="current"> Current location :<span style="color: white;" ng-bind="'  '+lokacija"> {{lokacija}} </span> </p>
    <button class="change" ng-click="funkcija()"> <p style="font-weight: bold">{{naslov}}</p> </button> 
     <br>  
    <a   class="dodani_buttoni" ng-click="changeLocation()" ng-show="!showDiv" >Read GPS coordinates</a>
    <a ng-show="!showDiv" href="#/lokacije" class="dodani_buttoni">Show a list of locations</a> 
- 
-   <a    href="#" ng-show="!showDiv" class="myButton">Show results in 100m range</a>
-   <a ng-show="!showDiv" ng-show="!showDiv" class="range_buttoni" href=""> </a>  
-    <a href="#" ng-show="!showDiv" class="myButton">Show results in 1000m range</a>
-   <a href="#" ng-show="!showDiv" class="myButton">Show results in 5000m range</a> 
-    <a href="#" ng-show="!showDiv" class="myButton">Show results in any range</a>     <br>
+ <ion-list>
+   <ion-radio    ng-value="'A'"   ng-show="!showDiv"  class="myButton"   >Show results in 100m range</ion-radio>
+   <ion-radio   ng-model="choice" ng-value="'A'" ng-show="!showDiv" ng-show="!showDiv" class="myButton" > Show results in 500m range</ion-radio>  
+    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in 1000m range</ion-radio>
+   <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in 5000m range</ion-radio> 
+    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in any range</ion-radio>  
+    </ion-list>     <br>
  </div>
     
       
@@ -18,6 +21,7 @@
   z-index: 3;     
    "><div class="float-button1">
      <span >
+       <button id="fab-profile" ui-sref="app.startScreen" class="button button-fab button-fab-bottom-right fab-fixed button-assertive pane" nav-view="active" style=" float:top;position: absolute; background-color:#5F5D99; border-radius:50%;opacity: 1; transform: translate3d(0%, 0px, 0px);">
          <img src="img/list.png" style="margin-top:10px;margin-left:-2px;">
        </button>
      </span>

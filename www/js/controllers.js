@@ -34,13 +34,11 @@ $scope.myPopup;
     $scope.modal.show();
   };
     $scope.exitApp=function()
-    { 
-      alert();
+    {  
       ionic.Platform.exitApp();
     }
     $scope.cancel=function()
-    {
-      alert("close");
+    { 
        $scope.myPopup.close();
         }
 
@@ -91,7 +89,7 @@ $scope.myPopup;
             var element = angular.element(document.querySelector('#lokacija1'));
             var height = element[0].offsetHeight;
             if (height < 100) {
-                $scope.visina = "400px";
+                $scope.visina = "446px";
                 $scope.changeStyle();
                 $scope.naslov = "Close";
                 $scope.showDiv = false;

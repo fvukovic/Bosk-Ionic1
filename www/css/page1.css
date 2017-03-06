@@ -17,7 +17,7 @@ text-decoration:none;
 text-decoration:none;
     }
     .lokacija 
-    {        
+    {   margin-top:16px;     
         background-color: #E84357;
         height:50px; 
         border-color: #DE0B32;  
@@ -41,8 +41,7 @@ text-decoration:none;
      margin:10px;
      margin-top: 15px;
     }
-    .change
-    {  float:right 
+    .change { 
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	background-color: #BF0023;
@@ -119,24 +118,28 @@ text-decoration:none;
 	text-shadow:0px 1px 20px #2f6627;
 
   } 
-.myButton {
-	background-color: #E84357;  
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
+.list .item-radio .item-content {
+   background-color: #E84357; 
+    
+  color: white;
 }
-.myButton:hover {
-	background-color: #DE0B32;  
+.list .item-radio .radio-icon {
+  float: left;
+  color: white;
 }
+.item-radio input:checked + .radio-content .item-content {
+    /* style the item content when its checked */
+    background-color: #E84357; 
+}
+ .myButton{
+        border:none;
+        margin-left:20px;
+ }
 .myButton:active {
 	position:relative;
 	top:1px;
 }
+ 
 .exit_text
 {
     color:white;

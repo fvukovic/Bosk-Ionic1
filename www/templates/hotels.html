@@ -1,51 +1,99 @@
-<ion-view ng-controller="StartCtrl">
+<ion-view >
   <ion-content>
-    <div id="lokacija" ng-style="myStyle"  ng-init="doSomething()">
+    <div id="lokacija" class="lokacija"  ng-style="myStyle"  ng-init="doSomething()">
       <p class="current"> Current location :<span style="color: white;" ng-bind="'  '+lokacija"> {{lokacija}} </span> </p>
    <button class="change" ng-click="funkcija()"> <p style="font-weight: bold">{{naslov}}</p> </button> 
     <br>  
    <a   class="dodani_buttoni" ng-click="changeLocation()" ng-show="!showDiv" >Read GPS coordinates</a>
    <a ng-show="!showDiv" href="#/lokacije" class="dodani_buttoni">Show a list of locations</a> 
  
-   <a    href="#" ng-show="!showDiv" class="myButton">Show results in 100m range</a>
-   <a ng-show="!showDiv" ng-show="!showDiv" class="range_buttoni" href=""> </a>  
-    <a href="#" ng-show="!showDiv" class="myButton">Show results in 1000m range</a>
-   <a href="#" ng-show="!showDiv" class="myButton">Show results in 5000m range</a> 
-    <a href="#" ng-show="!showDiv" class="myButton">Show results in any range</a>     <br>
+   <ion-list>
+   <ion-radio    ng-value="'A'"   ng-show="!showDiv"  class="myButton"   >Show results in 100m range</ion-radio>
+   <ion-radio   ng-model="choice" ng-value="'A'" ng-show="!showDiv" ng-show="!showDiv" class="myButton" > Show results in 500m range</ion-radio>  
+    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in 1000m range</ion-radio>
+   <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in 5000m range</ion-radio> 
+    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in any range</ion-radio>  
+    </ion-list>     <br>
  </div>
      <a href="#/hotels">
-     <div class="card" >
+     <div class="card" id="card" >
        
        <img src="img/esplanada.png" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
        <div>
-       <h3 style=""> Hotels</h3> 
-       <img src="img/star.png" style="float: left;" > 
-       <img src="img/star.png" style="float: left;" > 
-       <img src="img/star.png" style="float: left;" > 
-       
+       <h3 style="margin-top:10px;"> Hotel esplanade</h3> 
+       <img src="img/star.png" style="position:absolute;bottom:0;" >  
+       <img src="img/star.png" style="position:absolute;bottom:0;left:95px;" >
+       <img src="img/star.png" style="position:absolute;bottom:0;left:110px;" >
+       <img src="img/star.png" style="position:absolute;bottom:0;left:125px;" >      
+       <img src="img/star.png" style="position:absolute;bottom:0;left:140px;" >   
        </div>
-       <img class = "strelica" src="img/gumb_strelica.png">
+       <img class = "strelica" style="position:absolute;top:0;
+right: 0;" src="img/gumb_strelica.png">
 
      </div>
      </a>
-       <a href="#/restaurants">
-     <div class="card">
-       <h3 style="float:left"> Restaurants</h3> 
-       <img class = "strelica" src="img/gumb_strelica.png">
+      <a href="#/hotels">
+     <div class="card" id="card" >
+       
+       <img src="img/esplanada.png" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
+       <div>
+       <h3 style="margin-top:10px;"> Hotel esplanade</h3> 
+       <img src="img/star.png" style="position:absolute;bottom:0;" >  
+       <img src="img/star.png" style="position:absolute;bottom:0;left:95px;" >
+       <img src="img/star.png" style="position:absolute;bottom:0;left:110px;" >
+       <img src="img/star.png" style="position:absolute;bottom:0;left:125px;" >      
+       <img src="img/star.png" style="position:absolute;bottom:0;left:140px;" >   
+       </div>
+       <img class = "strelica" style="position:absolute;top:0;
+right: 0;" src="img/gumb_strelica.png">
+
      </div>
      </a>
-       <a href="#/stores">
-     <div class="card">
-       <h3 style="float:left"> Stores</h3> 
-       <img class = "strelica" src="img/gumb_strelica.png">
+      <a href="#/hotels">
+     <div class="card" id="card" >
+       
+       <img src="img/esplanada.png" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
+       <div>
+       <h3 style="margin-top:10px;"> Hotel esplanade</h3> 
+       <img src="img/star.png" style="position:absolute;bottom:0;" >  
+       <img src="img/star.png" style="position:absolute;bottom:0;left:95px;" >
+       <img src="img/star.png" style="position:absolute;bottom:0;left:110px;" >
+       <img src="img/star.png" style="position:absolute;bottom:0;left:125px;" >      
+       <img src="img/star.png" style="position:absolute;bottom:0;left:140px;" >   
+       </div>
+       <img class = "strelica" style="position:absolute;top:0;
+right: 0;" src="img/gumb_strelica.png">
+
      </div>
      </a>
-     <a href="#/info">
-      <div class="card">
-       <h3 style="float:left"> Info</h3> 
-       <img class = "strelica" src="img/gumb_strelica.png">
+      <a href="#/hotels">
+     <div class="card" id="card" >
+       
+       <img src="img/esplanada.png" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
+       <div>
+       <h3 style="margin-top:10px;"> Hotel esplanade</h3> 
+       <img src="img/star.png" style="position:absolute;bottom:0;" >  
+       <img src="img/star.png" style="position:absolute;bottom:0;left:95px;" >
+       <img src="img/star.png" style="position:absolute;bottom:0;left:110px;" >
+       <img src="img/star.png" style="position:absolute;bottom:0;left:125px;" >      
+       <img src="img/star.png" style="position:absolute;bottom:0;left:140px;" >   
+       </div>
+       <img class = "strelica" style="position:absolute;top:0;
+right: 0;" src="img/gumb_strelica.png">
+
      </div>
-     </a>
-     <img src="img/bosk_logo.png" class="logo1">
+     </a> 
+    
   </ion-content>
+  <ion-footer-bar style="background-color: #E3E3E3"  >
+  <div class="buttons">
+      <div class="float-button">
+     <span class="height-fix">
+       <button id="fab-profile" ui-sref="app.map" class="button button-fab button-fab-bottom-right fab-fixed button-assertive pane" nav-view="active" style="background-color:#5F5D99; border-radius:50%;opacity: 1; transform: translate3d(0%, 0px, 0px);">
+         <img src="img/map.png" style="margin-top:10px;">
+       </button>
+     </span>
+   </div>
+  </div>
+</ion-footer-bar>
 </ion-view>
