@@ -16,12 +16,12 @@ angular.module('Bosk')
             var element = angular.element(document.querySelector('#lokacija2'));
             var height = element[0].offsetHeight;
             if (height < 100) {
-                $scope.visina = "446px";
+                $scope.visina = "451px";
                 $scope.changeStyle();
                 $scope.naslov = "Close";
                 $scope.showDiv = false;
             } else {
-                $scope.visina = "49px";
+                $scope.visina = "55px";
                 console.log('else');
                 $scope.naslov = "Change";
                 $scope.changeStyle();

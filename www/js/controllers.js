@@ -210,9 +210,12 @@ $scope.myPopup;
   
 })
 
-.controller('OpenCtrl', function($scope,  $timeout,$location,$ionicSideMenuDelegate){
+.controller('OpenCtrl', function($scope,  $timeout,$location,$ionicSideMenuDelegate, $ionicHistory){
     console.log('jessam li se loadao?'); 
     $scope.title = 'nesto';
+    $ionicHistory.nextViewOptions({
+     disableBack: true
+  });
     $scope.menuVisibility=true;
     $timeout(funkcija, 4000); 
     function funkcija (){  
