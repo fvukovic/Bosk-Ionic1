@@ -1,13 +1,18 @@
 <ion-side-menus  ng-controller="OpenCtrl" enable-menu-with-back-views="true">
   
-  <ion-side-menu-content class="bar-dark"   drag-content="false">
+<ion-side-menu-content class="bar-dark"   drag-content="false">
     <ion-header-bar align-title="center"  ng-hide="menuVisibility"   class="bar-dark" style="height: 72px" class="bar-positive">
   <div class="buttons"> 
+     <img class="title-image" src="img/bijeli_logo.png" width="180px;" height="100%"  /> 
   </div>
-  <img class="title-image" src="img/bijeli_logo.png" width="180px;" height="100%"  /> 
-  <div class="buttons" >
-     <div style="border-radius:50%;background-color: #9698d1;  background-size:cover; width:43px;margin-top:5px; height:85%;margin-right: 10px">
-   <button class="button button-icon button-clear ion-navicon" style= "float:right;margin-top: 4px;margin-right:6px  " menu-toggle="left"></button></div>
+  <img  style="display:block; border:none;
+  margin-left:auto;
+  margin-right:auto;" /> 
+  <div class="buttons" >  <button class="button " style=  "margin-right: 15px;margin-top:5px;  height: 53px; border:none;   display:block; 
+  border-radius: 50%;
+  width: 53px; background-color: #8487ba" menu-toggle="left">
+    <img class="title-image" src="img/menu-icon.png" width="35px;"   style="margin-top: 10px" /> 
+    </button></div>
   </div>
   <div style="height: 50px;background-color: 50px"></div>
 </ion-header-bar>

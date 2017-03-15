@@ -89,12 +89,12 @@ $scope.myPopup;
             var element = angular.element(document.querySelector('#lokacija1'));
             var height = element[0].offsetHeight;
             if (height < 100) {
-                $scope.visina = "446px";
+                $scope.visina = "458px";
                 $scope.changeStyle();
                 $scope.naslov = "Close";
                 $scope.showDiv = false;
             } else {
-                $scope.visina = "49px";
+                $scope.visina = "55px";
                 console.log('else');
                 $scope.naslov = "Change";
                 $scope.changeStyle();

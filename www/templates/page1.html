@@ -1,72 +1,71 @@
 <ion-view ng-controller="StartCtrl" >
-  <ion-content >
-    <div id="lokacija" ng-style="myStyle"  ng-init="doSomething()">
+  <ion-content scroll="false">
+    <div id="lokacija2"  class="lokacija" ng-style="myStyle"  ng-init="doSomething()">
       <p class="current"> Current location :<span style="color: white;" ng-bind="'  '+lokacija"> {{lokacija}} </span> </p>
-   <button class="change" ng-click="funkcija()"> <p style="font-weight: bold">{{naslov}}</p> </button> 
+   <button class="change" ng-click="funkcija()"> <p class="locationButton">{{naslov}}</p> </button> 
     <br>  
    <a   class="dodani_buttoni" ng-click="changeLocation()" ng-show="!showDiv" >Read GPS coordinates</a>
    <a ng-show="!showDiv" href="#/lokacije" class="dodani_buttoni">Show a list of locations</a> 
- 
-   <a    href="#" ng-show="!showDiv" class="myButton">Show results in 100m range</a>
-   <a ng-show="!showDiv" ng-show="!showDiv" class="range_buttoni" href=""> </a>  
-    <a href="#" ng-show="!showDiv" class="myButton">Show results in 1000m range</a>
-   <a href="#" ng-show="!showDiv" class="myButton">Show results in 5000m range</a> 
-    <a href="#" ng-show="!showDiv" class="myButton">Show results in any range</a>     <br>
+ <ion-list>
+   <ion-radio    ng-value="'A'"   ng-show="!showDiv"  class="myButton"   >Show results in 100m range</ion-radio>
+   <ion-radio   ng-model="choice" ng-value="'A'" ng-show="!showDiv" ng-show="!showDiv" class="myButton" > Show results in 500m range</ion-radio>  
+    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in 1000m range</ion-radio>
+   <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" ng-selected="true" class="myButton">Show results in 5000m range</ion-radio> 
+    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in any range</ion-radio>  
+    </ion-list>     <br>
+ </div>   <br>
  </div>
-       <a href="#/hotels">
-     <div class="card">
-         <div style="border-radius:50%;background-color: #DEDEDE;float:left;  background-size:cover; width:40px; height:40px;margin: 9px; margin-right: 10px">
-       <img src="img/hotel_image.png" style="float:left;width: 25px; margin: 5px;margin-left:7px; margin-top:10px; " >
+       <a href="#/hotels" >
+     <div class="list list-inset" >
+         <div style="border-radius:50%; float:left;  background-size:cover;  margin: 8px; margin-right: 10px">
+       <img src="img/hotel_image.png" style="float:left;width: 45px; " >
    
        </div>
-        <h3 style="float:left;margin-top:10px;margin-left"> Hotels</h3> 
+        <h3 class="screenTitles"> Hotels</h3> 
        <img class = "strelica" src="img/gumb_strelica.png">
      </div>
      </a>
        <a href="#/restaurants">
-     <div class="card">
-         <div style="border-radius:50%;background-color: #DEDEDE;float:left;  background-size:cover; width:40px; height:40px;margin: 9px; margin-right: 10px">
-       <img src="img/restaurant.png" style="float:left;width: 25px; margin: 5px;margin-left:7px;  " >
+     <div class="list list-inset">
+           <div style="border-radius:50%; float:left;  background-size:cover;  margin: 8px; margin-right: 10px">
+       <img src="img/restaurant.png" style="float:left;width: 45px; " >
    
        </div>
-        <h3 style="float:left;margin-top:10px;margin-left"> Restaurants</h3> 
+        <h3 class="screenTitles"> Restaurants</h3> 
        <img class = "strelica" src="img/gumb_strelica.png">
      </div>
      </a>
         <a href="#/restaurants">
-     <div class="card">
-         <div style="border-radius:50%;background-color: #DEDEDE;float:left;  background-size:cover; width:40px; height:40px;margin: 9px; margin-right: 10px">
-       <img src="img/grocery.png" style="float:left;width: 25px; margin: 5px;margin-top:7px;margin-left:7px;  " >
+     <div class="list list-inset">
+           <div style="border-radius:50%; float:left;  background-size:cover;  margin: 8px; margin-right: 10px">
+       <img src="img/grocery.png" style="float:left;width: 45px; " >
    
        </div>
-        <h3 style="float:left;margin-top:10px;margin-left"> Stores</h3> 
+        <h3 class="screenTitles"> Stores</h3> 
        <img class = "strelica" src="img/gumb_strelica.png">
      </div>
      </a>
+      <a href="#/restaurants">
+     <div class="list list-inset">
+          <div style="border-radius:50%; float:left;  background-size:cover;  margin: 8px; margin-right: 10px">
+       <img src="img/pharmacies.png" style="float:left;width: 45px; " >
+   
+       </div>
+        <h3 class="screenTitles">Pharmacies</h3> 
+       <img class = "strelica" src="img/gumb_strelica.png">
+     </div>
+     </a> 
        <a href="#/restaurants">
-     <div class="card">
-         <div style="border-radius:50%;background-color: #DEDEDE;float:left;  background-size:cover; width:40px; height:40px;margin: 9px; margin-right: 10px">
-       <img src="img/station.png" style="float:left;width: 25px; margin: 5px;margin-left:7px;  " >
+     <div class="list list-inset">
+          <div style="border-radius:50%; float:left;  background-size:cover;  margin: 8px; margin-right: 10px">
+       <img src="img/station.png" style="float:left;width: 45px; " >
    
        </div>
-        <h3 style="float:left;margin-top:10px;margin-left"> Petroll station</h3> 
+        <h3  class="screenTitles"> Petroll station</h3> 
        <img class = "strelica" src="img/gumb_strelica.png">
      </div>
      </a>
-     <div style="  margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%; ">  
-     <img src="img/bosk_logo.png" class="logo1"> 
-     </div>
-
-   
- <div class="float-button">
-     <span class="height-fix">
-       <button id="fab-profile" ui-sref="app.jobAdd" class="button button-fab button-fab-bottom-right fab-fixed button-assertive pane" nav-view="active" style="background-color:#5F5D99; border-radius:50%;opacity: 1; transform: translate3d(0%, 0px, 0px);">
-         <img src="img/map.png" style="margin-top:10px;">
-       </button>
-     </span>
+    
    </div>
   </ion-content>
 </ion-view>

@@ -82,15 +82,29 @@ text-decoration:none;
         width: auto;
          background-repeat: no-repeat;
     }
+     .strelicaHotel{
+        float:right;
+        margin-top:3px;
+        margin-right:10px;
+        height: auto;
+        width: auto;
+         background-repeat: no-repeat;
+    }
     .margins{
         margin: 0px;
      
     }
+
+      .hotel{
+          position: relative;
+         color: #696969;
+         font-size:20px; 
+         height: 60px;  } 
     .screenTitles
     {
         float:left;
         font-size: 23px;
-        margin-top:10px;
+        margin-top:15px;
         color:#0D0D0D;
     } 
     .list

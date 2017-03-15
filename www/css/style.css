@@ -1,9 +1,6 @@
 ion-content{
    background-color:  #E3E3E3;
 }
-.ion-navicon {
-  font-size: 90px;
-}
 
    .mapa{
         height: 30px;
@@ -33,10 +30,7 @@ ion-content{
         background-image: url("../img/search.png");
       background-repeat : no-repeat;         
     }
-.visina-menu
-{
-height: 100;
-}
+
 .scroll{height: 100%;}
 
  

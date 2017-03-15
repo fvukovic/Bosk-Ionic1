@@ -35,7 +35,7 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
     url: '/start',
     views: {
       'menuContent': {
-        templateUrl: 'templates/page1.html', 
+        templateUrl: 'templates/open.html', 
          controller:'OpenCtrl'
       }
     }
