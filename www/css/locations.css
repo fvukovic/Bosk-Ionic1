@@ -1,5 +1,15 @@
 
 
 .locationTitle{
-height:100%; font-size: 50px;float:left;margin-top:9px;
+height:100%; font-size: 25px;float:left;margin-top:9px;margin-left: 15px;
+}
+.location
+{
+    height: 60px;
+}
+
+.strelicaHotel{
+
+    margin-top: 8px;
+
 }

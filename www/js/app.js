@@ -99,19 +99,13 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
       }
     }
   })
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/page2.html'
-        }
-      }
-    })
+
     .state('app.page2', {
       url: '/page2',
       views: {
         'menuContent': {
           templateUrl: 'templates/page2.html',
+          controller:"EmailCtrl"
         }
       }
     })

@@ -169,17 +169,16 @@ text-decoration:none;
 
 }
 .exit_button
-{
-     background-color: #DE0B32;  
+{ 
        	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
-	background-color: #BF0023;
+	background-color: #690342;
     border-radius: 0px;
     margin: 9px;
     width: 92%;
     height: 45px;
     font-weight:normal;
-	border:1px solid #BF0023;
+	border:1px solid #690342;
 	display:inline-block;
 	cursor:pointer;
 	color:#D6D6D6;
