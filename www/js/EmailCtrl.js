@@ -1,30 +1,23 @@
 angular.module('Bosk')
-.controller('EmailCtrl', function($cordovaEmailComposer, $scope) {
-$cordovaEmailComposer.isAvailable().then(function() {
-   // is available
-   alert("available");
- }, function () {
-   // not available
-   alert("not available");
- });
- $scope.sendEmail = function(){
-  var email = {
-     to: 'fvukovic@foi.hr',
-     cc: 'teste@example.com',
-     bcc: ['john@doe.com', 'jane@doe.com'],
-     attachments: [
-       'file://img/logo.png',
-       'res://icon.png',
-       'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
-       'file://README.pdf'
-     ],
-     subject: 'Inquery',
-     body: 'How are you? Nice greetings from Leipzig',
-     isHtml: true
-  };
+.controller('EmailCtrl', function($scope) {
+    document.addEventListener("deviceready", function () {
+       $scope.sendEmail= function() {console.log("asdasds");
+      alert();
+        if(window.plugins && window.plugins.emailComposer) {
+            window.plugins.emailComposer.showEmailComposerWithCallback(function(result) {
+                console.log("Response -> " + result);
+                    alert();
+            }, 
+            "Feedback for your App", // Subject
+            "",                      // Body
+            ["fvukovic@foi.hr"],    // To
+            null,                    // CC
+            null,                    // BCC
+            false,                   // isHTML
+            null,                    // Attachments
+            null);                   // Attachment Data
+        }
+    }
+}, false);
 
- $cordovaEmailComposer.open(email).then(null, function () {
-   // user cancelled email
-  });
- }
 });

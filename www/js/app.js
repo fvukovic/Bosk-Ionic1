@@ -99,8 +99,18 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
       }
     }
   })
-
+    .state('app.detail', {
+      cache:false,
+      url: 'hotels/:hotelId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/locationDetail.html',
+          controller: 'HotelDetailCtrl',
+        }
+      }
+    })
     .state('app.page2', {
+      cache:false,
       url: '/page2',
       views: {
         'menuContent': {

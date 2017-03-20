@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout,$ionicPopup,$state,$location) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout,$ionicPopup,$state,$location,$stateParams) {
 
  
 $scope.myPopup;
