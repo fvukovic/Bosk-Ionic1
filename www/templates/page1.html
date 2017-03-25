@@ -1,20 +1,6 @@
-<ion-view ng-controller="StartCtrl" >
+<ion-view hide-nav-bar="true">
   <ion-content >
-    <div id="lokacija2"  class="lokacija" ng-style="myStyle"  ng-init="doSomething()">
-      <p class="current"> Current location :<span style="color: white;" ng-bind="'  '+lokacija"> {{lokacija}} </span> </p>
-   <button class="change" ng-click="funkcija()"> <p class="locationButton">{{naslov}}</p> </button> 
-    <br>  
-   <a   class="dodani_buttoni" ng-click="changeLocation()" ng-show="!showDiv" >Read GPS coordinates</a>
-   <a ng-show="!showDiv" href="#/lokacije" class="dodani_buttoni">Show a list of locations</a> 
- <ion-list>
-   <ion-radio    ng-value="'A'"   ng-show="!showDiv"  class="myButton"   >Show results in 100m range</ion-radio>
-   <ion-radio   ng-model="choice" ng-value="'A'" ng-show="!showDiv" ng-show="!showDiv" class="myButton" > Show results in 500m range</ion-radio>  
-    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in 1000m range</ion-radio>
-   <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" ng-selected="true" class="myButton">Show results in 5000m range</ion-radio> 
-    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in any range</ion-radio>  
-    </ion-list>     <br>
- </div>   
- </div>
+    
        <a href="#/hotels" >
      <div class="list list-inset" >
          <div style="border-radius:50%; float:left;  background-size:cover;  margin: 8px; margin-right: 10px">

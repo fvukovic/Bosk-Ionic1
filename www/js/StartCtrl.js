@@ -1,6 +1,9 @@
 angular.module('Bosk')
-    .controller('StartCtrl', function ($scope, $ionicPlatform) {
-        $scope.visina = "49px";
+    .controller('StartCtrl', function ($scope, $ionicPlatform,$rootScope) {
+        $scope.visina = "49px"; 
+        window.localStorage.setItem("menuLocation", false); 
+        var lokalno = window.localStorage.getItem("menuLocation"); 
+       $rootScope=true; 
         $scope.naslov = "Change";
         $scope.showDiv = true;
         var geocoder="";
@@ -9,8 +12,7 @@ angular.module('Bosk')
             $scope.$lokacija = "Zagreb";
         } else {
             $scope.lokacija = window.localStorage.getItem("lokacija");
-        }
- 
+        }   
 
         $scope.funkcija = function () {             
             var element = angular.element(document.querySelector('#lokacija2'));

@@ -30,7 +30,17 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-   .state('app.start', { 
+   .state('bapp', {
+    abstract: true,
+    templateUrl: 'templates/menu2.html',
+    controller: 'AppCtrl'
+  })
+   .state('prazan', {
+    abstract: true,
+    templateUrl: 'templates/menuPrazan.html',
+    controller: 'AppCtrl'
+  }) 
+   .state('prazan.start', { 
      cache: false,
     url: '/start',
     views: {
@@ -45,8 +55,7 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
     url: '/startScreen',
     views: {
       'menuContent': {
-        templateUrl: 'templates/page1.html', 
-         controller:'StartCtrl'
+        templateUrl: 'templates/page1.html',  
       }
     }
   })
@@ -91,7 +100,7 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
   })
 
 
-  .state('app.about', {
+  .state('bapp.about', {
     url: '/about',
     views: {
       'menuContent': {
@@ -105,7 +114,17 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
       views: {
         'menuContent': {
           templateUrl: 'templates/locationDetail.html',
-          controller: 'HotelDetailCtrl',
+          controller: 'HoodCtrl',
+        }
+      }
+    })
+    .state('app.hood', {
+      cache:false,
+      url: 'lokacije/:cityId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/locationsHood.html',
+          controller: 'HoodCtrl',
         }
       }
     })

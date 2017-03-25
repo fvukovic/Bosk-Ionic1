@@ -1,0 +1,21 @@
+<ion-view>
+  <ion-content >
+   <a  >
+      <div class="list list-inset hotel" id="card" >
+       <h3 style="height:100%; font-size: 25px;float:left;margin-top:12px;margin-left: 15px;"> Pula</h3> 
+      
+       <img class = "strelica" style="position:absolute;top:0;
+right: 0;" src="img/gumb_strelica.png">
+
+     </div>
+     </a>
+     <ion-list class="hoods">
+   <ion-radio   class="list list-inset hood"      >Show results in 100m range</ion-radio>
+   <ion-radio   ng-model="choice" ng-value="'A'"    > Show results in 500m range</ion-radio>  
+    <ion-radio ng-model="choice" ng-value="'A'" >Show results in 1000m range</ion-radio>
+   <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" ng-selected="true" class="myButton">Show results in 5000m range</ion-radio> 
+    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in any range</ion-radio>  
+    </ion-list>     <br>
+
+  </ion-content>
+</ion-view>

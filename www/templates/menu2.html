@@ -1,0 +1,44 @@
+<ion-side-menus    enable-menu-with-back-views="true"> 
+<ion-side-menu-content class="bar-dark"   drag-content="false">
+  <div style="height: 40px;background-color: red;" >  </div>
+    <ion-header-bar align-title="center"     class="bar-dark" style="height: 72px" class="bar-positive">
+  <div class="buttons"> 
+     <img class="title-image" src="img/bijeli_logo.png" width="180px;" height="100%"  /> 
+  </div>
+  <img  style="display:block; border:none;
+  margin-left:auto;
+  margin-right:auto;" /> 
+  <div class="buttons" >  <button class="button " style=  "margin-right: 15px;margin-top:5px;  height: 53px; border:none;   display:block; 
+  border-radius: 50%;
+  width: 53px; background-color: #8487ba" menu-toggle="left">
+    <img class="title-image" src="img/menu-icon.png" width="35px;"   style="margin-top: 10px" /> 
+    </button></div>
+  </div>
+  <div style="height: 50px;background-color: 50px"></div>
+</ion-header-bar>
+ 
+    <ion-nav-view name="menuContent"></ion-nav-view> 
+  </ion-side-menu-content>
+
+  <ion-side-menu    style="background-color: #5F5D99; color: white" side="left">
+    <ion-content  style="background-color: #5F5D99; margin:10px;" class="menu-right-container ">
+      <ion-list class="list-assertive">
+        <ion-item style="background-color: #5F5D99;color: white;" menu-close ng-click="openState('app.startScreen')">
+          Start screen
+        </ion-item>
+        <ion-item style="background-color: #5F5D99;color: white;" menu-close ng-click="openState('app.info')">
+          Info
+        </ion-item>
+        <ion-item style="background-color: #5F5D99;color: white;" menu-close ng-click="openState('about')">
+          About us
+        </ion-item>
+        <ion-item style="background-color: #5F5D99;color: white;" menu-close ng-click="openState('bapp.page2')">
+          Contact us
+        </ion-item>
+        <ion-item style="background-color: #5F5D99;color: white;" menu-close ng-click="exit()">
+          Exit application
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

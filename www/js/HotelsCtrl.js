@@ -1,5 +1,6 @@
 angular.module('Bosk')
-    .controller('HotelsCtrl', function ($scope) {
+    .controller('HotelsCtrl', function ($scope,$rootScope) {
+        $rootScope.aa=true;
         $scope.visina = "49px";
         $scope.naslov = "Change";
         $scope.showDiv = true;
