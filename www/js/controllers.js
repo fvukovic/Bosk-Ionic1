@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout,$ionicPopup,$state,$location,$stateParams) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout,$ionicPopup,$state,$location,$stateParams,$rootScope) {
 
  
 $scope.myPopup;
@@ -23,7 +23,7 @@ $scope.myPopup;
   }).then(function(modal) {
     $scope.modal = modal;
   });
-
+$rootScope.myproperty="Varaždin";
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
     $scope.modal.hide();

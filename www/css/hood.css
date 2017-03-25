@@ -2,18 +2,6 @@
           position: relative;
          color: #696969;
          font-size:20px; 
-         height: 60px;  } 
+         height: 20px;  } 
 
-.hood .item-radio .item-content {
-   background-color: black; 
-    
-  color: white;
-}
-.list .item-radio .radio-icon {
-  float: left;
-  color: white;
-}
-.item-radio input:checked + .radio-content .item-content {
-    /* style the item content when its checked */
-    background-color: #b51879; 
-}
+ 

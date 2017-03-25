@@ -1,21 +1,41 @@
 <ion-view>
-  <ion-content >
+  <style> .hoods .item-radio .item-content {
+   background-color: white; 
+   margin-bottom: 20px;    
+  color: black;
+}
+ 
+.hood input:checked + .radio-content .item-content {
+    /* style the item content when its checked */
+    background-color: white; 
+}
+.hoods .item-radio .radio-icon    {
+  margin-top:-10px;
+   color: #b51879;
+}
+.hood{
+  margin:5px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+ </style>
+  <ion-content  style="margin-top: 70px;" >
    <a  >
       <div class="list list-inset hotel" id="card" >
-       <h3 style="height:100%; font-size: 25px;float:left;margin-top:12px;margin-left: 15px;"> Pula</h3> 
-      
-       <img class = "strelica" style="position:absolute;top:0;
-right: 0;" src="img/gumb_strelica.png">
+       <h3 style="height:100%; font-size: 25px;float:left;margin-top:12px;margin-left: 15px;">City of Zagreb</h3> 
+    
 
      </div>
      </a>
-     <ion-list class="hoods">
-   <ion-radio   class="list list-inset hood"      >Show results in 100m range</ion-radio>
-   <ion-radio   ng-model="choice" ng-value="'A'"    > Show results in 500m range</ion-radio>  
-    <ion-radio ng-model="choice" ng-value="'A'" >Show results in 1000m range</ion-radio>
-   <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" ng-selected="true" class="myButton">Show results in 5000m range</ion-radio> 
-    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in any range</ion-radio>  
-    </ion-list>     <br>
+     <ion-list  class="hoods">
+    <ion-radio   ng-model="choice" ng-value="'A'"  ng-click="chooseHood1('Jarun')" class= "list list-inset myButton hood" ><p style="font-size:20px;margin-top: -12px;">  Jarun</p></ion-radio>  
+   <ion-radio   ng-model="choice" ng-value="'A'"  ng-click="chooseHood1('Precko')" class= "list list-inset myButton hood" ><p style="font-size:20px;margin-top: -12px;"> Prečko</p></ion-radio>  
+    <ion-radio ng-model="choice" ng-value="'A'" class="list list-inset myButton hood" ng-click="chooseHood1('Donji Grad')"><p style="font-size:20px;margin-top: -12px;"> Donji grad</p></ion-radio>
+   <ion-radio  ng-model="choice" ng-value="'A'" ng-show="!showDiv" ng-selected="true" class="list list-inset myButton hood" ng-click="chooseHood1('Kajzerica')"><p style="font-size:20px;margin-top: -12px;"> Kajzerica</p></ion-radio> 
+    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="list list-inset myButton hood" ng-click="chooseHood1('Utrine')"><p style="font-size:20px;margin-top: -12px;"> Utrine</p></ion-radio>  
+    </ion-item>     <br>
 
   </ion-content>
 </ion-view>

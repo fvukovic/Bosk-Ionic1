@@ -1,31 +1,36 @@
 <ion-view  >
-  <ion-content content scroll="false" >
- 
-    <div id="lokacija1" class="lokacija" ng-style="myStyle"  ng-init="doSomething()">
-      <p class="current"> Current location :<span style="color: white;" ng-bind="'  '+lokacija"> {{lokacija}} </span> </p>
-   <button class="change" ng-click="funkcija()"> <p style="font-weight: bold">{{naslov}}</p> </button> 
-    <br>  
-   <a   class="dodani_buttoni" ng-click="changeLocation()" ng-show="!showDiv" >Read GPS coordinates</a>
-   <a ng-show="!showDiv" href="#/lokacije" class="dodani_buttoni">Show a list of locations</a> 
- <ion-list>
-   <ion-radio    ng-value="'A'"   ng-show="!showDiv"  class="myButton"   >Show results in 100m range</ion-radio>
-   <ion-radio   ng-model="choice" ng-value="'A'" ng-show="!showDiv" ng-show="!showDiv" class="myButton" > Show results in 500m range</ion-radio>  
-    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in 1000m range</ion-radio>
-   <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in 5000m range</ion-radio> 
-    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in any range</ion-radio>  
-    </ion-list>     <br>
- </div>
-    
+   <style>.list .item-radio .item-content {
+   background-color: #b51879;     
+  color: white;
+}
+.list .item-radio .radio-icon {
+  float: left;
+  color: white;
+}
+.item-radio input:checked + .radio-content .item-content {
+    /* style the item content when its checked */
+    background-color: #b51879; 
+}
+ .myButton{
+        border:none;
+        margin-left:20px;
+ } </style>
+  <ion-content  scroll="false"  > 
       
-   <div style=" position: absolute;z-index: 3;"><div class="float-button1">
-     <span >
-       <button id="fab-profile" ui-sref="app.startScreen" class="button button-fab button-fab-bottom-right fab-fixed button-assertive pane" nav-view="active" style=" float:top;position: absolute; background-color:#5F5D99; border-radius:50%;opacity: 1;width: 60px;height: 60px; transform: translate3d(0%, 0px, 0px);">
-         <img src="img/list.png" style="margin-top:12px;margin-left:3px;">
+    
+   <ng-map style="height: 100%;" center="[45.815399, 15.966568]"<ng-map>  
+        <ion-footer-bar style="background-color: transparent;height: 0px"  >
+  <div class="buttons">
+      <div class="float-button">
+     <span class="height-fix">
+       <button id="fab-profile" ui-sref="app.startScreen" class="button button-fab button-fab-bottom-right fab-fixed button-assertive pane" nav-view="active" style="background-color:#5F5D99;height: 60px;width:60px; border-radius:50%;opacity: 1; transform: translate3d(0%, 0px, 0px);">
+         <img src="img/list.png" style="margin-top:7px;">
        </button>
      </span>
-   </div></div>
-   <ng-map style="height: 100%;" center="[45.815399, 15.966568]"<ng-map>  
-    
+   </div>
+  </div>
+</ion-footer-bar> 
   
     </ion-content>
+
 </ion-view>

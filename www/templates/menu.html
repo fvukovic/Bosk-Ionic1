@@ -1,6 +1,5 @@
 <ion-side-menus    enable-menu-with-back-views="true"> 
-<ion-side-menu-content class="bar-dark"   drag-content="false">
-  <div style="height: 40px;background-color: red;" >  </div>
+<ion-side-menu-content class="bar-dark"   drag-content="false"> 
     <ion-header-bar align-title="center"  ng-hide="menuVisibility"   class="bar-dark" style="height: 72px" class="bar-positive">
   <div class="buttons"> 
      <img class="title-image" src="img/bijeli_logo.png" width="180px;" height="100%"  /> 
@@ -15,13 +14,14 @@
     </button></div>
   </div>
   <div style="height: 50px;background-color: 50px"></div>
-</ion-header-bar>
- <div ng-hide="{{$rootScope.aa}}" ng-controller="StartCtrl" id="lokacija2"  class="lokacija" ng-style="myStyle"  ng-init="doSomething()">
-      <p class="current"> Current location :<span style="color: white;" ng-bind="'  '+lokacija"> {{lokacija}} </span> </p>
-   <button class="change" ng-click="funkcija()"> <p class="locationButton">{{naslov}}</p> </button> 
+  <div   ng-controller="StartCtrl" cache-view="false" id="lokacija2"  class="lokacijaa" ng-style="myStyle"  ng-init="doSomething()">
+    
+      <p class="current"> Current location :</p><p style="color: white; left:160px;top:5px; position: absolute;font-size:16px;"  >  {{chooseCity()}}</p> 
+      <p style="color: white; left:160px;top:27px; position: absolute;font-size:16px;"  >  {{chooseHood()}}</p>  
+   <button class="change" ng-click="funkcija()"> <p  style="font-size:17px">{{naslov}}</p> </button> 
     <br>  
    <a   class="dodani_buttoni" ng-click="changeLocation()" ng-show="!showDiv" >Read GPS coordinates</a>
-   <a ng-show="!showDiv" href="#/lokacije" class="dodani_buttoni">Show a list of locations</a> 
+   <a ng-show="!showDiv" href="#/lokacije" ng-click="changeLocation() ;funkcija()"  class="dodani_buttoni">Show a list of locations</a> 
  <ion-list>
    <ion-radio    ng-value="'A'"   ng-show="!showDiv"  class="myButton"   >Show results in 100m range</ion-radio>
    <ion-radio   ng-model="choice" ng-value="'A'" ng-show="!showDiv" ng-show="!showDiv" class="myButton" > Show results in 500m range</ion-radio>  
@@ -29,9 +29,10 @@
    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" ng-selected="true" class="myButton">Show results in 5000m range</ion-radio> 
     <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in any range</ion-radio>  
     </ion-list>     <br>
- </div>   
- </div>
-    <ion-nav-view name="menuContent"></ion-nav-view> 
+ </div>     
+</ion-header-bar>
+ 
+    <ion-nav-view name="menuContent"  ></ion-nav-view> 
   </ion-side-menu-content>
 
   <ion-side-menu  ng-hide="menuVisibility"  style="background-color: #5F5D99; color: white" side="left">
@@ -40,13 +41,13 @@
         <ion-item style="background-color: #5F5D99;color: white;" menu-close ng-click="openState('app.startScreen')">
           Start screen
         </ion-item>
-        <ion-item style="background-color: #5F5D99;color: white;" menu-close ng-click="openState('app.info')">
+        <ion-item style="background-color: #5F5D99;color: white;" menu-close ng-click="openState('bapp.info')">
           Info
         </ion-item>
         <ion-item style="background-color: #5F5D99;color: white;" menu-close ng-click="openState('bapp.about')">
           About us
         </ion-item>
-        <ion-item style="background-color: #5F5D99;color: white;" menu-close ng-click="openState('app.page2')">
+        <ion-item style="background-color: #5F5D99;color: white;" menu-close ng-click="openState('bapp.page2')">
           Contact us
         </ion-item>
         <ion-item style="background-color: #5F5D99;color: white;" menu-close ng-click="exit()">

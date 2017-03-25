@@ -1,6 +1,22 @@
-<ion-view hide-nav-bar="true">
-  <ion-content >
-    
+<ion-view cache-view="false" >
+     <style>.list .item-radio .item-content {
+   background-color: #b51879;     
+  color: white;
+}
+.list .item-radio .radio-icon {
+  float: left;
+  color: white;
+}
+.item-radio input:checked + .radio-content .item-content {
+    /* style the item content when its checked */
+    background-color: #b51879; 
+}
+ .myButton{
+        border:none;
+        margin-left:20px;
+ } </style>
+  <ion-content style="margin-top: 70px;" scroll="false"    >
+  
        <a href="#/hotels" >
      <div class="list list-inset" >
          <div style="border-radius:50%; float:left;  background-size:cover;  margin: 8px; margin-right: 10px">

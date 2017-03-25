@@ -1,20 +1,6 @@
 <ion-view >
-  <ion-content>
-    <div id="lokacija" class="lokacija"  ng-style="myStyle"  ng-init="doSomething()">
-      <p class="current"> Current location :<span style="color: white;" ng-bind="'  '+lokacija"> {{lokacija}} </span> </p>
-   <button class="change" ng-click="funkcija()"> <p style="font-weight: bold">{{naslov}}</p> </button> 
-    <br>  
-   <a   class="dodani_buttoni" ng-click="changeLocation()" ng-show="!showDiv" >Read GPS coordinates</a>
-   <a ng-show="!showDiv" href="#/lokacije" class="dodani_buttoni">Show a list of locations</a> 
- 
-   <ion-list>
-   <ion-radio    ng-value="'A'"   ng-show="!showDiv"  class="myButton"   >Show results in 100m range</ion-radio>
-   <ion-radio   ng-model="choice" ng-value="'A'" ng-show="!showDiv" ng-show="!showDiv" class="myButton" > Show results in 500m range</ion-radio>  
-    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in 1000m range</ion-radio>
-   <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in 5000m range</ion-radio> 
-    <ion-radio ng-model="choice" ng-value="'A'" ng-show="!showDiv" class="myButton">Show results in any range</ion-radio>  
-    </ion-list>     <br>
- </div>
+  <ion-content style="margin-top: 70px;">
+     
      <a ui-sref="app.detail({hotelId:1})">
      <div class="list list-inset hotel" id="card" >
        
@@ -83,9 +69,9 @@ right: 0;" src="img/gumb_strelica.png">
 
      </div>
      </a> 
-    
+   
   </ion-content>
-  <ion-footer-bar style="background-color: #E3E3E3"  >
+ <ion-footer-bar style="background-color: #E3E3E3"  >
   <div class="buttons">
       <div class="float-button">
      <span class="height-fix">

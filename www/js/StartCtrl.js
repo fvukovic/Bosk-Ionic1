@@ -1,18 +1,25 @@
 angular.module('Bosk')
-    .controller('StartCtrl', function ($scope, $ionicPlatform,$rootScope) {
-        $scope.visina = "49px"; 
+    .controller('StartCtrl', function ($scope, $ionicPlatform,$rootScope,$location) {
+        $scope.visina = "49px";  
         window.localStorage.setItem("menuLocation", false); 
         var lokalno = window.localStorage.getItem("menuLocation"); 
-       $rootScope=true; 
+        
         $scope.naslov = "Change";
         $scope.showDiv = true;
         var geocoder="";
-        $scope.$lokacija = "";
+        $scope.$lokacija = $rootScope.myproperty;
         if (!window.localStorage.getItem("lokacija")) {
             $scope.$lokacija = "Zagreb";
         } else {
             $scope.lokacija = window.localStorage.getItem("lokacija");
         }   
+          $scope.chooseCity = function( ){ 
+        $scope.lokacija=window.localStorage.getItem("lokacija");  
+        return($scope.lokacija);}
+        $scope.chooseHood = function( ){ 
+         
+        return(window.localStorage.getItem("hood"));
+}
 
         $scope.funkcija = function () {             
             var element = angular.element(document.querySelector('#lokacija2'));
@@ -32,6 +39,7 @@ angular.module('Bosk')
         }
 
         $scope.changeLocation = function () { 
+            
             geocoder = "";
             geocoder = new google.maps.Geocoder();
             console.log(geocoder); 
@@ -44,8 +52,9 @@ angular.module('Bosk')
                 timestamp = position.timestamp;
                 var latlng = new google.maps.LatLng(latvalue, lngvalue);
                 geocoder.geocode({ 'latLng': latlng }, function (results, status) {
-
+                window.localStorage.setItem("hood","---");  
                     if (status == google.maps.GeocoderStatus.OK) {
+                        
                         console.log(results)
                         if (results[1]) {
 

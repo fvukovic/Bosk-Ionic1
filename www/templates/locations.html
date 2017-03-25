@@ -1,12 +1,28 @@
  
 <ion-view >
-  <ion-content >
+   <style>.list .item-radio .item-content {
+   background-color: #b51879;     
+  color: white;
+}
+.list .item-radio .radio-icon {
+  float: left;
+  color: white;
+}
+.item-radio input:checked + .radio-content .item-content {
+    /* style the item content when its checked */
+    background-color: #b51879; 
+}
+ .myButton{
+        border:none;
+        margin-left:20px;
+ } </style>
+  <ion-content  style="margin-top: 70px;" >
  
     <br>
       
-     <a ui-sref="app.hood({cityId:1})">
+     <a ui-sref="app.hood({cityId:1})" >
       <div class="list list-inset hotel" id="card" >
-       <h3 style="height:100%; font-size: 25px;float:left;margin-top:12px;margin-left: 15px;"> Pula</h3> 
+       <h3 style="height:100%; font-size: 25px;float:left;margin-top:12px;margin-left: 15px;"> Zagreb</h3> 
       
        <img class = "strelica" style="position:absolute;top:0;
 right: 0;" src="img/gumb_strelica.png">

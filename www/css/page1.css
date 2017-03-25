@@ -16,10 +16,14 @@ text-decoration:none;
     {
 text-decoration:none;
     }
-    .lokacija 
-    {   margin-top:27px;     
+    .lokacijaa 
+    {   
+        position: absolute;
+        margin-top:66px;
+        margin-left: -5px;
+        width: 100%;     
         background-color: #b51879;
-        height:55px; 
+        height:55px;  
         border-color: #DE0B32;  
     }
        
@@ -125,7 +129,9 @@ text-decoration:none;
 	background-color: #690342;
     border-radius: 3px;
     margin: 9px;
-    width: 95%;
+    margin-right: 10px;
+    margin-left:10px;
+    width: 97%;
     height: 45px;
     font-weight:normal;
 	border:1px solid #690342;
@@ -137,28 +143,8 @@ text-decoration:none;
 	text-decoration:none; 
 
   } 
-.list .item-radio .item-content {
-   background-color: #b51879; 
-    
-  color: white;
-}
-.list .item-radio .radio-icon {
-  float: left;
-  color: white;
-}
-.item-radio input:checked + .radio-content .item-content {
-    /* style the item content when its checked */
-    background-color: #b51879; 
-}
- .myButton{
-        border:none;
-        margin-left:20px;
- }
-.myButton:active {
-	position:relative;
-	top:1px;
-}
  
+
  
 .exit_text
 {
