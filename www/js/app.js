@@ -24,7 +24,7 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
+      
     .state('app', {
     abstract: true,
     templateUrl: 'templates/menu.html',
@@ -128,7 +128,7 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
         }
       }
     })
-    .state('app.page2', {
+    .state('bapp.page2', {
       cache:false,
       url: '/page2',
       views: {
@@ -148,7 +148,7 @@ angular.module('Bosk', ['ionic', 'starter.controllers','ngMap'])
         }
       }
     })
-    .state('app.info', {
+    .state('bapp.info', {
       url: '/info',
       views: {
         'menuContent': {
