@@ -17,6 +17,7 @@ $scope.myPopup;
   $state.go(state); 
 };
 
+
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
     scope: $scope

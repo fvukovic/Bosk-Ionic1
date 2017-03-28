@@ -21,8 +21,7 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
-  <platform name="android">
-    <preference name="android-minSdkVersion" value="17"/> 
+  <platform name="android"> > 
     <splash src="resources/ios/splash/splash.png" height="1136" width="640"/> 
   </platform>
   <platform name="ios"> 
