@@ -4,9 +4,10 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
+ 
 angular.module('Bosk', ['ionic','ngCordova', 'starter.controllers','ngMap'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,$cordovaSQLite) {
   $ionicPlatform.ready(function() {  
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -19,7 +20,13 @@ angular.module('Bosk', ['ionic','ngCordova', 'starter.controllers','ngMap'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-  });
+    var db = null;
+
+document.addEventListener('deviceready', function() { 
+  
+
+});
+     });
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -104,7 +111,8 @@ angular.module('Bosk', ['ionic','ngCordova', 'starter.controllers','ngMap'])
     url: '/about',
     views: {
       'menuContent': {
-        templateUrl: 'templates/aboutus.html', 
+        templateUrl: 'templates/aboutus.html',
+        controller:  'AboutCtrl'
       }
     }
   })
@@ -153,6 +161,7 @@ angular.module('Bosk', ['ionic','ngCordova', 'starter.controllers','ngMap'])
       views: {
         'menuContent': {
           templateUrl: 'templates/info.html', 
+          controller: "InfoCtrl",
         }
       }
     })
@@ -165,6 +174,16 @@ angular.module('Bosk', ['ionic','ngCordova', 'starter.controllers','ngMap'])
         }
       }
     })
+    .state('bapp.infoD', {
+    url: '/info/:infoId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/infoDetail.html',
+        controller: 'InfoDetailCtrl'
+      }
+    }
+  }) 
+
 
   .state('app.single', {
     url: '/playlists/:playlistId',

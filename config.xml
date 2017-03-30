@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.bosk174870" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Bosk</name>
-  <description>
-        An Ionic Framework and Cordova project.
+  <description>&#xD;
+        An Ionic Framework and Cordova project.&#xD;
     </description>
-  <author email="you@example.com" href="http://example.com/">
-      Your Name Here
+  <author email="you@example.com" href="http://example.com/">&#xD;
+      Your Name Here&#xD;
     </author>
   <content scroll="false" src="index.html"/>
   <access origin="*"/>
@@ -21,11 +21,227 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
-  <platform name="android"> > 
-    <splash src="resources/ios/splash/splash.png" height="1136" width="640"/> 
+  <platform name="android">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     &gt; &#xD;
+     &#xD;
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    <splash src="resources/ios/splash/splash.png" height="1136" width="640"/>
   </platform>
-  <platform name="ios"> 
-    <splash src="resources/ios/splash/splash.png" height="1136" width="640"/>  
-  </platform> 
-
+  <platform name="ios">
+    <splash src="resources/ios/splash/splash.png" height="1136" width="640"/>
+  </platform>
+  <allow-navigation href="http://192.168.148.2:8100"/>
 </widget>

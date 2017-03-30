@@ -211,18 +211,27 @@ $rootScope.myproperty="Varaždin";
   
 })
 
-.controller('OpenCtrl', function($scope,  $timeout,$location,$ionicSideMenuDelegate, $ionicHistory){
-    console.log('jessam li se loadao?'); 
-    $scope.title = 'nesto';
-    $ionicHistory.nextViewOptions({
-     disableBack: true
-  });
-    $scope.menuVisibility=true;
-    $timeout(funkcija, 4000); 
-    function funkcija (){  
-       $scope.menuVisibility=false; 
-        $location.path('/startScreen');
-    }
+.controller('InfoDetailCtrl', function($scope, $timeout,$stateParams,$http){
+    $scope.info;
+    $scope.infoDescription;
+        $http({
+            
+            method: "GET",
+            url: 'http://glutenfree.hr/rest/info_list_full.php', 
+            
+        }).then(function successCallback(response) {
+            //response.data ti je to
+            console.log(response.data);
+            console.log(response.data[0]["id"]);  
+            for(var i =0; i<2;i++){ 
+                if($stateParams.infoId==response.data[i]["id"]){
+                  $scope.info=response.data[i]["title"];
+                  $scope.infoDescription=response.data[i]["description"]; 
+                }
+
+            }
+        }, function errorCallback(response) {
+        });
 })
 .controller('GeoCtrl', function($cordovaGeolocation) {
 console.log("lodam se")
