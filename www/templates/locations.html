@@ -1,5 +1,5 @@
  
-<ion-view >
+<ion-view > 
    <style>.list .item-radio .item-content {
    background-color: #b51879;     
   color: white;
@@ -20,9 +20,9 @@
  
     <br>
       
-     <a ui-sref="app.hood({cityId:1})" >
+     <a  ng-repeat="grad in gradovi" ng-click="pickCity({{grad['id']}})" >
       <div class="list list-inset hotel" id="card" >
-       <h3 style="height:100%; font-size: 25px;float:left;margin-top:12px;margin-left: 15px;"> Zagreb</h3> 
+       <h3 style="height:100%; font-size: 25px;float:left;margin-top:12px;margin-left: 15px;"> {{grad["name"]}}</h3> 
       
        <img class = "strelica" style="position:absolute;top:0;
 right: 0;" src="img/gumb_strelica.png">

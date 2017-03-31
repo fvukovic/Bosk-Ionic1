@@ -59,10 +59,11 @@ document.addEventListener('deviceready', function() {
   })
   .state('app.startScreen', {
      cache: false,
-    url: '/startScreen',
+    url: '/startScreen/:cityId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/page1.html',  
+        templateUrl: 'templates/page1.html',
+        controller:"StartScreenCtrl"  
       }
     }
   })

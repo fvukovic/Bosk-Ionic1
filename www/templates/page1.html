@@ -17,7 +17,7 @@
  } </style>
   <ion-content style="margin-top: 70px;" scroll="false"    >
   
-       <a href="#/hotels" >
+       <a href="#/hotels" ng-show="showA">
      <div class="list list-inset" >
          <div style="border-radius:50%; float:left;  background-size:cover;  margin: 8px; margin-right: 10px">
        <img src="img/hotel_image.png" style="float:left;width: 45px; " >
@@ -27,7 +27,7 @@
        <img class = "strelica" src="img/gumb_strelica.png">
      </div>
      </a>
-       <a href="#/restaurants">
+       <a href="#/restaurants" ng-show="showB">
      <div class="list list-inset">
            <div style="border-radius:50%; float:left;  background-size:cover;  margin: 8px; margin-right: 10px">
        <img src="img/restaurant.png" style="float:left;width: 45px; " >
@@ -37,7 +37,7 @@
        <img class = "strelica" src="img/gumb_strelica.png">
      </div>
      </a>
-        <a href="#/restaurants">
+        <a href="#/restaurants" ng-show="showC">
      <div class="list list-inset">
            <div style="border-radius:50%; float:left;  background-size:cover;  margin: 8px; margin-right: 10px">
        <img src="img/grocery.png" style="float:left;width: 45px; " >
@@ -47,7 +47,7 @@
        <img class = "strelica" src="img/gumb_strelica.png">
      </div>
      </a>
-      <a href="#/restaurants">
+      <a href="#/restaurants" ng-show="showD">
      <div class="list list-inset">
           <div style="border-radius:50%; float:left;  background-size:cover;  margin: 8px; margin-right: 10px">
        <img src="img/pharmacies.png" style="float:left;width: 45px; " >
@@ -57,7 +57,7 @@
        <img class = "strelica" src="img/gumb_strelica.png">
      </div>
      </a> 
-       <a ui-sref="app.hood({cityId:1})">
+       <a ui-sref="app.hood({cityId:1})" ng-show="showE">
      <div class="list list-inset">
           <div style="border-radius:50%; float:left;  background-size:cover;  margin: 8px; margin-right: 10px">
        <img src="img/station.png" style="float:left;width: 45px; " >

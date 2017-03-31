@@ -3,6 +3,31 @@ angular.module('Bosk')
         $ionicHistory.nextViewOptions({
             disableBack: true
         });
+   /*     var Indata={'lon':'15.3','lat':'45','distance':'1000'};
+        $http.post(" http://glutenfree.hr/rest/distance.php", Indata headers : {
+        'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+    }).
+        then(function (data) { alert("success") },
+             function (data) { alert("error") }); 
+
+*/ 
+var Indata = {'lon': '16.328681', 'lat': '46.298267','distance':'5000' };
+        $http({
+            
+            method: "POST",
+            url: 'http://glutenfree.hr/rest/distance.php',
+            
+            dataType:'json', 
+            params:Indata,
+            headers : {'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8' }
+            
+        }).then(function successCallback(response) {
+            console.log(response.data); 
+            
+        }, function errorCallback(response) {
+            console.log(response); 
+        });
+
         document.addEventListener('deviceready', function () {
 
             var db = null;
@@ -41,6 +66,6 @@ angular.module('Bosk')
 
         $timeout(funkcija, 4000);
         function funkcija() {
-            $location.path('/startScreen');
+            $location.path('/startScreen/-1');
         }
     })

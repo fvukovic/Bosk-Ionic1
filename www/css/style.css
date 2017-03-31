@@ -20,6 +20,9 @@ ion-content{
     top: 0;
     left: 0;
 } 
+.markerTitle{
+  font-size:20px;
+}
      .trazi{
          
           border-left: thick solid #BDBDBD;

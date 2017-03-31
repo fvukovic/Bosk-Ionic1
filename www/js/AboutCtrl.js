@@ -12,7 +12,6 @@ angular.module('Bosk')
         }).then(function successCallback(response) { 
             $scope.title=response.data[0]["title"];
             $scope.description=(response.data[0]["description"]);
-
         }, function errorCallback(response) {
         });
 })
