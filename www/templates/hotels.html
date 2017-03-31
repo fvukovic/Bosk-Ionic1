@@ -1,12 +1,12 @@
 <ion-view >
   <ion-content style="margin-top: 70px;">
      
-     <a ui-sref="app.detail({hotelId:1})">
+     <a ng-repeat="hotel in hotels" ui-sref="app.detail({hotelId:{{hotel['id']}}})">
      <div class="list list-inset hotel" id="card" >
        
        <img src="img/esplanada.png" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
        <div>
-       <h3 style="margin-top:10px;"> Hotel esplanade</h3> 
+       <h3 style="margin-top:10px;"> {{hotel["description"]}}</h3> 
        <img src="img/star.png" style="position:absolute;bottom:0;" >  
        <img src="img/star.png" style="position:absolute;bottom:0;left:95px;" >
        <img src="img/star.png" style="position:absolute;bottom:0;left:110px;" >
@@ -18,58 +18,7 @@ right: 0;" src="img/gumb_strelica.png">
 
      </div>
      </a>
-     <a ui-sref="app.detail({hotelId:1})">
-     <div class="list list-inset hotel" id="card" >
-       
-       <img src="img/esplanada.png" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
-       <div>
-       <h3 style="margin-top:10px;"> Hotel esplanade</h3> 
-       <img src="img/star.png" style="position:absolute;bottom:0;" >  
-       <img src="img/star.png" style="position:absolute;bottom:0;left:95px;" >
-       <img src="img/star.png" style="position:absolute;bottom:0;left:110px;" >
-       <img src="img/star.png" style="position:absolute;bottom:0;left:125px;" >      
-       <img src="img/star.png" style="position:absolute;bottom:0;left:140px;" >   
-       </div>
-       <img class = "strelica" style="position:absolute;top:0;
-right: 0;" src="img/gumb_strelica.png">
-
-     </div>
-     </a>
-      <a ui-sref="app.detail({hotelId:1})">
-      <div class="list list-inset hotel" id="card" >
-       
-       <img src="img/esplanada.png" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
-       <div>
-       <h3 style="margin-top:10px;"> Hotel esplanade</h3> 
-       <img src="img/star.png" style="position:absolute;bottom:0;" >  
-       <img src="img/star.png" style="position:absolute;bottom:0;left:95px;" >
-       <img src="img/star.png" style="position:absolute;bottom:0;left:110px;" >
-       <img src="img/star.png" style="position:absolute;bottom:0;left:125px;" >      
-       <img src="img/star.png" style="position:absolute;bottom:0;left:140px;" >   
-       </div>
-       <img class = "strelica" style="position:absolute;top:0;
-right: 0;" src="img/gumb_strelica.png">
-
-     </div>
-     </a>
-      <a ui-sref="app.detail({hotelId:1})">
-     <div class="list list-inset hotel" id="card" >
-       
-       <img src="img/esplanada.png" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
-       <div>
-       <h3 style="margin-top:10px;"> Hotel esplanade</h3> 
-       <img src="img/star.png" style="position:absolute;bottom:0;" >  
-       <img src="img/star.png" style="position:absolute;bottom:0;left:95px;" >
-       <img src="img/star.png" style="position:absolute;bottom:0;left:110px;" >
-       <img src="img/star.png" style="position:absolute;bottom:0;left:125px;" >      
-       <img src="img/star.png" style="position:absolute;bottom:0;left:140px;" >   
-       </div>
-       <img class = "strelica" style="position:absolute;top:0;
-right: 0;" src="img/gumb_strelica.png">
-
-     </div>
-     </a> 
-   
+      
   </ion-content>
  <ion-footer-bar style="background-color: #E3E3E3"  >
   <div class="buttons">

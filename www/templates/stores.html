@@ -1,30 +1,34 @@
-<ion-view> 
-   <style>.list .item-radio .item-content {
-   background-color: #b51879;     
-  color: white;
-}
-.list .item-radio .radio-icon {
-  float: left;
-  color: white;
-}
-.item-radio input:checked + .radio-content .item-content {
-    /* style the item content when its checked */
-    background-color: #b51879; 
-}
- .myButton{
-        border:none;
-        margin-left:20px;
- } </style>
-<ion-content style="margin-top: 70px;"  >
-     <a href="#/hotels">
-     <div class="card">
-         <div style="border-radius:50%;background-color: #DEDEDE;float:left;  background-size:cover; width:40px; height:40px;margin: 9px; margin-right: 10px">
-       <img src="img/hotel_image.png" style="float:left;width: 25px; margin: 5px;margin-left:7px; margin-top:10px; " >
-   
+<ion-view >
+  <ion-content style="margin-top: 70px;">
+     
+     <a ng-repeat="hotel in hotels" ui-sref="app.detailS({hotelId: {{hotel['id']}}})">
+     <div class="list list-inset hotel" id="card" >
+       
+       <img src="img/esplanada.png" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
+       <div>
+       <h3 style="margin-top:10px;"> {{hotel['description']}}</h3> 
+       <img src="img/star.png" style="position:absolute;bottom:0;" >  
+       <img src="img/star.png" style="position:absolute;bottom:0;left:95px;" >
+       <img src="img/star.png" style="position:absolute;bottom:0;left:110px;" >
+       <img src="img/star.png" style="position:absolute;bottom:0;left:125px;" >      
+       <img src="img/star.png" style="position:absolute;bottom:0;left:140px;" >   
        </div>
-        <h3 style="float:left;margin-top:10px;"> Hotels</h3> 
-       <img class = "strelica" src="img/gumb_strelica.png">
+       <img class = "strelica" style="position:absolute;top:0;
+right: 0;" src="img/gumb_strelica.png">
+
      </div>
      </a>
-</ion-content>
+      
+  </ion-content>
+ <ion-footer-bar style="background-color: #E3E3E3"  >
+  <div class="buttons">
+      <div class="float-button">
+     <span class="height-fix">
+       <button id="fab-profile" ui-sref="app.map" class="button button-fab button-fab-bottom-right fab-fixed button-assertive pane" nav-view="active" style="background-color:#5F5D99;height: 60px;width:60px; border-radius:50%;opacity: 1; transform: translate3d(0%, 0px, 0px);">
+         <img src="img/map.png" style="margin-top:7px;">
+       </button>
+     </span>
+   </div>
+  </div>
+</ion-footer-bar>
 </ion-view>

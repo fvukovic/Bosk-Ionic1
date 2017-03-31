@@ -2,7 +2,14 @@ angular.module('Bosk')
     .controller('StartCtrl', function ($scope, $ionicPlatform, $rootScope, $location, $cordovaGeolocation, $http) {
         $scope.visina = "49px";
         $scope.naslov = "Change";
+        $scope.grad; 
+        if(window.localStorage.getItem("lokacija")=="" || window.localStorage.getItem("lokacija")==null){
+             $scope.grad=1;
+        }else{
+             $scope.grad=window.localStorage.getItem("lokacija");
+        }
         $scope.showDiv = true;
+        
         var geocoder = "";
         $scope.$lokacija = $rootScope.myproperty;
         if (!window.localStorage.getItem("lokacija")) {
@@ -55,6 +62,8 @@ angular.module('Bosk')
                                 $scope.lokacija = array[0]
                                 window.localStorage.setItem("lokacija", array[0]);
                                 window.localStorage.setItem("hood", "----");
+                                 window.localStorage.setItem("id", 42);
+                                  $location.path('/startScreen/'+(window.localStorage.getItem("id")));
                                 $scope.chooseCity();
                                 $scope.$evalAsync();
                             } else {

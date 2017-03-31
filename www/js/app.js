@@ -92,7 +92,16 @@ document.addEventListener('deviceready', function() {
     views: {
       'menuContent': {
         templateUrl: 'templates/stores.html',
-        controller:  'AboutCtrl'
+        controller:  'StoreCtrl'
+      }
+    }
+  })
+    .state('app.pharmacie', {
+    url: '/pharmacie',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/pharmacije.html',
+        controller:  'PharmacieCtrl'
       }
     }
   })
@@ -102,7 +111,16 @@ document.addEventListener('deviceready', function() {
     views: {
       'menuContent': {
         templateUrl: 'templates/restaurants.html',
-        controller:  'AboutCtrl'
+        controller:  'RestaurantCtrl'
+      }
+    }
+  })
+  .state('app.gas', {
+    url: '/gas',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/gas.html',
+        controller:  'GasCtrl'
       }
     }
   })
@@ -123,10 +141,51 @@ document.addEventListener('deviceready', function() {
       views: {
         'menuContent': {
           templateUrl: 'templates/locationDetail.html',
-          controller: 'HoodCtrl',
+          controller: 'HotelDetailCtrl',
         }
       }
     })
+    .state('app.detailR', {
+      cache:false,
+      url: 'restaurants/:hotelId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/locationDetail.html',
+          controller: 'HotelDetailCtrl',
+        }
+      }
+    })
+    .state('app.detailS', {
+      cache:false,
+      url: 'stores/:hotelId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/locationDetail.html',
+          controller: 'HotelDetailCtrl',
+        }
+      }
+    })
+    .state('app.detailP', {
+      cache:false,
+      url: 'pharmacie/:hotelId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/locationDetail.html',
+          controller: 'HotelDetailCtrl',
+        }
+      }
+    })
+    .state('app.detailG', {
+      cache:false,
+      url: 'pharmacie/:hotelId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/locationDetail.html',
+          controller: 'HotelDetailCtrl',
+        }
+      }
+    })
+    
     .state('app.hood', {
       cache:false,
       url: 'lokacije/:cityId',

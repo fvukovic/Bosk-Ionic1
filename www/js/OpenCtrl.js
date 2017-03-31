@@ -12,21 +12,22 @@ angular.module('Bosk')
 
 */ 
 var Indata = {'lon': '16.328681', 'lat': '46.298267','distance':'5000' };
-        $http({
-            
+
+
+
+
+
+ var request =$http({            
             method: "POST",
             url: 'http://glutenfree.hr/rest/distance.php',
+            data:{lon: '16.328681', lat: '46.298267',distance:'5000' },
+            headers : {'Content-Type' : 'application/x-www-form-urlencoded' }
             
-            dataType:'json', 
-            params:Indata,
-            headers : {'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8' }
-            
-        }).then(function successCallback(response) {
-            console.log(response.data); 
-            
-        }, function errorCallback(response) {
-            console.log(response); 
         });
+        request.success(function (data) { 
+            
+        console.log(data);
+}); 
 
         document.addEventListener('deviceready', function () {
 
@@ -56,9 +57,7 @@ var Indata = {'lon': '16.328681', 'lat': '46.298267','distance':'5000' };
             method: "GET",
             url: 'http://glutenfree.hr/rest/info_list_full.php',
 
-        }).then(function successCallback(response) {
-            console.log(response.data);
-            console.log(response.data[0]["id"]);
+        }).then(function successCallback(response) { 
             window.localStorage.setItem("info", (response.data));
             $scope.title = 'nesto';
         }, function errorCallback(response) {

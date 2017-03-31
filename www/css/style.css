@@ -13,6 +13,19 @@ ion-content{
     .map-container .scroll{
     height: 100%;
 }
+.markerName{
+ position:absolute;
+ top:-10px;
+ font-size:14px;
+ background-color:white;
+   background: rgba(255, 255, 255, .7);
+ padding-left:4px;
+ padding-right:4px;
+ color: #504c75;
+  
+}
+
+
 .angular-google-map-container {
     height: 100%;
     width: 100%;
@@ -20,9 +33,7 @@ ion-content{
     top: 0;
     left: 0;
 } 
-.markerTitle{
-  font-size:20px;
-}
+ 
      .trazi{
          
           border-left: thick solid #BDBDBD;

@@ -92,12 +92,29 @@ angular.module('starter.controllers', [])
     
             
     if (!window.localStorage.getItem("lokacija")) {
+       $scope.hotels;
       $scope.$lokacija = "Zagreb";
     } else {
       $scope.lokacija = window.localStorage.getItem("lokacija");
     }
+   $scope.goAnchor = function (id,di) {
+            console.log(id); 
+            console.log(this.id.value); 
+            this.id.value
+        };
     var vm = this;
     NgMap.getMap().then(function (map) { 
+         var request =$http({            
+            method: "POST",
+            url: 'http://glutenfree.hr/rest/categories.php',
+            data:{city:window.localStorage.getItem("id"),category:window.localStorage.getItem("category")},
+            headers : {'Content-Type' : 'application/x-www-form-urlencoded' }
+            
+        });
+        request.success(function (data) { 
+        $scope.hotels=data;
+        console.log(data);
+});
  
 
 

@@ -1,13 +1,21 @@
 angular.module('Bosk')
-.controller('HotelDetailCtrl', function($scope,$stateParams) { 
-    $scope.visina = "49px";
-        $scope.naslov = "Change";
-        $scope.showDiv = true;
-        var geocoder="";
-        $scope.$lokacija = "";
-        if (!window.localStorage.getItem("lokacija")) {
-            $scope.$lokacija = "Zagreb";
-        } else {
-            $scope.lokacija = window.localStorage.getItem("lokacija");
-        }
+.controller('HotelDetailCtrl', function($scope,$stateParams,$http) { 
+  $scope.location; 
+   var request =$http({            
+            method: "POST",
+            url: 'http://glutenfree.hr/rest/categories.php',
+            data:{city:window.localStorage.getItem("id"),category:window.localStorage.getItem("category")},
+            headers : {'Content-Type' : 'application/x-www-form-urlencoded' }
+            
+        }); 
+        request.success(function (data) {
+            for(var i = 0; i<data.length;i++){
+                if(data[i]["id"]== $stateParams.hotelId){
+                     $scope.location=data[i];
+                     
+                     console.log($scope.location);
+                }
+            }
+        
+});
 });
