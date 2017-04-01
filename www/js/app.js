@@ -34,7 +34,7 @@ document.addEventListener('deviceready', function() {
       
     .state('app', {
     abstract: true,
-    templateUrl: 'templates/menu.html',
+    templateUrl: 'templates/menuIos.html',
     controller: 'AppCtrl'
   })
    .state('bapp', {
