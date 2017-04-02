@@ -68,7 +68,7 @@ angular.module('starter.controllers', [])
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
     $http({
       method: "GET",
-      url: 'http://glutenfree.hr/rest/city.php',
+      url: 'http://glutenfree.hr/rest/active_cities.php',
 
     }).then(function successCallback(response) {
       $scope.gradovi = response.data;
@@ -81,9 +81,9 @@ angular.module('starter.controllers', [])
         console.log($scope.gradovi[i]["id"]);
         if ($scope.gradovi[i]["id"] == lokacija) {
           window.localStorage.setItem("lokacija", $scope.gradovi[i]["name"]);
-          window.localStorage.setItem("lat", $scope.gradovi[i]["latitude"]);
-          window.localStorage.setItem("long", $scope.gradovi[i]["longitude"]);
-           window.localStorage.setItem("id", $scope.gradovi[i]["id"]);
+          window.localStorage.setItem("lat", $scope.gradovi[i]["longitude"]);
+          window.localStorage.setItem("long", $scope.gradovi[i]["latitude"]);
+          window.localStorage.setItem("id", $scope.gradovi[i]["id"]);
 
         }
       }
@@ -91,35 +91,33 @@ angular.module('starter.controllers', [])
     }
   })
   .controller('MyController', function (NgMap, $scope, $http) {
- $scope.hotels; 
- alert(window.localStorage.getItem("id"));
-    if (window.localStorage.getItem("id")=="-1") {
-        
-        $scope.lat = window.localStorage.getItem("lat");
-      $scope.long = window.localStorage.getItem("long");
-      alert( $scope.lat+ $scope.long); 
- var request =$http({            
-            method: "POST",
-            url: 'http://glutenfree.hr/rest/distance.php',
-            data:{lon: window.localStorage.getItem("long"), lat: window.localStorage.getItem("lat"),distance:window.localStorage.getItem("distance") },
-            headers : {'Content-Type' : 'application/x-www-form-urlencoded' }            
-        });
-        request.success(function (data) { 
-            console.log(data);
-        $scope.hotels=data;
-}); 
-request.error(function (data) { 
-            console.log(data);
-        $scope.hotels=data;
-}); 
+    $scope.hotels;
+    $scope.category;
+    $scope.lat =  window.localStorage.getItem("long");
+      $scope.long =window.localStorage.getItem("lat"); 
+    if (window.localStorage.getItem("id") == "-1") {
+
+       
+      var request = $http({
+        method: "POST",
+        url: 'http://glutenfree.hr/rest/distance.php',
+        data: { lon: window.localStorage.getItem("long"), lat: window.localStorage.getItem("lat"), distance: window.localStorage.getItem("distance") },
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      });
+      request.success(function (data) {
+        console.log(data);
+        $scope.hotels = data;
+        $scope.category=  window.localStorage.getItem("category");
+      });
+      request.error(function (data) {
+        console.log(data);
+        $scope.hotels = data;
+      });
 
       $scope.$lokacija = "Zagreb";
-    } else { 
-      $scope.lokacija = window.localStorage.getItem("lokacija");
-      $scope.lat = window.localStorage.getItem("lat");
-      $scope.long = window.localStorage.getItem("long");
-      alert("ovo su:" + $scope.lat + "  " + $scope.long);
-       var request = $http({
+    } else {
+      $scope.lokacija = window.localStorage.getItem("lokacija");  
+      var request = $http({
         method: "POST",
         url: 'http://glutenfree.hr/rest/categories.php',
         data: { city: window.localStorage.getItem("id"), category: window.localStorage.getItem("category") },
@@ -128,6 +126,7 @@ request.error(function (data) {
       });
       request.success(function (data) {
         $scope.hotels = data;
+        $scope.category=  window.localStorage.getItem("category");
         console.log(data);
       });
 
@@ -139,7 +138,7 @@ request.error(function (data) {
     };
     var vm = this;
     NgMap.getMap().then(function (map) {
-     
+
 
 
     });
@@ -149,6 +148,7 @@ request.error(function (data) {
   .controller('InfoDetailCtrl', function ($scope, $timeout, $stateParams, $http) {
     $scope.info;
     $scope.infoDescription;
+    $scope.image;
     $http({
 
       method: "GET",
@@ -162,6 +162,7 @@ request.error(function (data) {
         if ($stateParams.infoId == response.data[i]["id"]) {
           $scope.info = response.data[i]["title"];
           $scope.infoDescription = response.data[i]["description"];
+          $scope.image= response.data[i]["image"];
         }
       }
     }, function errorCallback(response) {

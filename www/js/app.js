@@ -78,6 +78,7 @@ document.addEventListener('deviceready', function() {
     }
   })
 .state('app.hotels', {
+  cache: false,
     url: '/hotels',
     views: {
       'menuContent': {
@@ -88,6 +89,7 @@ document.addEventListener('deviceready', function() {
   })
 
   .state('app.stores', {
+    cache: false,
     url: '/stores',
     views: {
       'menuContent': {
@@ -97,6 +99,7 @@ document.addEventListener('deviceready', function() {
     }
   })
     .state('app.pharmacie', {
+      cache: false,
     url: '/pharmacie',
     views: {
       'menuContent': {
@@ -107,6 +110,7 @@ document.addEventListener('deviceready', function() {
   })
 
   .state('app.restaurants', {
+    cache: false,
     url: '/restaurants',
     views: {
       'menuContent': {
@@ -116,6 +120,7 @@ document.addEventListener('deviceready', function() {
     }
   })
   .state('app.gas', {
+    cache: false,
     url: '/gas',
     views: {
       'menuContent': {

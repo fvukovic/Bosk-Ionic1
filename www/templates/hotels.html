@@ -1,12 +1,28 @@
 <ion-view >
-  <ion-content  style="margin-top: -44px;" >
+      <style>.list .item-radio .item-content {
+   background-color: #b51879;     
+  color: white;
+}
+.list .item-radio .radio-icon {
+  float: left;
+  color: white;
+}
+.item-radio input:checked + .radio-content .item-content {
+    /* style the item content when its checked */
+    background-color: #b51879; 
+}
+ .myButton{
+        border:none;
+        margin-left:20px;
+ } </style>
+  <ion-content   style="margin-top: 70px;" >
      
      <a ng-repeat="hotel in hotels" ui-sref="app.detail({hotelId:{{hotel['id']}}})">
      <div class="list list-inset hotel" id="card" ng-if="hotel['category'] == 1 " >
        
-       <img src="img/esplanada.png" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
+       <img src="http://glutenfree.hr/images/thumbs/{{hotel['web']}}" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
        <div>
-       <h3 style="margin-top:10px;"> {{hotel["description"]}}</h3> 
+       <h3 style="margin-top:10px;"> {{hotel["title"]}}</h3> 
        <img src="img/star.png" style="position:absolute;bottom:0;" >  
        <img src="img/star.png" style="position:absolute;bottom:0;left:95px;" >
        <img src="img/star.png" style="position:absolute;bottom:0;left:110px;" >

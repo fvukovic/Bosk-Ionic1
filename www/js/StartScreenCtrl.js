@@ -7,8 +7,7 @@ angular.module('Bosk')
                 $scope.showD = false;
                 $scope.showE = false;
 
-                if (window.localStorage.getItem("id") == "-1") {
-                         alert("molim te : "+window.localStorage.getItem("long")+window.localStorage.getItem("lat"));
+                if (window.localStorage.getItem("id") == "-1") { 
                         var request = $http({
                                 method: "POST",
                                 url: 'http://glutenfree.hr/rest/distance.php',
@@ -39,8 +38,7 @@ angular.module('Bosk')
                         });
                 }
 
-                                if(  window.localStorage.getItem("id") >0) {
-                                        alert(window.localStorage.getItem("id"));
+                                if(  window.localStorage.getItem("id") >0) { 
                                  var request = $http({
                                                 method: "POST",
                                                 url: 'http://glutenfree.hr/rest/all_cities.php',

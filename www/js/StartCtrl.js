@@ -1,5 +1,5 @@
-angular.module('Bosk')  
-  .controller('StartCtrl', function ($scope, $ionicPlatform, $rootScope, $location, $cordovaGeolocation, $http, $ionicHistory,$state ) {
+angular.module('Bosk')
+    .controller('StartCtrl', function ($scope, $ionicPlatform, $rootScope, $location, $cordovaGeolocation, $http, $ionicHistory, $state) {
         $scope.visina = "49px";
         $scope.naslov = "Change";
         $scope.grad;
@@ -24,16 +24,16 @@ angular.module('Bosk')
         $scope.chooseHood = function () {
             return (window.localStorage.getItem("hood"));
         }
-         $scope.setDistance = function (distance) {
-             window.localStorage.setItem("distance",distance);
-              $state.go($state.current, {}, {reload: true});
+        $scope.setDistance = function (distance) {
+            window.localStorage.setItem("distance", distance);
+            $state.go($state.current, {}, { reload: true });
         }
 
         $scope.funkcija = function () {
             var element = angular.element(document.querySelector('#lokacija'));
             var height = element[0].offsetHeight;
             if (height < 100) {
-                $scope.visina = "451px";
+                $scope.visina = "420px";
                 $scope.changeStyle();
                 $scope.naslov = "Close";
                 $scope.showDiv = false;
@@ -53,26 +53,27 @@ angular.module('Bosk')
 
 
 
-
+ 
         $scope.changeLocation = function () {
-            alert("asdasd");
-            var posOptions = { timeout: 10000, enableHighAccuracy: false };
+            var posOptions = { timeout: 10000, enableHighAccuracy: true };
             $cordovaGeolocation
                 .getCurrentPosition(posOptions)
                 .then(function (position) {
                     $scope.lat = position.coords.latitude;
-                    alert($scope.lat);
                     window.localStorage.setItem("lat", $scope.lat);
                     $scope.long = position.coords.longitude;
                     window.localStorage.setItem("long", $scope.long);
-                    window.localStorage.setItem("distance", "10000");
-                    alert(window.localStorage.getItem("distance"))
-                    alert($scope.long);
+                    if (window.localStorage.getItem("distance") > 50) {
+                    } else {
+                        window.localStorage.setItem("distance", "10000");
+                    }
+
                     var geocoder = new google.maps.Geocoder();
                     var latlng = new google.maps.LatLng($scope.lat, $scope.long);
                     var request = {
                         latLng: latlng
                     };
+                    
                     geocoder.geocode(request, function (data, status) {
                         if (status == google.maps.GeocoderStatus.OK) {
                             if (data[0] != null) {
@@ -93,8 +94,8 @@ angular.module('Bosk')
                     })
                     console.log(position);
                 })
-
-        }
+        } 
+ 
         $scope.changeStyle = function () {
             $scope.myStyle = {
                 'height': $scope.visina
