@@ -6,16 +6,49 @@ angular.module('Bosk')
                 $scope.showC = false;
                 $scope.showD = false;
                 $scope.showE = false;
-                if ($stateParams.cityId == "") {
 
-                        if (window.localStorage.getItem("id") != "") { 
-                                var request = $http({
-                                        method: "POST",
-                                        url: 'http://glutenfree.hr/rest/all_cities.php',
-                                        data: { city: window.localStorage.getItem("id") },
-                                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+                if (window.localStorage.getItem("id") == "-1") {
+                         alert("molim te : "+window.localStorage.getItem("long")+window.localStorage.getItem("lat"));
+                        var request = $http({
+                                method: "POST",
+                                url: 'http://glutenfree.hr/rest/distance.php',
+                                data: { lon: window.localStorage.getItem("long"), lat: window.localStorage.getItem("lat"),distance: window.localStorage.getItem("distance") },
+                                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+                        });
+                        request.success(function (data) {
+                               
+                                console.log(data);
+                                 for (var i = 0; i < data.length; i++) {
+                                                        if (data[i]["category"] == 1) {
+                                                                $scope.showA = true;
+                                                        }
+                                                        if (data[i]["category"] == 2) {
+                                                                $scope.showB = true;
+                                                        }
+                                                        if (data[i]["category"] == 3) {
+                                                                $scope.showC = true;
+                                                        }
+                                                        if (data[i]["category"] == 4) {
+                                                                $scope.showD = true;
+                                                        }
+                                                        if (data[i]["category"] == 5) {
+                                                                $scope.showE = true;
+                                                        }
 
-                                });
+                                                }
+                        });
+                }
+
+                                if(  window.localStorage.getItem("id") >0) {
+                                        alert(window.localStorage.getItem("id"));
+                                 var request = $http({
+                                                method: "POST",
+                                                url: 'http://glutenfree.hr/rest/all_cities.php',
+                                                data: { city: window.localStorage.getItem("id") },
+                                                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+
+                                        });
+                                         
                                 request.success(function (data) {
                                         for (var i = 0; i < data.length; i++) {
                                                 if (data[i]["category"] == 1) {
@@ -36,76 +69,48 @@ angular.module('Bosk')
 
                                         }
                                 });
+                                         }
 
-                        } else
-                                var request = $http({
-                                        method: "POST",
-                                        url: 'http://glutenfree.hr/rest/all_cities.php',
-                                        data: { city: 1 },
-                                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+                        if(  window.localStorage.getItem("id") == "") {
 
-                                });
-                        request.success(function (data) {
-                                for (var i = 0; i < data.length; i++) {
-                                        if (data[i]["category"] == 1) {
-                                                $scope.showA = true;
-                                        }
-                                        if (data[i]["category"] == 2) {
-                                                $scope.showB = true;
-                                        }
-                                        if (data[i]["category"] == 3) {
-                                                $scope.showC = true;
-                                        }
-                                        if (data[i]["category"] == 4) {
-                                                $scope.showD = true;
-                                        }
-                                        if (data[i]["category"] == 5) {
-                                                $scope.showE = true;
-                                        }
+                                if (window.localStorage.getItem("id") != "") {
+                                        var request = $http({
+                                                method: "POST",
+                                                url: 'http://glutenfree.hr/rest/all_cities.php',
+                                                data: { city: window.localStorage.getItem("id") },
+                                                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
 
+                                        });
+                                        request.success(function (data) {
+                                                for (var i = 0; i < data.length; i++) {
+                                                        if (data[i]["category"] == 1) {
+                                                                $scope.showA = true;
+                                                        }
+                                                        if (data[i]["category"] == 2) {
+                                                                $scope.showB = true;
+                                                        }
+                                                        if (data[i]["category"] == 3) {
+                                                                $scope.showC = true;
+                                                        }
+                                                        if (data[i]["category"] == 4) {
+                                                                $scope.showD = true;
+                                                        }
+                                                        if (data[i]["category"] == 5) {
+                                                                $scope.showE = true;
+                                                        }
+
+                                                }
+                                        });
+
+                                } else{
+                                       
                                 }
-                        });
-                }
-                if ($stateParams.cityId != "-1") {
-                        var request = $http({
-                                method: "POST",
-                                url: 'http://glutenfree.hr/rest/all_cities.php',
-                                data: { city: $stateParams.cityId },
-                                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+                        }
+                       
 
-                        });
-                        request.success(function (data) {
-                                for (var i = 0; i < data.length; i++) {
-                                        if (data[i]["category"] == 1) {
-                                                $scope.showA = true;
-                                        }
-                                        if (data[i]["category"] == 2) {
-                                                $scope.showB = true;
-                                        }
-                                        if (data[i]["category"] == 3) {
-                                                $scope.showC = true;
-                                        }
-                                        if (data[i]["category"] == 4) {
-                                                $scope.showD = true;
-                                        }
-                                        if (data[i]["category"] == 5) {
-                                                $scope.showE = true;
-                                        }
-
-                                }
-                        });
-                } else {
-                        $scope.showA = true;
-                        $scope.showB = true;
-                        $scope.showC = true;
-                        $scope.showD = true;
-                        $scope.showE = true;
-
-                }
-
-                $scope.items;
+                      
 
 
 
-        })
+                })
 

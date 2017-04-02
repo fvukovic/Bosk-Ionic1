@@ -19,9 +19,8 @@ var Indata = {'lon': '16.328681', 'lat': '46.298267','distance':'5000' };
  var request =$http({            
             method: "POST",
             url: 'http://glutenfree.hr/rest/distance.php',
-            data:{lon: '16.328681', lat: '46.298267',distance:'5000' },
-            headers : {'Content-Type' : 'application/x-www-form-urlencoded' }
-            
+            data:{lon: '15.980174193115204', lat: '45.79141413253635',distance:'5000' },
+            headers : {'Content-Type' : 'application/x-www-form-urlencoded' }            
         });
         request.success(function (data) { 
             

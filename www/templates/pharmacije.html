@@ -2,7 +2,7 @@
   <ion-content style="margin-top: 70px;">
      
      <a ng-repeat="hotel in hotels" ui-sref="app.detailP({hotelId:{{hotel['id']}}})">
-     <div class="list list-inset hotel" id="card" >
+     <div class="list list-inset hotel" id="card" ng-if="hotel['category'] == 4" >
        
        <img src="img/esplanada.png" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
        <div>

@@ -15,25 +15,36 @@
         border:none;
         margin-left:20px;
  } </style>
-  <ion-content  scroll="false"  > 
+  <ion-content  style="margin-top: -44px;"  scroll="false"  > 
       
     
    <ng-map style="height: 100%;" zoom="12" center="[{{long}},{{lat}} ]"> 
-    <custom-marker ng-repeat="hotel in hotels" id="aa" on-click="goAnchor($event,2,2)"  position="{{hotel['latitude']}},{{hotel['longitude']}}"   ><img  position="45.815399,15.966568" src="img/marker.png" style="width:40px;position:relative;top:10px;"><div class="markerName" > {{hotel["description"]}} </div>  </custom-marker> 
-    
+    <custom-marker ng-repeat="hotel in hotels" id="aa" on-click="goAnchor($event,2,2)"  position="{{hotel['latitude']}},{{hotel['longitude']}}"   ><img  position="45.815399,15.966568" src="img/marker.png" style="width:40px;position:relative;top:10px;"><div class="markerName" > {{hotel["title"]}} </div>  </custom-marker> 
+    <button id="fab-profile" ui-sref="app.startScreen" class="button button-fab button-fab-bottom-right fab-fixed button-assertive pane" nav-view="active" style="position: absolute;
+right:    0;
+bottom:   0; background-color:#5F5D99;height: 60px;width:60px; border-radius:50%;opacity: 1; transform: translate3d(0%, 0px, 0px);">
+         <img src="img/list.png" style="margin-top:-100px;">
+       </button>
    </ng-map>  
-        <ion-footer-bar style="background-color: transparent;height: 0px"  >
+       
   <div class="buttons">
       <div class="float-button">
      <span class="height-fix">
        <button id="fab-profile" ui-sref="app.startScreen" class="button button-fab button-fab-bottom-right fab-fixed button-assertive pane" nav-view="active" style="background-color:#5F5D99;height: 60px;width:60px; border-radius:50%;opacity: 1; transform: translate3d(0%, 0px, 0px);">
-         <img src="img/list.png" style="margin-top:7px;">
+         <img src="img/list.png" style="margin-top:-100px;">
        </button>
      </span>
    </div>
-  </div>
-</ion-footer-bar> 
+  </div> 
   
     </ion-content>
-
+<ion-footer-bar align-title="left" class="bar-assertive">
+  <div class="buttons">
+    <button class="button">Left Button</button>
+  </div>
+  <h1 class="title">Title!</h1>
+  <div class="buttons" ng-click="doSomething()">
+    <button class="button">Right Button</button>
+  </div>
+</ion-footer-bar>
 </ion-view>
