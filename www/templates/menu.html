@@ -1,25 +1,23 @@
 <ion-side-menus enable-menu-with-back-views="true">
   <ion-side-menu-content class="bar-dark" drag-content="false">
-    <ion-header-bar align-title="center" ng-hide="menuVisibility" class="bar-dark" style="height: 72px" class="bar-positive">
-      <div class="buttons">
+ <ion-header-bar align-title="center" class="bar-dark" style="height: 72px" >
+ <div class="buttons">
         <img class="title-image" src="img/bijeli_logo.png" width="180px;" height="100%" />
       </div>
-      <img style="display:block; border:none;
-  margin-left:auto;
-  margin-right:auto;" />
-      <div class="buttons">
-        <button class="button " style="margin-right: 15px;margin-top:5px;  height: 53px; border:none;   display:block; 
+  <h1 class="title"></h1>
+  <div class="buttons">
+    <button class="button " style="margin-right: 15px;margin-top:5px;  height: 53px; border:none;   display:block; 
   border-radius: 50%;
   width: 53px; background-color: #8487ba" menu-toggle="left">
           <img class="title-image" src="img/menu-icon.png" width="35px;" style="margin-top: 10px" />
           </button>
-      </div>
-      </div>
-      <div style="height: 50px;background-color: 50px"></div>
-      <div ng-controller="StartCtrl" cache-view="false" id="lokacija2" class="lokacijaa" ng-style="myStyle" ng-init="doSomething()">
+  </div>
+</ion-header-bar>
+     
+      <div ng-controller="StartCtrl" cache-view="false" id="lokacija" class="lokacijaa" ng-style="myStyle" ng-init="doSomething()">
 
         <p class="current"> Current location :</p>
-        <p style="color: white; left:150px;top:18px; position: absolute;font-size:16px;"> {{chooseCity()}}</p>
+        <p style="color: white; left:150px;top:89px; position: absolute;font-size:16px;"> {{chooseCity()}}</p>
 
         <button class="change" ng-click="funkcija()"> <p  style="font-size:17px">{{naslov}}</p> </button>
         <br>
@@ -29,11 +27,10 @@
           <ion-radio ng-value="'100'" name="a" ng-show="!showDiv" class="myButton">Show results in 100m range</ion-radio>
           <ion-radio ng-model="choice" name="a" ng-value="'500'" ng-show="!showDiv" ng-show="!showDiv" class="myButton"> Show results in 500m range</ion-radio>
           <ion-radio ng-model="choice" name="a" ng-value="'1000'" ng-show="!showDiv" class="myButton">Show results in 1000m range</ion-radio>
-          <ion-radio ng-model="choice" name="a" ng-value="'5000'" ng-show="!showDiv" ng-selected="true" class="myButton">Show results in 5000m range</ion-radio>
-          <ion-radio ng-model="choice" name="a" ng-value="'any'" ng-show="!showDiv" class="myButton">Show results in any range</ion-radio>
+          <ion-radio ng-model="choice" name="a" ng-value="'5000'" ng-show="!showDiv" ng-selected="true" class="myButton">Show results in 5000m range</ion-radio> 
         </ion-list> <br>
       </div>
-    </ion-header-bar>
+    
 
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>

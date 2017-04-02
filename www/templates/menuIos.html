@@ -4,7 +4,7 @@
       <div class="buttons">
           <button class="button" side="left" style="margin-left: 10px;margin-top:5px;  height: 53px; border:none;   display:block; 
   border-radius: 50%;
-  width: 53px; background-color: #8487ba" menu-toggle="left">
+  width: 53px; background-color: #8487ba" ng-click="goBack()">
           <img class="title-image" src="img/back.png" width="30px;" style="margin-top:5px;margin-left:-4px"; />
           </button>
        
@@ -19,8 +19,7 @@
           <img class="title-image" src="img/menu-icon.png" width="35px;" style="margin-top: 10px" />
           </button>
       </div>
-      </div>
-      <div style="height: 50px;background-color: 50px"></div>
+       
       <div ng-controller="StartCtrl" cache-view="false" id="lokacija2" class="lokacijaa" ng-style="myStyle" ng-init="doSomething()">
 
         <p class="current"> Current location :</p>
@@ -28,7 +27,7 @@
 
         <button class="change" ng-click="funkcija()"> <p  style="font-size:17px">{{naslov}}</p> </button>
         <br>
-        <a class="dodani_buttoni" ng-click="changeLocation()" ng-show="!showDiv">Read GPS coordinates</a>
+        <button class="dodani_buttoni"  ng-click="changeLocation()"> <p  style="font-size:17px">Read GPS coordinates</button>
         <a ng-show="!showDiv" href="#/lokacije" ng-click=" funkcija()" class="dodani_buttoni">Show a list of locations</a>
         <ion-list>
           <ion-radio ng-value="'100'" name="a" ng-show="!showDiv" class="myButton">Show results in 100m range</ion-radio>

@@ -18,9 +18,8 @@ text-decoration:none;
     }
     .lokacijaa 
     {   
-        position: absolute;
-        margin-top:66px;
-        margin-left: -5px;
+         
+        margin-top:71px; 
         width: 100%;     
         background-color: #b51879;
         height:55px;  
@@ -128,10 +127,9 @@ text-decoration:none;
 	-webkit-border-radius:3px;
 	background-color: #690342;
     border-radius: 3px;
-    margin: 9px;
-    margin-right: 10px;
-    margin-left:10px;
-    width: 97%;
+    margin: 9px; 
+    margin-left:8px;
+    width: 95%;
     height: 45px;
     font-weight:normal;
 	border:1px solid #690342;

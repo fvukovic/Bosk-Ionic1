@@ -14,8 +14,7 @@ angular.module('Bosk')
 var Indata = {'lon': '16.328681', 'lat': '46.298267','distance':'5000' };
 
 
-
-
+ 
 
  var request =$http({            
             method: "POST",
