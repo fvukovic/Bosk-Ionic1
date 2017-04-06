@@ -86,11 +86,18 @@ angular.module('starter.controllers', [])
       $location.path('/startScreen/');
     }
   })
-  .controller('MyController', function (NgMap, $scope, $http) {
-    $scope.hotels;
+  .controller('MyController', function (NgMap, $scope, $http,$location,$state) {
+
+    var vm = this;    
+    NgMap.getMap().then(function (map) {
+        $scope.hotels;
     $scope.category;
     $scope.lat = window.localStorage.getItem("long");
     $scope.long = window.localStorage.getItem("lat");
+     $scope.pinClicked = function(event, marker) { 
+        console.log('the marker ->', marker,event);
+        $state.go('app.detailG',{"hotelId":marker});
+      };
     if (window.localStorage.getItem("id") == "-1") {
 
 
@@ -122,19 +129,12 @@ angular.module('starter.controllers', [])
       });
       request.success(function (data) {
         $scope.hotels = data;
-        $scope.category = window.localStorage.getItem("category");
-        console.log(data);
+        $scope.category = window.localStorage.getItem("category"); 
+       
       });
 
-    }
-    $scope.goAnchor = function (id, di) {
-      console.log(id);
-      console.log(this.id.value);
-      this.id.value
-    };
-    var vm = this;
-    NgMap.getMap().then(function (map) {
-
+    } 
+          
 
 
     });
