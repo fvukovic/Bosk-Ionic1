@@ -88,7 +88,8 @@ angular.module('starter.controllers', [])
   })
   .controller('MyController', function (NgMap, $scope, $http,$location,$state) {
 
-    var vm = this;    
+    var vm = this;
+    vm.dynMarkers = []
     NgMap.getMap().then(function (map) {
         $scope.hotels;
     $scope.category;
@@ -129,13 +130,14 @@ angular.module('starter.controllers', [])
       });
       request.success(function (data) {
         $scope.hotels = data;
-        $scope.category = window.localStorage.getItem("category"); 
+        $scope.category = window.localStorage.getItem("category");
+        console.log("asdasd"+data);
        
       });
 
     } 
-          
-
+       
+    
 
     });
 
