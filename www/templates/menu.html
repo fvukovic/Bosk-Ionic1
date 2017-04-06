@@ -19,17 +19,17 @@
       <div ng-controller="StartCtrl" cache-view="false" id="lokacija" class="lokacijaa" ng-style="myStyle" ng-init="doSomething()">
 
         <p class="current"> Current location :</p>
-        <p style="color: white; left:150px;top:18px; position: absolute;font-size:16px;"> {{chooseCity()}}</p>
+        <p style="display:inline-block;  color: white; margin-top: 17px;  font-size:16px;"> {{chooseCity()}}</p>
 
         <button class="change" ng-click="funkcija()"> <p  style="font-size:17px">{{naslov}}</p> </button>
         <br>
-        <a class="dodani_buttoni" ng-click="changeLocation()" ng-show="!showDiv">Read GPS coordinates</a>
+        <a class="dodani_buttoni" ng-click="changeLocation();funkcija()" ng-show="!showDiv">Read GPS coordinates</a>
         <a ng-show="!showDiv" href="#/lokacije" ng-click=" funkcija()" class="dodani_buttoni">Show a list of locations</a>
        <ion-list>
-          <ion-radio ng-value="'100'" name="a" ng-show="!showDiv" class="myButton" ng-click="setDistance('100')" >Show results in 100m range</ion-radio>
-          <ion-radio ng-model="choice" name="a" ng-value="'500'" ng-show="!showDiv" ng-show="!showDiv" ng-click="setDistance('500')" class="myButton"> Show results in 500m range</ion-radio>
-          <ion-radio ng-model="choice" name="a" ng-value="'1000'" ng-show="!showDiv" ng-click="setDistance('1000')" class="myButton">Show results in 1000m range</ion-radio>
-          <ion-radio ng-model="choice" name="a" ng-value="'5000'" ng-show="!showDiv" ng-click="setDistance('5000')" ng-selected="true" class="myButton">Show results in 5000m range</ion-radio> 
+          <ion-radio ng-value="'100'" name="a" ng-show="!showDiv" class="myButton" ng-click="setDistance('100');funkcija()" >Show results in 100m range</ion-radio>
+          <ion-radio ng-model="choice" name="a" ng-value="'500'" ng-show="!showDiv" ng-show="!showDiv" ng-click="setDistance('500');funkcija()" class="myButton"> Show results in 500m range</ion-radio>
+          <ion-radio ng-model="choice" name="a" ng-value="'1000'" ng-show="!showDiv" ng-click="setDistance('1000');funkcija()" class="myButton">Show results in 1000m range</ion-radio>
+          <ion-radio ng-model="choice" name="a" ng-value="'5000'" ng-show="!showDiv" ng-click="setDistance('5000');funkcija()" ng-selected="true" class="myButton">Show results in 5000m range</ion-radio> 
         </ion-list> <br>
       </div>
     </ion-header-bar>

@@ -3,6 +3,11 @@ angular.module('Bosk')
         $ionicHistory.nextViewOptions({
             disableBack: true
         });
+        window.localStorage.setItem("id","1");
+        window.localStorage.setItem("lokacija","Zagreb");
+        window.localStorage.setItem("lat","45.815399");
+        window.localStorage.setItem("long","15.966568");
+         window.localStorage.setItem("distance","10000");
    /*     var Indata={'lon':'15.3','lat':'45','distance':'1000'};
         $http.post(" http://glutenfree.hr/rest/distance.php", Indata headers : {
         'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -41,19 +46,10 @@ var Indata = {'lon': '16.328681', 'lat': '46.298267','distance':'5000' };
 
         });
         console.log('jessam li se ldasdasdasdoadao?');
-        $http({
-
-            method: "GET",
-            url: 'http://glutenfree.hr/rest/info_list_full.php',
-
-        }).then(function successCallback(response) { 
-            window.localStorage.setItem("info", (response.data));
-            $scope.title = 'nesto';
-        }, function errorCallback(response) {
-        });
+      
 
         $timeout(funkcija, 4000);
         function funkcija() {
-            $location.path('/startScreen/-1');
+            $location.path('/startScreen/');
         }
     })

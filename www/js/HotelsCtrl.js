@@ -2,6 +2,7 @@ angular.module('Bosk')
 
     .controller('HotelsCtrl', function ($scope,$rootScope,$http) {
         $scope.hotels;
+        
         window.localStorage.setItem("category","1");
         if(window.localStorage.getItem("id")!="-1"){
         var request =$http({            
@@ -12,8 +13,8 @@ angular.module('Bosk')
             
         });
         request.success(function (data) { 
-        $scope.hotels=data;
-        console.log(data);
+             console.log(data);
+              $scope.hotels = data;
 });
 }else{
   var request = $http({

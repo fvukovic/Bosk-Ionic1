@@ -7,9 +7,13 @@
     height: fill; ">  
     
      </div>
- <img src="http://glutenfree.hr/images/thumbs/{{image}}" style=" display:block; overflow:hidden ; width: 310px;
+ 
+       <img src="http://glutenfree.hr/images/thumbs/{{image}}" ng-if="image!=null  " style="display:block; overflow:hidden ; width: 310px;
   margin-left:auto;
-  margin-right:auto; " >  
+  margin-right:auto;"  >
+   <img src="img/icon.png" ng-if="image=='' || image==null" style="display:block; overflow:hidden ; width: 310px;
+  margin-left:auto;
+  margin-right:auto;"  > 
       <br> 
     <p style="padding: 10px; color:#0b1628">
      {{infoDescription}}

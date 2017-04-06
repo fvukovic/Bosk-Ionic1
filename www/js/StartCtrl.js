@@ -50,9 +50,6 @@ angular.module('Bosk')
             $ionicHistory.goBack();
 
         }
-
-
-
  
         $scope.changeLocation = function () {
             var posOptions = { timeout: 10000, enableHighAccuracy: true };
@@ -84,7 +81,8 @@ angular.module('Bosk')
                                 window.localStorage.setItem("hood", "----");
                                 window.localStorage.setItem("id", "-1");
                                 console.log(data[1].formatted_address);
-                                $location.path('/startScreen/');
+                                alert("Your location: "+data[1].formatted_address);
+                                $location.path('/startScreen/-1');
                                 $scope.chooseCity();
                                 $scope.$evalAsync();
                             } else {

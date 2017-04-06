@@ -5,8 +5,7 @@ angular.module('Bosk')
                 $scope.showB = false;
                 $scope.showC = false;
                 $scope.showD = false;
-                $scope.showE = false;
-
+                $scope.showE = false; 
                 if (window.localStorage.getItem("id") == "-1") { 
                         var request = $http({
                                 method: "POST",
@@ -38,7 +37,7 @@ angular.module('Bosk')
                         });
                 }
 
-                                if(  window.localStorage.getItem("id") >0) { 
+                                if(  window.localStorage.getItem("id") >0) {  
                                  var request = $http({
                                                 method: "POST",
                                                 url: 'http://glutenfree.hr/rest/all_cities.php',

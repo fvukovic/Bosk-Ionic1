@@ -19,29 +19,42 @@
        
       <div style="border-radius:5px; background-color: white; margin: 10px"  >  
     <p style=" color:black;  font-family:Verdana; 
-    font-weight:100;    font-size:25px; margin: 15px;padding-top: 15px; " >{{location["title"]}}</p>
-   
-
-    <div style="margin: 15px;">
-        <img src="img/star.png" style="position:relative;bottom:0;   " >  
-       <img src="img/star.png" style="position:relative;bottom:0;" >
-       <img src="img/star.png" style="position:relative;bottom:0;" >
-       <img src="img/star.png" style="position:relative;bottom:0;" >      
-       <img src="img/star.png" style="position:relative;bottom:0;" > 
+    font-weight:100;    font-size:25px; margin: 15px;padding-top: 15px; " >{{location["title"]}}</p> 
+    <div style="margin: 15px;" ng-if="location['category']==1 || location['category']==2">
+      
+        <img src="img/star.png" ng-if="location['standing']>0" style="position:relative;bottom:0;   " >  
+       <img src="img/star.png" ng-if="location['standing']>1" style="position:relative;bottom:0;" >
+       <img src="img/star.png" ng-if="location['standing']>2" style="position:relative;bottom:0;" >
+       <img src="img/star.png" ng-if="location['standing']>3" style="position:relative;bottom:0;" >      
+       <img src="img/star.png" ng-if="location['standing']>4" style="position:relative;bottom:0;" > 
        
     </div>
-       <img src="http://glutenfree.hr/images/thumbs/{{location['web']}}" style="display:block; overflow:hidden ; width: 310px;
+
+    
+       <img src="http://glutenfree.hr/images/thumbs/{{location['image']}}" ng-if="location['image']!=null  " style="display:block; overflow:hidden ; width: 250px;
+  margin-left:auto;
+  margin-right:auto;"  >
+   <img src="img/hotel_image.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==1"   style="display:block; overflow:hidden ; width: 250px;
+  margin-left:auto;
+  margin-right:auto;"  >
+   <img src="img/restaurant.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==2"   style="display:block; overflow:hidden ; width: 250px;
+  margin-left:auto;
+  margin-right:auto;"  >
+   <img src="img/grocery.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==3"   style="display:block; overflow:hidden ; width: 250px;
+  margin-left:auto;
+  margin-right:auto;"  >
+   <img src="img/pharmacies.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==4"   style="display:block; overflow:hidden ; width: 250px;
+  margin-left:auto;
+  margin-right:auto;"  >
+   <img src="img/station.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==5"   style="display:block; overflow:hidden ; width: 250px;
   margin-left:auto;
   margin-right:auto;"  >
    <p  style="margin: 15px;">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo libero, euismod sit amet mauris eu, tempus dapibus mi.
-      Cras viverra sapien id ligulllentesque. Nullam utentesque
-      fermentum. Praesent semper odio quis pharetra vulputate. Pellentesque ullamcorper lacus quam, vitae congue mi pellentesque
-      sed. Nulla facilisi. 
+       {{location['description']}}
     </p><br>
-    <p  style="margin: 15px;"> Pellentesque vitae sem convallis diam dignissim ultricies. Curabitur pellentesque vestibulum sagittis.
-      Quisque blandit elit rhoncus nunc sodales lacinia id ac mi. Suspendisse sit amet vulputate elit.
-    </p>
+    <p style="margin: 15px;">
+     {{location['adress']}}
+    </p><br>
   </div>
 
   </ion-content>
