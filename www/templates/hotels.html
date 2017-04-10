@@ -19,17 +19,18 @@
      
      <a ng-repeat="hotel in hotels" ui-sref="app.detailG({hotelId:{{hotel['id']}}})">
      <div class="list list-inset hotel" id="card" ng-if="hotel['category'] == 1" >
-       
-    <img src="http://glutenfree.hr/images/thumbs/{{hotel['image']}}" ng-if="hotel['image']!=null  " style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
-       <img src="img/hotel_image.png" ng-if="hotel['image']=='' || hotel['image']==null" style="float:left;height: 100%; width: 55px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
-             <div>
+          <img src="http://glutenfree.hr/images/thumbs/{{hotel['image']}}" ng-if="hotel['image']!=null" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
+      <img src="img/hotel_image.png" ng-if="hotel['image']==null" style="float:left;width: 45px; margin-left: 10px ;margin-top:7px; margin-right: 10px;"  >
+        
+    
+                <div>
                <div  style="width:90%;height: 30px; ">
        <span style="margin-top:2px;width:50%;font-size: 17px; "> {{hotel["title"]}}</span> </div>
         <img src="img/star.png" ng-if="hotel['standing']>0" style="position:absolute;bottom:0;" >  
-       <img src="img/star.png" ng-if="hotel['standing']>1"style="position:absolute;bottom:0;left:90px;" >
-       <img src="img/star.png" ng-if="hotel['standing']>2" style="position:absolute;bottom:0;left:106px;" >
-       <img src="img/star.png" ng-if="hotel['standing']>3" style="position:absolute;bottom:0;left:122px;" >      
-       <img src="img/star.png" ng-if="hotel['standing']>4" style="position:absolute;bottom:0;left:138px;" >    
+       <img src="img/star.png" ng-if="hotel['standing']>1"style="position:absolute;bottom:0;left:82px;" >
+       <img src="img/star.png" ng-if="hotel['standing']>2" style="position:absolute;bottom:0;left:98px;" >
+       <img src="img/star.png" ng-if="hotel['standing']>3" style="position:absolute;bottom:0;left:114px;" >      
+       <img src="img/star.png" ng-if="hotel['standing']>4" style="position:absolute;bottom:0;left:130px;" >    
        </div>
        <img class = "strelica" style="position:absolute;top:0;
 right: 0;" src="img/gumb_strelica.png">

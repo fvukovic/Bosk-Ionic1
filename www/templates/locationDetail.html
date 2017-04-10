@@ -51,11 +51,21 @@
   margin-right:auto;"  >
    <p  style="margin: 15px;">
        {{location['description']}}
-    </p><br>
+    </p> 
     <p style="margin: 15px;">
-     {{location['adress']}}
-    </p><br>
+    <b>Address:</b>  {{location['adress']}}
+    </p> 
+      <p ng-if="location['web']!=''" style="margin: 15px;">
+    <b> Web:</b>  <a href="{{location['web']}}"> {{location['web']}}</a>
+    </p> 
+        <p ng-if="location['email']!= ''" style="margin: 15px;">
+     <b> E-mail:</b>  {{location['email']}}
+    </p> 
+      <p ng-if="location['phone']!= ''" style="margin: 15px;">
+    <b>Tel:</b>  {{location['phone']}}
+    </p> 
+    <br>
   </div>
-
+    
   </ion-content>
 </ion-view>

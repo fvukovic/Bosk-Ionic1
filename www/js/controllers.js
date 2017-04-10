@@ -139,7 +139,7 @@ angular.module('starter.controllers', [])
        
     
 
-    });
+                 });
 
   })
 
