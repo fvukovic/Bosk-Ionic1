@@ -1,5 +1,5 @@
 angular.module('Bosk')
-    .controller('StartCtrl', function ($scope, $ionicPlatform, $rootScope, $location, $cordovaGeolocation, $http, $ionicHistory, $state) {
+    .controller('StartCtrl', function ($ionicLoading, $scope, $ionicPlatform, $rootScope, $location, $cordovaGeolocation, $http, $ionicHistory, $state) {
         $scope.visina = "49px";
         $scope.naslov = "Change";
         $scope.grad;
@@ -50,12 +50,14 @@ angular.module('Bosk')
             $ionicHistory.goBack();
 
         }
- 
+
         $scope.changeLocation = function () {
+            $ionicLoading.show({ template: 'Finding your location...', noBackdrop: true, duration: 2000 });
             var posOptions = { timeout: 10000, enableHighAccuracy: true };
             $cordovaGeolocation
                 .getCurrentPosition(posOptions)
                 .then(function (position) {
+
                     $scope.lat = position.coords.latitude;
                     window.localStorage.setItem("lat", $scope.lat);
                     $scope.long = position.coords.longitude;
@@ -70,7 +72,7 @@ angular.module('Bosk')
                     var request = {
                         latLng: latlng
                     };
-                    
+
                     geocoder.geocode(request, function (data, status) {
                         if (status == google.maps.GeocoderStatus.OK) {
                             if (data[0] != null) {
@@ -81,7 +83,7 @@ angular.module('Bosk')
                                 window.localStorage.setItem("hood", "----");
                                 window.localStorage.setItem("id", "-1");
                                 console.log(data[1].formatted_address);
-                                alert("Your location: "+data[1].formatted_address);
+                                alert("Your location: " + data[1].formatted_address);
                                 $location.path('/startScreen/-1');
                                 $scope.chooseCity();
                                 $scope.$evalAsync();
@@ -92,8 +94,8 @@ angular.module('Bosk')
                     })
                     console.log(position);
                 })
-        } 
- 
+        }
+
         $scope.changeStyle = function () {
             $scope.myStyle = {
                 'height': $scope.visina

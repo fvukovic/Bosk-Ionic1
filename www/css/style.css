@@ -49,4 +49,43 @@ ion-content{
 
 .scroll{height: 100%;}
 
- 
+ .info{
+   padding-top: 6px;
+   border-radius: 5px;
+   height: 30px;
+   background-color:  #E3E3E3; 
+   margin-left:10px;
+   margin-right: 10px;
+   margin-bottom: 7px;
+   
+
+ }
+ .infoText{
+   float: right;
+   margin-right: 20px;
+   color:#616161;  
+   font-size: 12px;
+ }
+ .infoImage{
+   padding-top: 15px;
+display:block; overflow:hidden ; width: 250px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:4px;
+
+ }
+ .infoTitle{ 
+    color:#1F1F1F;  
+    font-family:Verdana; 
+    font-weight:400;  
+      font-size:19px;
+       margin: 15px;
+       padding-top: 15px; 
+ }
+ .infoIcon{
+   
+   height: 13px; width: 18px;
+   margin-left: 10px;
+   float: left;
+   margin-top: 3px
+ }

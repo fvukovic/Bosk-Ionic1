@@ -17,7 +17,7 @@ text-decoration:none;
 text-decoration:none;
     }
     .lokacijaa 
-    {    
+    {    position: absolute;
         margin-top:66px;
         margin-left: -5px;
         width: 100%;     
@@ -43,14 +43,14 @@ text-decoration:none;
     left: 0; 
     right: 0;
       color: #b51879;
-     font-size: 17px;
+     font-size: 15px;
     margin: auto;
     font-weight: bold;
 } 
     .current
     {
      color:white;
-     font-size: 17px;
+     font-size: 15px;
      float:left;
      display:inline-block; 
      margin:10px;

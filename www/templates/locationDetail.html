@@ -1,71 +1,79 @@
 <ion-view>
-   <style>.list .item-radio .item-content {
-   background-color: #b51879;     
-  color: white;
-}
-.list .item-radio .radio-icon {
-  float: left;
-  color: white;
-}
-.item-radio input:checked + .radio-content .item-content {
-    /* style the item content when its checked */
-    background-color: #b51879; 
-}
- .myButton{
-        border:none;
-        margin-left:20px;
- } </style>
-  <ion-content   style="margin-top: 70px;" >
-       
-      <div style="border-radius:5px; background-color: white; margin: 10px"  >  
-    <p style=" color:black;  font-family:Verdana; 
-    font-weight:100;    font-size:25px; margin: 15px;padding-top: 15px; " >{{location["title"]}}</p> 
-    <div style="margin: 15px;" ng-if="location['category']==1 || location['category']==2">
-      
-        <img src="img/star.png" ng-if="location['standing']>0" style="position:relative;bottom:0;   " >  
-       <img src="img/star.png" ng-if="location['standing']>1" style="position:relative;bottom:0;" >
-       <img src="img/star.png" ng-if="location['standing']>2" style="position:relative;bottom:0;" >
-       <img src="img/star.png" ng-if="location['standing']>3" style="position:relative;bottom:0;" >      
-       <img src="img/star.png" ng-if="location['standing']>4" style="position:relative;bottom:0;" > 
-       
+  <style>
+    .list .item-radio .item-content {
+      background-color: #b51879;
+      color: white;
+    }
+    
+    .list .item-radio .radio-icon {
+      float: left;
+      color: white;
+    }
+    
+    .item-radio input:checked + .radio-content .item-content {
+      /* style the item content when its checked */
+      background-color: #b51879;
+    }
+    
+    .myButton {
+      border: none;
+      margin-left: 20px;
+    }
+  </style>
+  <ion-content style="margin-top: 70px;">
+
+    <div style="border-radius:5px; background-color: white; margin: 10px">
+
+
+
+      <img src="http://glutenfree.hr/images/thumbs/{{location['image']}}" ng-if="location['image']!=null  " class=infoImage>
+      <img src="img/hotel_image.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==1" style="display:block; overflow:hidden ; width: 250px;
+  margin-left:auto;
+  margin-right:auto;">
+        <img src="img/restaurant.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==2" style="display:block; overflow:hidden ; width: 250px;
+  margin-left:auto;
+  margin-right:auto;">
+          <img src="img/grocery.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==3" style="display:block; overflow:hidden ; width: 250px;
+  margin-left:auto;
+  margin-right:auto;">
+            <img src="img/pharmacies.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==4" style="display:block; overflow:hidden ; width: 250px;
+  margin-left:auto;
+  margin-right:auto;">
+              <img src="img/station.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==5" style="display:block; overflow:hidden ; width: 250px;
+  margin-left:auto;
+  margin-right:auto;">
+                <p class="infoTitle">{{location["title"]}}</p>
+                <div style="margin: 15px;" ng-if="location['category']==1 || location['category']==2">
+
+                  <img src="img/star.png" ng-if="location['standing']>0" style="position:relative;bottom:0;   ">
+                  <img src="img/star.png" ng-if="location['standing']>1" style="position:relative;bottom:0;">
+                  <img src="img/star.png" ng-if="location['standing']>2" style="position:relative;bottom:0;">
+                  <img src="img/star.png" ng-if="location['standing']>3" style="position:relative;bottom:0;">
+                  <img src="img/star.png" ng-if="location['standing']>4" style="position:relative;bottom:0;">
+
+                </div>
+
+                <div class="info"> <img class="infoIcon" style="height: 15px" src="img/clock.png">
+                  <p style="float: left;margin-left: 11px; color:#616161;  ">working hours</p>
+                  <p class="infoText"> {{location['workinghours']}} </p>
+                </div>
+                <div class="info"> <img class="infoIcon" style="height: 15px" src="img/phone.png">
+                  <p style="float: left;margin-left: 11px; color:#616161;  ">phone</p>
+                  <p class="infoText"> {{location['phone']}} </p>
+                </div>
+                <div class="info"> <img class="infoIcon" style="height: 15px" src="img/world.png">
+                  <p style="float: left;margin-left: 11px; color:#616161;  ">web site</p>
+                  <p class="infoText"> {{location['web']}} </p>
+                </div>
+                <div class="info"> <img class="infoIcon" src="img/email.png">
+                  <p style="float: left;margin-left: 11px; color:#616161;  ">email</p>
+                  <p class="infoText"> {{location['email']}} </p>
+                </div>
+                <p style="margin: 15px;">
+                  {{location['description']}}
+                </p>
+              <br>
     </div>
 
-    
-       <img src="http://glutenfree.hr/images/thumbs/{{location['image']}}" ng-if="location['image']!=null  " style="display:block; overflow:hidden ; width: 250px;
-  margin-left:auto;
-  margin-right:auto;"  >
-   <img src="img/hotel_image.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==1"   style="display:block; overflow:hidden ; width: 250px;
-  margin-left:auto;
-  margin-right:auto;"  >
-   <img src="img/restaurant.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==2"   style="display:block; overflow:hidden ; width: 250px;
-  margin-left:auto;
-  margin-right:auto;"  >
-   <img src="img/grocery.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==3"   style="display:block; overflow:hidden ; width: 250px;
-  margin-left:auto;
-  margin-right:auto;"  >
-   <img src="img/pharmacies.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==4"   style="display:block; overflow:hidden ; width: 250px;
-  margin-left:auto;
-  margin-right:auto;"  >
-   <img src="img/station.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==5"   style="display:block; overflow:hidden ; width: 250px;
-  margin-left:auto;
-  margin-right:auto;"  >
-   <p  style="margin: 15px;">
-       {{location['description']}}
-    </p> 
-    <p style="margin: 15px;">
-    <b>Address:</b>  {{location['adress']}}
-    </p> 
-      <p ng-if="location['web']!=''" style="margin: 15px;">
-    <b> Web:</b>  <a href="{{location['web']}}"> {{location['web']}}</a>
-    </p> 
-        <p ng-if="location['email']!= ''" style="margin: 15px;">
-     <b> E-mail:</b>  {{location['email']}}
-    </p> 
-      <p ng-if="location['phone']!= ''" style="margin: 15px;">
-    <b>Tel:</b>  {{location['phone']}}
-    </p> 
-    <br>
-  </div>
-    
   </ion-content>
 </ion-view>

@@ -1,11 +1,13 @@
 angular.module('Bosk')
-        .controller('StartScreenCtrl', function ($scope, $http, $stateParams) {
+        .controller('StartScreenCtrl', function ($scope, $http, $stateParams,$ionicLoading) {
+                
                 console.log('jessam li se loadao?');
                 $scope.showA = false;
                 $scope.showB = false;
                 $scope.showC = false;
                 $scope.showD = false;
                 $scope.showE = false; 
+                $scope.nemaLokacija = false;   
                 if (window.localStorage.getItem("id") == "-1") { 
                         var request = $http({
                                 method: "POST",
@@ -19,18 +21,23 @@ angular.module('Bosk')
                                  for (var i = 0; i < data.length; i++) {
                                                         if (data[i]["category"] == 1) {
                                                                 $scope.showA = true;
+                                                                $scope.nemaLokacija=true;
                                                         }
                                                         if (data[i]["category"] == 2) {
                                                                 $scope.showB = true;
+                                                                $scope.nemaLokacija=true;
                                                         }
                                                         if (data[i]["category"] == 3) {
                                                                 $scope.showC = true;
+                                                                $scope.nemaLokacija=true;
                                                         }
                                                         if (data[i]["category"] == 4) {
                                                                 $scope.showD = true;
+                                                                $scope.nemaLokacija=true;
                                                         }
                                                         if (data[i]["category"] == 5) {
                                                                 $scope.showE = true;
+                                                                $scope.nemaLokacija=true;
                                                         }
 
                                                 }
@@ -50,18 +57,23 @@ angular.module('Bosk')
                                         for (var i = 0; i < data.length; i++) {
                                                 if (data[i]["category"] == 1) {
                                                         $scope.showA = true;
+                                                        $scope.nemaLokacija=true;
                                                 }
                                                 if (data[i]["category"] == 2) {
                                                         $scope.showB = true;
+                                                        $scope.nemaLokacija=true;
                                                 }
                                                 if (data[i]["category"] == 3) {
                                                         $scope.showC = true;
+                                                        $scope.nemaLokacija=true;
                                                 }
                                                 if (data[i]["category"] == 4) {
                                                         $scope.showD = true;
+                                                        $scope.nemaLokacija=true;
                                                 }
                                                 if (data[i]["category"] == 5) {
                                                         $scope.showE = true;
+                                                        $scope.nemaLokacija=true;
                                                 }
 
                                         }
@@ -104,8 +116,7 @@ angular.module('Bosk')
                                 }
                         }
                        
-
-                      
+ 
 
 
 
