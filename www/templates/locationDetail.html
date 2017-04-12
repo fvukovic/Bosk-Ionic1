@@ -22,11 +22,11 @@
   </style>
   <ion-content style="margin-top: 70px;">
 
-    <div style="border-radius:5px; background-color: white; margin: 10px">
+    <div style="border-radius:5px; background-color: white; margin: 10px;margin-top: 30px;">
 
 
 
-      <img src="http://glutenfree.hr/images/thumbs/{{location['image']}}" ng-if="location['image']!=null  " class=infoImage>
+      <img src="http://glutenfree.hr/images/medium/{{location['image']}}" ng-if="location['image']!=null  " class=infoImage>
       <img src="img/hotel_image.png" ng-if="(location['image']=='' || location['image']==null) && location['category']==1" style="display:block; overflow:hidden ; width: 250px;
   margin-left:auto;
   margin-right:auto;">
@@ -53,21 +53,25 @@
 
                 </div>
 
-                <div class="info"> <img class="infoIcon" style="height: 15px" src="img/clock.png">
+                <div class="info" ng-if="location['workinghours']!=''"> <img class="infoIcon" style="height: 15px" src="img/clock.png">
                   <p style="float: left;margin-left: 11px; color:#616161;  ">working hours</p>
                   <p class="infoText"> {{location['workinghours']}} </p>
                 </div>
-                <div class="info"> <img class="infoIcon" style="height: 15px" src="img/phone.png">
+                <div class="info" ng-if="location['phone']!=''"> <img class="infoIcon" style="height: 15px" src="img/phone.png">
                   <p style="float: left;margin-left: 11px; color:#616161;  ">phone</p>
                   <p class="infoText"> {{location['phone']}} </p>
                 </div>
-                <div class="info"> <img class="infoIcon" style="height: 15px" src="img/world.png">
+                <div class="info" ng-if="location['web']!=''"> <img class="infoIcon" style="height: 15px" src="img/world.png">
                   <p style="float: left;margin-left: 11px; color:#616161;  ">web site</p>
                   <p class="infoText"> {{location['web']}} </p>
                 </div>
-                <div class="info"> <img class="infoIcon" src="img/email.png">
-                  <p style="float: left;margin-left: 11px; color:#616161;  ">email</p>
+                <div class="info" ng-if="location['email']!=''"> <img class="infoIcon" src="img/email.png">
+                  <p style="float: left;margin-left: 11px; color:#616161;  ">e-mail</p>
                   <p class="infoText"> {{location['email']}} </p>
+                </div>
+                <div class="info"   ng-if="location['tables']!='0'"> <img class="infoIcon" style="height: 15px" src="img/table.png">
+                  <p style="float: left;margin-left: 11px; color:#616161;  ">tables</p>
+                  <p class="infoText"> {{location['tables']}} </p>
                 </div>
                 <p style="margin: 15px;">
                   {{location['description']}}

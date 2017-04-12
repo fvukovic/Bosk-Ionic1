@@ -25,8 +25,10 @@ angular.module('Bosk')
             return (window.localStorage.getItem("hood"));
         }
         $scope.setDistance = function (distance) {
+           
             window.localStorage.setItem("distance", distance);
-            $state.go($state.current, {}, { reload: true });
+                $scope.changeLocation();
+          
         }
 
         $scope.funkcija = function () {
@@ -52,8 +54,11 @@ angular.module('Bosk')
         }
 
         $scope.changeLocation = function () {
-            $ionicLoading.show({ template: 'Finding your location...', noBackdrop: true, duration: 2000 });
-            var posOptions = { timeout: 10000, enableHighAccuracy: true };
+             if (window.localStorage.getItem("distance") < 50) {
+                         window.localStorage.setItem("distance", "5000");
+                    }  
+                
+             var posOptions = { timeout: 10000, enableHighAccuracy: true };
             $cordovaGeolocation
                 .getCurrentPosition(posOptions)
                 .then(function (position) {
@@ -62,11 +67,7 @@ angular.module('Bosk')
                     window.localStorage.setItem("lat", $scope.lat);
                     $scope.long = position.coords.longitude;
                     window.localStorage.setItem("long", $scope.long);
-                    if (window.localStorage.getItem("distance") > 50) {
-                    } else {
-                        window.localStorage.setItem("distance", "10000");
-                    }
-
+                   
                     var geocoder = new google.maps.Geocoder();
                     var latlng = new google.maps.LatLng($scope.lat, $scope.long);
                     var request = {
@@ -87,13 +88,28 @@ angular.module('Bosk')
                                 $location.path('/startScreen/-1');
                                 $scope.chooseCity();
                                 $scope.$evalAsync();
+                                
                             } else {
                                 alert("No address available");
                             }
                         }
                     })
                     console.log(position);
+                      
                 })
+                    cordova.plugins.diagnostic.isLocationAvailable(function(available){
+    console.log("Location is " + (available ? "available" : "not available"));
+    if(available == false){
+alert("Please enable GPS service on your device.");
+    }else{
+         $ionicLoading.show({ template: 'Finding your location... <br> Distance: '+   window.localStorage.getItem("distance"), noBackdrop: true, duration: 2000 });
+         $location.path('/startScreen/-1'); 
+         
+}
+}, function(error){
+    
+});
+
         }
 
         $scope.changeStyle = function () {

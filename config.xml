@@ -18,10 +18,21 @@
   <preference name="android-targetSdkVersion" value="23"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="3000"/>
+  <plugin name="cordova.plugins.diagnostic" source="npm"/>
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
   <platform name="android">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -145,6 +156,76 @@
     
     
      
+  
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
   
     
     
