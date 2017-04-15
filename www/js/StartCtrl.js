@@ -3,6 +3,7 @@ angular.module('Bosk')
         $scope.visina = "49px";
         $scope.naslov = "Change";
         $scope.grad;
+        $scope.working = true;
         if (window.localStorage.getItem("lokacija") == "" || window.localStorage.getItem("lokacija") == null) {
             $scope.grad = 1;
         } else {
@@ -58,7 +59,7 @@ angular.module('Bosk')
                          window.localStorage.setItem("distance", "5000");
                     }  
                 
-             var posOptions = { timeout: 10000, enableHighAccuracy: true };
+             var posOptions = { timeout: 13000, enableHighAccuracy: true };
             $cordovaGeolocation
                 .getCurrentPosition(posOptions)
                 .then(function (position) {
@@ -96,13 +97,15 @@ angular.module('Bosk')
                     })
                     console.log(position);
                       
-                })
+                }).catch(function(response) {
+  alert("Error, check your internet connection or gps device!");
+})
                     cordova.plugins.diagnostic.isLocationAvailable(function(available){
     console.log("Location is " + (available ? "available" : "not available"));
     if(available == false){
 alert("Please enable GPS service on your device.");
     }else{
-         $ionicLoading.show({ template: 'Finding your location... <br> Distance: '+   window.localStorage.getItem("distance"), noBackdrop: true, duration: 2000 });
+          $ionicLoading.show({ template: 'Try to find your location. Please wait .. <br> Distance: '+   window.localStorage.getItem("distance"), noBackdrop: true, duration: 5000 });
          $location.path('/startScreen/-1'); 
          
 }

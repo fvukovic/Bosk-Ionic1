@@ -76,6 +76,7 @@ angular.module('starter.controllers', [])
       $scope.neznam = response.data;
        console.log("ovo vrati"+ response.data);
     }, function errorCallback(response) {
+      alert("No internet connection!");
     });
     $scope.pickCity = function (lokacija,lat,lon,name) {
       window.localStorage.setItem("id", lokacija);
@@ -114,8 +115,7 @@ angular.module('starter.controllers', [])
         $scope.category = window.localStorage.getItem("category");
       });
       request.error(function (data) {
-        console.log(data);
-        $scope.hotels = data;
+        console.log(data); 
       });
 
       $scope.$lokacija = "Zagreb";

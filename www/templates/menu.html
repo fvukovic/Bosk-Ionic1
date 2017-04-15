@@ -1,4 +1,4 @@
-<ion-side-menus enable-menu-with-back-views="true">
+<ion-side-menus ng-controller="StartCtrl" enable-menu-with-back-views="true">
   <ion-side-menu-content class="bar-dark" drag-content="false">
     <ion-header-bar align-title="center" ng-hide="menuVisibility" class="bar-dark" style="height: 72px" class="bar-positive">
       <div class="buttons">
@@ -16,11 +16,11 @@
       </div>
       </div>
       <div style="height: 50px;background-color: 50px"></div>
-      <div ng-controller="StartCtrl" cache-view="false" id="lokacija" class="lokacijaa" ng-style="myStyle" ng-init="doSomething()">
+      <div  cache-view="false" id="lokacija" class="lokacijaa" ng-style="myStyle" ng-init="doSomething()">
 
         <p class="current"> Current location :</p>
-        <p style="display:inline-block;  color: white; margin-top: 17px;  font-size:15px;"> {{chooseCity()}}</p>
-
+        <div style="width: 80px;display:inline-block; "><p style="display:inline-block;  color: white; margin-top: 17px;  font-size:15px;"> {{chooseCity()}}</p>
+        </div>
         <button class="change" ng-click="funkcija()"> <p  style="font-size:17px">{{naslov}}</p> </button>
         <br>
         <a class="dodani_buttoni" ng-click="changeLocation();funkcija()" ng-show="!showDiv">Read GPS coordinates</a>
@@ -32,7 +32,7 @@
           <ion-radio ng-model="choice" name="a" ng-value="'5000'" ng-show="!showDiv" ng-click="setDistance('5000');funkcija()" ng-selected="true" class="myButton">Show results in 5000m range</ion-radio> 
         </ion-list> <br>
       </div>
-    </ion-header-bar>
+        </ion-header-bar>
 
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
