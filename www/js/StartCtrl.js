@@ -87,6 +87,7 @@ angular.module('Bosk')
                                 console.log(data[1].formatted_address);
                                 alert("Your location: " + data[1].formatted_address);
                                 $location.path('/startScreen/-1');
+                                 $state.go($state.current, {}, { reload: true });
                                 $scope.chooseCity();
                                 $scope.$evalAsync();
                                 
@@ -105,7 +106,7 @@ angular.module('Bosk')
     if(available == false){
 alert("Please enable GPS service on your device.");
     }else{
-          $ionicLoading.show({ template: 'Try to find your location. Please wait .. <br> Distance: '+   window.localStorage.getItem("distance"), noBackdrop: true, duration: 5000 });
+          $ionicLoading.show({ template: 'Try to find your location. Please wait .. <br> Distance: '+   window.localStorage.getItem("distance"), noBackdrop: true, duration: 4000 });
          $location.path('/startScreen/-1'); 
          
 }
