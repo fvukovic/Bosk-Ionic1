@@ -106,7 +106,7 @@ angular.module('Bosk')
     if(available == false){
 alert("Please enable GPS service on your device.");
     }else{
-          $ionicLoading.show({ template: 'Try to find your location. Please wait .. <br> Distance: '+   window.localStorage.getItem("distance"), noBackdrop: true, duration: 4000 });
+          $ionicLoading.show({ template: 'Try to find your location. Please wait .. <br> Distance: '+   window.localStorage.getItem("distance"), noBackdrop: true, duration: 3000 });
          $location.path('/startScreen/-1'); 
          
 }

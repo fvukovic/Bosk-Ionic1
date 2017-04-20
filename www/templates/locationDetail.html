@@ -45,11 +45,11 @@
                 <p class="infoTitle">{{location["title"]}}</p>
                 <div style="margin: 15px;" ng-if="location['category']==1 || location['category']==2">
 
-                  <img src="img/star.png" ng-if="location['standing']>0" style="position:relative;bottom:0;   ">
-                  <img src="img/star.png" ng-if="location['standing']>1" style="position:relative;bottom:0;">
-                  <img src="img/star.png" ng-if="location['standing']>2" style="position:relative;bottom:0;">
-                  <img src="img/star.png" ng-if="location['standing']>3" style="position:relative;bottom:0;">
-                  <img src="img/star.png" ng-if="location['standing']>4" style="position:relative;bottom:0;">
+                  <img src="img/star.png" ng-if="location['stars']>0" style="position:relative;bottom:0;   ">
+                  <img src="img/star.png" ng-if="location['stars']>1" style="position:relative;bottom:0;">
+                  <img src="img/star.png" ng-if="location['stars']>2" style="position:relative;bottom:0;">
+                  <img src="img/star.png" ng-if="location['stars']>3" style="position:relative;bottom:0;">
+                  <img src="img/star.png" ng-if="location['stars']>4" style="position:relative;bottom:0;">
 
                 </div>
 
@@ -73,9 +73,8 @@
                   <p style="float: left;margin-left: 11px; color:#616161;  ">tables</p>
                   <p class="infoText"> {{location['tables']}} </p>
                 </div>
-                <p style="margin: 15px;">
-                  {{location['description']}}
-                </p>
+                <div ng-bind-html="description" style="margin: 15px;"> 
+                </div>
               <br>
     </div>
 

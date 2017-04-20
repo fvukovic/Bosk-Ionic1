@@ -67,6 +67,15 @@ document.addEventListener('deviceready', function() {
       }
     }
   })
+   .state('app.startScreen1', {
+     cache: false,
+    url: '/startScreen1/:cityId',
+    views: {
+      'menuContent': { 
+        controller:"RouterCtrl"  
+      }
+    }
+  })
 
   .state('app.search', {
     url: '/search',

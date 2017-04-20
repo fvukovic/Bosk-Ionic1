@@ -1,6 +1,10 @@
 angular.module('Bosk')
-        .controller('StartScreenCtrl', function ($scope, $http, $stateParams,$ionicLoading) {
-                
+        .controller('StartScreenCtrl', function ($scope, $http, $stateParams,$ionicLoading,$ionicHistory,$ionicPlatform,$state) {
+    $ionicPlatform.registerBackButtonAction(function (event) {
+ 
+    navigator.app.backHistory();
+  
+}, 100);
                 console.log('jessam li se loadao?');
                 $scope.showA = false;
                 $scope.showB = false;
