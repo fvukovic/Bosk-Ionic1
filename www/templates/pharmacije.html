@@ -22,9 +22,12 @@
           <img src="http://glutenfree.hr/images/thumbs/{{hotel['icon']}}" ng-if="hotel['icon']!=null" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
       <img src="img/pharmacies.png" ng-if="hotel['icon']==null" style="float:left;width: 45px; margin-left: 10px ;margin-top:7px; margin-right: 10px;"  >
       
-        <div>
-               <div  style="margin-top:10px;width:90%;height: 30px; ">
-       <span style="width:50%;font-size: 17px; "> {{hotel["title"]}}</span> </div>   
+        <div> 
+      <div  style="width:90%;height: 30px; ">
+       <span style="position: relative;
+top: 10px;width:50%;font-size: 17px; " ng-if="hotel['title'].length>=25"> {{hotel["title"]}}</span> </div> 
+<span style="position: relative;
+top: -10px;width:50%;font-size: 17px; " ng-if="hotel['title'].length<25"> {{hotel["title"]}}</span> 
        </div>
        <img class = "strelica" style="position:absolute;top:0;
 right: 0;" src="img/gumb_strelica.png">

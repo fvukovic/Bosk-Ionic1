@@ -52,95 +52,82 @@
                   <img src="img/star.png" ng-if="location['stars']>4" style="position:relative;bottom:0;">
 
                 </div>
-                <div  style="margin-left: 10px"  ng-if="location['date']!='0000-00-00'">  
+                <div style="margin-left: 10px" ng-if="location['date']!='0000-00-0'">
                   <p style="float: left;margin-left: 11px; color:#616161;position: absolute  "> {{location['date']}} </p>
-                </div> <br/><br/>
-                 <div  style="margin-left: 10px"  ng-if="location['adress']!=''">  
+                </div> <br/> 
+                <div style="margin-left: 10px" ng-if="location['adress']!=''">
                   <p style="float: left;margin-left: 11px; color:#616161;position: absolute  "> {{location['adress']}} </p>
-                </div> 
+                </div>
                 <br/>
-                <div class="info" ng-if="location['workinghours']!='' && location['workinghours'].length<=21" > <img class="infoIcon" style="height: 15px" src="img/clock.png">
-                  <p style="float: left;margin-left: 11px; color:#616161;  ">working hours</p>
-                  <p class="infoText"> {{location['workinghours']}} </p>
+
+                <div class="info" ng-if="location['workinghours']!=''" style="position: relative "> <img class="infoIcon" src="img/clock.png">
+                  <span class="infoText">working hours</span>
+                  <p class="locationInfo">{{location['workinghours']}}</p>
                 </div>
-                  <div class="info"  style="height: 50px"  ng-if="location['workinghours']!='' && location['workinghours'].length>21"> <img class="infoIcon" style="height: 15px;margin-top:12px" src="img/clock.png">
-                  <p style="float: left;margin-left: 11px; color:#616161;margin-top:10px  ">working hours</p>
-                  <p class="infoText"> {{location['workinghours']}} </p>
+                <div class="info" ng-if="location['phone']!=''" style="position: relative "> <img class="infoIcon" src="img/phone.png">
+                  <a href="tel:{{location['phone']}}">
+                    <span class="infoText">phone</span>
+                    <p class="locationInfo">{{location['phone']}}</p>
+                  </a>
                 </div>
-                <div   href="tel:{{location['phone']}}" class="info" ng-if="location['phone']!=''"> <img class="infoIcon" style="height: 15px" src="img/phone.png">
-                  <a  href="tel:{{location['phone']}}"><p style="float: left;margin-left: 11px; color:#616161;  ">phone</p>
-                  <p class="infoText"> {{location['phone']}} </p></a>
-                </div>
-                <div  ng-click="goOnURL(location['web'])" class="info" ng-if="location['web']!='' && location['web'].length<=21"> <img class="infoIcon" style="height: auto;" src="img/world.png">
-               
-                  <p style="float: left;margin-left: 11px; color:#616161  ">web site</p>
-                  <p class="infoText"> {{location['web']}} </p>
 
 
-
-
-
-
-
-                </div>
-                 <div   ng-click="goOnURL(location['web'])" class="info" ng-if="location['web']!='' && location['web'].length>21"> <img class="infoIcon" style="margin-top:12px"  src="img/world.png">
-                   <p style="float: left;margin-left: 11px;margin-right: 224px; color:#616161; ;margin-top:8px; ">web site</p>
-                  <p style="  white-space: pre-wrap;      /* CSS3 */   
-   white-space: -moz-pre-wrap; /* Firefox */    
-   white-space: -pre-wrap;     /* Opera <7 */   
-   white-space: -o-pre-wrap;   /* Opera 7 */    
-   word-wrap: break-word; "> {{location['web']}} </p>
-                  
+                <div  ng-click="goOnURL(location['web'])" class="info" ng-if="location['web']!=''" style="position: relative "> <img class="infoIcon" src="img/world.png">
+                 <a>
+                  <span class="infoText">web-site  </span>
+                  <p class="locationInfo">{{location['web']}}</p>
+                 </a>
                 </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-                <div class="info" ng-if="location['email']!='' && location['email'].length<=21"> <img class="infoIcon" src="img/email.png">
-                  <p style="float: left;margin-left: 11px; color:#616161;  ">e-mail</p>
-                  <p class="infoText"> {{location['email']}} </p>
+                <div class="info" ng-if="location['workinghours']!=''" style="position: relative "> <img class="infoIcon" style="height: 12px;" src="img/email.png">
+                  <span class="infoText">email</span>
+                  <p class="locationInfo">{{location['email']}}</p>
                 </div>
-                 <div style="height: 50px" class="info" ng-if="location['email']!=''  && location['email'].length>21"> <img class="infoIcon" src="img/email.png" style="margin-top:12px" >
-                  <p style="float: left;margin-left: 11px; color:#616161; ;margin-top:8px; ">e-mail</p>
-                  <p class="infoText"> {{location['email']}} </p>
+
+
+
+                <div class="info" ng-if="location['tables']!=0" style="position: relative "> <img class="infoIcon" src="img/table.png">
+                  <span class="infoText">tables</span>
+                  <p class="locationInfo">{{location['tables']}}</p>
                 </div>
-                <div class="info"   ng-if="location['tables']!='0'"> <img class="infoIcon" style="height: 15px" src="img/table.png">
-                  <p style="float: left;margin-left: 11px; color:#616161;  ">tables</p>
-                  <p class="infoText"> {{location['tables']}} </p>
-                </div>                
-                <div class="info"   ng-if="location['food']!=''  && location['food'].length<=21"> <img class="infoIcon" style="height: 15px" src="img/table.png">
-                  <p style="float: left;margin-left: 11px; color:#616161;  ">food</p>
-                  <p class="infoText"> {{location['food']}} </p>
+
+
+
+                <div class="info" ng-if="location['food']!=''" style="position: relative "> <img class="infoIcon" src="img/world.png">
+                  <span class="infoText">food</span>
+                  <p class="locationInfo">{{location['food']}}</p>
                 </div>
-                <div class="info"   style="height: 50px"  ng-if="location['food']!=''  && location['food'].length>21"> <img class="infoIcon" style="height: 15px" src="img/table.png">
-                  <p style="float: left;margin-left: 11px; color:#616161;  ">food</p>
-                  <p class="infoText"> {{location['food']}} </p>
+
+
+
+                <div class="info" ng-if="location['mobile']!=''" style="position: relative "> <img class="infoIcon" src="img/phone.png">
+                  <a href="tel:{{location['mobile']}}">
+                    <span class="infoText">mobile  </span>
+                    <p class="locationInfo">{{location['mobile']}}</p>
+                  </a>
                 </div>
-                 <div   href="tel:{{location['mobile']}}" class="info" ng-if="location['mobile']!='' "> <img class="infoIcon" style="height: 15px" src="img/phone.png">
-                  <a  href="tel:{{location['mobile']}}"><p style="float: left;margin-left: 11px; color:#616161;  ">mobile</p>
-                  <p class="infoText"> {{location['mobile']}} </p></a>
+
+
+                <div class="info" ng-if="location['parking']!=''" style="position: relative "> <img class="infoIcon" src="img/world.png">
+                  <span class="infoText">parking</span>
+                  <p class="locationInfo">{{location['parking']}}</p>
                 </div>
-                    <div class="info"   ng-if="location['parking']!=''"> <img class="infoIcon" style="height: 15px" src="img/table.png">
-                  <p style="float: left;margin-left: 11px; color:#616161;  ">parking</p>
-                  <p class="infoText"> {{location['parking']}} </p>
+
+
+
+
+                <div class="info" ng-if="location['standing']!=0" style="position: relative "> <img class="infoIcon" src="img/table.png">
+                  <span class="infoText">standing</span>
+                  <p class="locationInfo">{{location['standing']}}</p>
                 </div>
-                    <div class="info"   ng-if="location['standing']!='0'"> <img class="infoIcon" style="height: 15px" src="img/table.png">
-                  <p style="float: left;margin-left: 11px; color:#616161;  ">standing</p>
-                  <p class="infoText"> {{location['standing']}} </p>
+
+
+
+                <div ng-bind-html="description" style="margin: 15px;">
                 </div>
-                
-                <div ng-bind-html="description" style="margin: 15px;"> 
-                </div>
-              <br>
+                <br>
     </div>
 
   </ion-content>

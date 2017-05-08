@@ -49,10 +49,8 @@ ion-content{
 
 .scroll{height: 100%;}
 
- .info{
-   padding-top: 6px;
-   border-radius: 5px;
-   height: 30px;
+ .info{  
+   border-radius: 5px; 
    background-color:  #E3E3E3; 
    margin-left:10px;
    margin-right: 10px;
@@ -61,10 +59,12 @@ ion-content{
 
  }
  .infoText{
-   float: right;
-   margin-right: 20px;
-   color:#616161;  
-   font-size: 12px;
+   top: 50%;
+   color:#484848;
+   font-size: 13px;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 28px;
  }
  .infoImage{ 
 display:block; overflow:hidden ;
@@ -82,9 +82,23 @@ width: 100%;
        margin: 15px; 
  }
  .infoIcon{
+   left: 8px;
+   height: 15px;  top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
    
-   height: 13px; width: 18px;
-   margin-left: 10px;
-   float: left;
-   margin-top: 3px
+ }
+
+ .locationInfo{
+  padding-top: 4px;
+   padding-bottom: 4px;
+   left: 160px; width: 120px;position: relative;
+    top: 50%;    white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;
+   font-size: 13px; 
+    color:#484848;
+  /** */
  }

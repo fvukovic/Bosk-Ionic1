@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.bosk174870" version="1.8" android-versionCode="14" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>BOSK</name>
-  <description> 
-    Gluten free guide Croatia
+  <name> BOSK Gluten free guide Croatia</name>
+  <description> &#xD;
+   BOSK Gluten free guide Croatia&#xD;
     </description>
-  <author email="fvukovic@foi.hr" href="">&#xD;
-      Filip Vuković
+  <author email="fvukovic@foi.hr" href="">&#xD;&#xD;
+      Filip Vuković&#xD;
     </author>
   <content scroll="false" src="index.html"/>
   <access origin="*"/>
@@ -34,424 +34,520 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-     &gt; &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+     &gt; &#xD;&#xD;
+     &#xD;&#xD;
+  &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+  &#xD;
      &#xD;
-  
-    
-  
-    
-  
-    
-  
-     
-    
-    
-  
-    
-    
-    
-    
-    
-     
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+     &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+  &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
+    &#xD;
   
     
     
@@ -562,5 +658,6 @@
   <allow-navigation href="http://192.168.1.8:8101"/>
   <allow-navigation href="http://192.168.42.10:8100"/>
   <allow-navigation href="http://192.168.1.6:8100"/>
+  <allow-navigation href="http://192.168.1.14:8100"/>
   <icon src="resources\android\icon\drawable-xhdpi-icon.png"/>
 </widget>

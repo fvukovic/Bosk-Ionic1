@@ -1,48 +1,56 @@
-<ion-view >
-     <style>.list .item-radio .item-content {
-   background-color: #b51879;     
-  color: white;
-}
-.list .item-radio .radio-icon {
-  float: left;
-  color: white;
-}
-.item-radio input:checked + .radio-content .item-content {
-    /* style the item content when its checked */
-    background-color: #b51879; 
-}
- .myButton{
-        border:none;
-        margin-left:20px;
- } </style>
-  <ion-content   style="margin-top: 70px;" >
-     
-     <a ng-repeat="hotel in hotels" ui-sref="app.detailG({hotelId:{{hotel['id']}}})">
-     <div class="list list-inset hotel" id="card" ng-if="hotel['category'] == 5" >
-            <img src="http://glutenfree.hr/images/thumbs/{{hotel['icon']}}" ng-if="hotel['icon']!=null" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px " >
-      <img src="img/station.png" ng-if="hotel['icon']==null" style="float:left;width: 45px; margin-left: 10px ;margin-top:7px; margin-right: 10px;"  >
-        
+<ion-view>
+  <style>
+    .list .item-radio .item-content {
+      background-color: #b51879;
+      color: white;
+    }
     
-       <div>
-               <div  style=" margin-top:10px;width:90%;height: 30px; ">
-       <span style="margin-top:2px;width:50%;font-size: 17px; "> {{hotel["title"]}}</span> </div>  
-       </div>
-       <img class = "strelica" style="position:absolute;top:0;
+    .list .item-radio .radio-icon {
+      float: left;
+      color: white;
+    }
+    
+    .item-radio input:checked + .radio-content .item-content {
+      /* style the item content when its checked */
+      background-color: #b51879;
+    }
+    
+    .myButton {
+      border: none;
+      margin-left: 20px;
+    }
+  </style>
+  <ion-content style="margin-top: 70px;">
+
+    <a ng-repeat="hotel in hotels" ui-sref="app.detailG({hotelId:{{hotel['id']}}})">
+      <div class="list list-inset hotel" id="card" ng-if="hotel['category'] == 5">
+        <img src="http://glutenfree.hr/images/thumbs/{{hotel['icon']}}" ng-if="hotel['icon']!=null" style="float:left;height: 100%; width: 60px;margin: 5px; padding-bottom: 8px; margin-right:15px ">
+        <img src="img/station.png" ng-if="hotel['icon']==null" style="float:left;width: 45px; margin-left: 10px ;margin-top:7px; margin-right: 10px;">
+        <div>
+          <div style="width:90%;height: 30px; ">
+            <span style="position: relative;
+top: 10px;width:50%;font-size: 17px; " ng-if="hotel['title'].length>=25"> {{hotel["title"]}}</span>
+          </div>
+          <span style="position: relative;
+top: -10px;width:50%;font-size: 17px; " ng-if="hotel['title'].length<25"> {{hotel["title"]}}</span>
+        </div>
+        <img class="strelica" style="position:absolute;top:0;
 right: 0;" src="img/gumb_strelica.png">
 
-     </div>
-     </a>
-      
+      </div>
+    </a>
+
+
   </ion-content>
- <ion-footer-bar style="background-color: #E3E3E3"  >
-  <div class="buttons">
+  <ion-footer-bar style="background-color: #E3E3E3">
+    <div class="buttons">
       <div class="float-button">
-     <span class="height-fix">
+        <span class="height-fix">
        <button id="fab-profile" ui-sref="app.map" class="button button-fab button-fab-bottom-right fab-fixed button-assertive pane" nav-view="active" style="background-color:#5F5D99;height: 60px;width:60px; border-radius:50%;opacity: 1; transform: translate3d(0%, 0px, 0px);">
          <img src="img/map.png" style="margin-top:7px;">
        </button>
      </span>
-   </div>
-  </div>
-</ion-footer-bar>
+      </div>
+    </div>
+  </ion-footer-bar>
 </ion-view>

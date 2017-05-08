@@ -24,7 +24,10 @@
       <img src="img/restaurant.png" ng-if="hotel['icon']==null" style="float:left;width: 45px; margin-left: 10px ;margin-top:7px; margin-right: 10px;"  >
           <div>
                <div  style="width:90%;height: 30px; ">
-       <span style="margin-top:2px;width:50%;font-size: 17px; "> {{hotel["title"]}}</span> </div>
+       <span style="position: relative;
+top: 10px;width:50%;font-size: 17px; " ng-if="hotel['title'].length>=25"> {{hotel["title"]}}</span> </div> 
+<span style="position: relative;
+top: -10px;width:50%;font-size: 17px; " ng-if="hotel['title'].length<25"> {{hotel["title"]}}</span> 
         <img src="img/star.png" ng-if="hotel['stars']>0" style="position:absolute;bottom:0;" >  
        <img src="img/star.png" ng-if="hotel['stars']>1"style="position:absolute;bottom:0;left:97px;" >
        <img src="img/star.png" ng-if="hotel['stars']>2" style="position:absolute;bottom:0;left:113px;" >
