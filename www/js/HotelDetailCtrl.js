@@ -1,6 +1,7 @@
 var c = angular.module('Bosk')
 .controller('HotelDetailCtrl', function($scope,$stateParams,$http) { 
   $scope.location; 
+  $scope.description;
 c.directive('browseTo', function ($ionicGesture) {
  return {
   restrict: 'A',
@@ -18,8 +19,7 @@ c.directive('browseTo', function ($ionicGesture) {
  }
 });
 
-  $scope.goOnURL = function(adress){
-      alert(adress);
+  $scope.goOnURL = function(adress){ 
 cordova.InAppBrowser.open(adress, '_system');
 
   }
@@ -54,8 +54,8 @@ cordova.InAppBrowser.open(adress, '_system');
             for(var i = 0; i<data.length;i++){
                 if(data[i]["id"]== $stateParams.hotelId){
                      $scope.location=data[i];
-                     
-                     console.log($scope.location);
+                     $scope.description=data[i]["description"];
+                     console.log("OVOOO" +$scope.description);
                 }
             }
         

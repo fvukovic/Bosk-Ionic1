@@ -149,6 +149,15 @@ document.addEventListener('deviceready', function() {
       }
     }
   })
+    .state('bapp.bosk', {
+    url: '/bosk',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/BOSKgluten.html',
+        controller:  'BoskCtrl'
+      }
+    }
+  })
     .state('app.detail', {
       cache:false,
       url: 'hotels/:hotelId',

@@ -52,7 +52,7 @@
                   <img src="img/star.png" ng-if="location['stars']>4" style="position:relative;bottom:0;">
 
                 </div>
-                <div style="margin-left: 10px" ng-if="location['date']!='0000-00-0'">
+                <div style="margin-left: 10px" ng-if="location['date']!='0000-00-00'">
                   <p style="float: left;margin-left: 11px; color:#616161;position: absolute  "> {{location['date']}} </p>
                 </div> <br/> 
                 <div style="margin-left: 10px" ng-if="location['adress']!=''">
@@ -75,7 +75,7 @@
                 <div  ng-click="goOnURL(location['web'])" class="info" ng-if="location['web']!=''" style="position: relative "> <img class="infoIcon" src="img/world.png">
                  <a>
                   <span class="infoText">web-site  </span>
-                  <p class="locationInfo">{{location['web']}}</p>
+                  <p class="locationInfo">{{location['web'].substring(7,location['web'].length-1)}}</p>
                  </a>
                 </div>
 
@@ -95,7 +95,7 @@
 
 
 
-                <div class="info" ng-if="location['food']!=''" style="position: relative "> <img class="infoIcon" src="img/world.png">
+                <div class="info" ng-if="location['food']!=''" style="position: relative "> <img class="infoIcon" src="img/food.png">
                   <span class="infoText">food</span>
                   <p class="locationInfo">{{location['food']}}</p>
                 </div>
@@ -110,7 +110,7 @@
                 </div>
 
 
-                <div class="info" ng-if="location['parking']!=''" style="position: relative "> <img class="infoIcon" src="img/world.png">
+                <div class="info" ng-if="location['parking']!=''" style="position: relative "> <img class="infoIcon" src="img/parking.png">
                   <span class="infoText">parking</span>
                   <p class="locationInfo">{{location['parking']}}</p>
                 </div>

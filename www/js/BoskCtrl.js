@@ -1,6 +1,5 @@
 angular.module('Bosk')
-.controller('AboutCtrl', function($scope, $http){
-    console.log('jessam li se loadao?');
+.controller('BoskCtrl', function($scope, $http){ 
     $scope.title;
     $scope.description;
     $scope.image;
@@ -8,7 +7,7 @@ angular.module('Bosk')
        $http({
             
             method: "GET",
-            url: 'http://glutenfree.hr/rest/about_us.php', 
+            url: 'http://glutenfree.hr/rest/standard.php', 
             
         }).then(function successCallback(response) { 
             console.log(response);
