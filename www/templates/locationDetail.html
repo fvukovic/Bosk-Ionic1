@@ -60,6 +60,11 @@
                 </div>
                 <br/>
 
+                 <div class="info" ng-if="location['adress']!=''" style="position: relative "> <img class="infoIcon" src="img/clock.png">
+                  <span class="infoText">adress</span>
+                  <p class="locationInfo">{{location['adress']}}</p>
+                </div>
+
                 <div class="info" ng-if="location['workinghours']!=''" style="position: relative "> <img class="infoIcon" src="img/clock.png">
                   <span class="infoText">working hours</span>
                   <p class="locationInfo">{{location['workinghours']}}</p>

@@ -7,10 +7,11 @@
  
 angular.module('Bosk', ['ionic','ngCordova', 'starter.controllers','ngMap'])
 
-.run(function($ionicPlatform,$cordovaSQLite) {
-  $ionicPlatform.ready(function() {  
+.run(function($ionicPlatform,$cordovaSQLite) { 
+ screen.orientation.lock('portrait'); 
+  $ionicPlatform.ready(function() {    
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
+    // for form inputs) 
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);

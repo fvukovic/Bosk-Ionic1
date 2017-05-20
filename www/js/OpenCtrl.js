@@ -18,6 +18,8 @@ angular.module('Bosk')
 
         $timeout(funkcija, 4000);
         function funkcija() {
-            $location.path('/startScreen1/');
+             screen.orientation.unlock(); 
+            $location.path('/startScreen1/'); 
+          
         }
     })

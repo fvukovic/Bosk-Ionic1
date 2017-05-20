@@ -3,7 +3,7 @@ angular.module('Bosk')
         $scope.visina = "49px";
         $scope.naslov = "Change";
         $scope.grad;
-        $scope.working = true;
+        $scope.working = true;  
         if (window.localStorage.getItem("lokacija") == "" || window.localStorage.getItem("lokacija") == null) {
             $scope.grad = 1;
         } else {

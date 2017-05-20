@@ -92,7 +92,7 @@ width: 100%;
  .locationInfo{
   padding-top: 4px;
    padding-bottom: 4px;
-   left: 160px; width: 120px;position: relative;
+   left: 120px; width: 160px;position: relative;
     top: 50%;    white-space: pre-wrap;      /* CSS3 */   
    white-space: -moz-pre-wrap; /* Firefox */    
    white-space: -pre-wrap;     /* Opera <7 */   
