@@ -1,8 +1,11 @@
 angular.module('starter.controllers', [])
 
-  .controller('AppCtrl', function ($scope, $ionicModal, $timeout, $ionicPopup, $state, $location, $stateParams, $rootScope) {
+  .controller('AppCtrl', function ($scope, $ionicModal, $timeout, $ionicPopup, $state, $location, $stateParams, $rootScope, $ionicPlatform,$ionicHistory) {
 
-
+   $ionicPlatform.registerBackButtonAction(function (event) { 
+            $ionicHistory.goBack();
+  
+}, 100);
     $scope.myPopup;
     // With the new view caching in Ionic, Controllers are only called
     // when they are recreated or on app start, instead of every page change.

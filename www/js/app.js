@@ -240,6 +240,16 @@ document.addEventListener('deviceready', function() {
         }
       }
     })
+        .state('app.distance', {
+      cache:false,
+      url: '/distance',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/distanceMap.html',
+          controller: 'DinstanceMapCtrl',
+        }
+      }
+    })
     .state('bapp.info', {
       url: '/info',
       views: {

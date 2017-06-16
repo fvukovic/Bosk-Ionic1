@@ -55,13 +55,9 @@
                 <div style="margin-left: 10px" ng-if="location['date']!='0000-00-00'">
                   <p style="float: left;margin-left: 11px; color:#616161;position: absolute  "> {{location['date']}} </p>
                 </div> <br/> 
-                <div style="margin-left: 10px" ng-if="location['adress']!=''">
-                  <p style="float: left;margin-left: 11px; color:#616161;position: absolute  "> {{location['adress']}} </p>
-                </div>
-                <br/>
-
-                 <div class="info" ng-if="location['adress']!=''" style="position: relative "> <img class="infoIcon" src="img/clock.png">
-                  <span class="infoText">adress</span>
+                 
+                 <div class="info" ng-if="location['adress']!=''" style="position: relative "> <img class="infoIcon" src="img/location.png">
+                  <span class="infoText">address</span>
                   <p class="locationInfo">{{location['adress']}}</p>
                 </div>
 
@@ -74,9 +70,7 @@
                     <span class="infoText">phone</span>
                     <p class="locationInfo">{{location['phone']}}</p>
                   </a>
-                </div>
-
-
+                </div> 
                 <div  ng-click="goOnURL(location['web'])" class="info" ng-if="location['web']!=''" style="position: relative "> <img class="infoIcon" src="img/world.png">
                  <a>
                   <span class="infoText">web-site  </span>
@@ -86,7 +80,7 @@
 
 
 
-                <div class="info" ng-if="location['workinghours']!=''" style="position: relative "> <img class="infoIcon" style="height: 12px;" src="img/email.png">
+                <div class="info" ng-if="location['email']!=''" style="position: relative "> <img class="infoIcon" style="height: 12px;" src="img/email.png">
                   <span class="infoText">email</span>
                   <p class="locationInfo">{{location['email']}}</p>
                 </div>
@@ -128,7 +122,14 @@
                   <p class="locationInfo">{{location['standing']}}</p>
                 </div>
 
-
+                           <div class="info"  style="position: relative;height: 40px; "> 
+                             
+                             <div ng-click="directionClick()" style="margin: 0 auto;width: 130px;height: 40px; ">
+                             <img style="height: 30px;margin-top: 4px;margin-right: 10px" src="img/direction.png">
+                  <span style="color: #b51879; position: relative;
+bottom: 10px;" >DIRECTIONS</span>
+                             </div>
+                </div>
 
                 <div ng-bind-html="description" style="margin: 15px;">
                 </div>
