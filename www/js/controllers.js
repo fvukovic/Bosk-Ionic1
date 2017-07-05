@@ -65,22 +65,31 @@ angular.module('starter.controllers', [])
     };
   })
 
-  .controller('LocCtrl', function ($scope, $location, $http) {
+  .controller('LocCtrl', function ($stateParams,$scope, $location, $http) {
     $scope.title = 'nesto';
     $scope.gradovi;
     $scope.neznam;
-    $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
-    $http({
-      method: "GET",
-      url: 'http://glutenfree.hr/rest/active_cities.php',
+    $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded"; 
+ if($stateParams.regijaId =="1"){
 
-    }).then(function successCallback(response) {
-      $scope.gradovi = response.data;
-      $scope.neznam = response.data;
-       console.log("ovo vrati"+ response.data);
-    }, function errorCallback(response) {
-      alert("No internet connection!");
-    });
+   window.localStorage.setItem("id", 1);
+      window.localStorage.setItem("lokacija", "Zagreb");
+      window.localStorage.setItem("lat",45.8150108);
+      window.localStorage.setItem("long", 15.981919 );
+      
+      $location.path('/startScreen/');   
+ }
+        var request = $http({
+            method: "POST",
+            url: 'http://glutenfree.hr/rest/v2_cities_by_region.php',
+             data: { id: $stateParams.regijaId },
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        });
+            request.success(function (data) {
+        $scope.gradovi = data; 
+        console.log(data);
+      
+        }); 
     $scope.pickCity = function (lokacija,lat,lon,name) {
       window.localStorage.setItem("id", lokacija);
       window.localStorage.setItem("lokacija", name);
@@ -96,13 +105,30 @@ angular.module('starter.controllers', [])
     vm.dynMarkers = []
     NgMap.getMap().then(function (map) {
         $scope.hotels;
-    $scope.category;
+    $scope.category; 
     $scope.lat = window.localStorage.getItem("long");
     $scope.long = window.localStorage.getItem("lat");
      $scope.pinClicked = function(event, marker) { 
         console.log('the marker ->', marker,event);
         $state.go('app.detailG',{"hotelId":marker});
       };
+     if (window.localStorage.getItem("id") == "-2") {
+    var request = $http({
+                method: "POST",
+                url: 'http://glutenfree.hr/rest/v2_categories.php',
+                data: { city: window.localStorage.getItem("id"), category: window.localStorage.getItem("category")  },
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+
+            });
+            request.success(function (data) {
+                console.log(data);
+                 $scope.category = window.localStorage.getItem("category");
+                $scope.hotels = data;
+            });
+        }
+
+
+
     if (window.localStorage.getItem("id") == "-1") {
 
 
@@ -122,7 +148,10 @@ angular.module('starter.controllers', [])
       });
 
       $scope.$lokacija = "Zagreb";
-    } else {
+    } 
+    
+    
+       if (window.localStorage.getItem("id") >0){
       $scope.lokacija = window.localStorage.getItem("lokacija");
       var request = $http({
         method: "POST",
@@ -143,6 +172,7 @@ angular.module('starter.controllers', [])
     
 
                  });
+                 
 
   })
 

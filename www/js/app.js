@@ -260,7 +260,8 @@ document.addEventListener('deviceready', function() {
       }
     })
       .state('app.location', {
-      url: '/lokacije',
+        cache:false,
+      url: '/lokacije:regijaId',
       views: {
         'menuContent': {
           templateUrl: 'templates/locations.html', 
@@ -268,6 +269,17 @@ document.addEventListener('deviceready', function() {
         }
       }
     })
+
+          .state('app.regions', {
+      url: '/regije',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/regions.html', 
+          controller: 'RegionsCtrl'
+        }
+      }
+    })
+
     .state('bapp.infoD', {
     url: '/info/:infoId',
     views: {

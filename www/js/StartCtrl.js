@@ -3,12 +3,15 @@ angular.module('Bosk')
         $scope.visina = "49px";
         $scope.naslov = "Change";
         $scope.grad;
-        $scope.working = true;  
+        $scope.working = true;
         if (window.localStorage.getItem("lokacija") == "" || window.localStorage.getItem("lokacija") == null) {
             $scope.grad = 1;
         } else {
             $scope.grad = window.localStorage.getItem("lokacija");
         }
+
+          $ionicLoading.show({ template: 'Looking for Your location. Please wait .. ', noBackdrop: true, duration: 3000 });
+          
         $scope.showDiv = true;
 
         var geocoder = "";
@@ -26,10 +29,10 @@ angular.module('Bosk')
             return (window.localStorage.getItem("hood"));
         }
         $scope.setDistance = function (distance) {
-           
+
             window.localStorage.setItem("distance", distance);
-                $scope.changeLocation();
-          
+            $scope.changeLocation();
+
         }
 
         $scope.funkcija = function () {
@@ -55,11 +58,11 @@ angular.module('Bosk')
         }
 
         $scope.changeLocation = function () {
-             if (window.localStorage.getItem("distance") < 50) {
-                         window.localStorage.setItem("distance", "5000");
-                    }  
-                
-             var posOptions = { timeout: 13000, enableHighAccuracy: true };
+            if (window.localStorage.getItem("distance") < 50) {
+                window.localStorage.setItem("distance", "5000");
+            }
+
+            var posOptions = { timeout: 13000, enableHighAccuracy: true };
             $cordovaGeolocation
                 .getCurrentPosition(posOptions)
                 .then(function (position) {
@@ -68,7 +71,7 @@ angular.module('Bosk')
                     window.localStorage.setItem("lat", $scope.lat);
                     $scope.long = position.coords.longitude;
                     window.localStorage.setItem("long", $scope.long);
-                   
+
                     var geocoder = new google.maps.Geocoder();
                     var latlng = new google.maps.LatLng($scope.lat, $scope.long);
                     var request = {
@@ -87,39 +90,46 @@ angular.module('Bosk')
                                 console.log(data[1].formatted_address);
                                 alert("Your location: " + data[1].formatted_address);
                                 $location.path('/startScreen/-1');
-                                 $state.go($state.current, {}, { reload: true });
+                                $state.go($state.current, {}, { reload: true });
                                 $scope.chooseCity();
                                 $scope.$evalAsync();
-                                
+
                             } else {
                                 alert("No address available");
                             }
                         }
                     })
                     console.log(position);
-                      
-                }).catch(function(response) {
-  alert("Error, check your internet connection or gps device!");
-})
-                    cordova.plugins.diagnostic.isLocationAvailable(function(available){
-    console.log("Location is " + (available ? "available" : "not available"));
-    if(available == false){
-alert("Please enable GPS service on your device.");
-    }else{
-          $ionicLoading.show({ template: 'Looking for Your location. Please wait .. <br> Distance: '+   window.localStorage.getItem("distance"), noBackdrop: true, duration: 3000 });
-         $location.path('/startScreen/-1'); 
-         
-}
-}, function(error){
-   alert("Error, check your internet connection or gps device!");
-});
+
+                }).catch(function (response) {
+                       if( window.localStorage.getItem("id")==-2){
+                     alert("GPS is not available,Location : Whole Croatia!");
+                }else{
+                alert("Error, check your internet connection or gps device!");
+                }
+                })
+            cordova.plugins.diagnostic.isLocationAvailable(function (available) {
+                console.log("Location is " + (available ? "available" : "not available"));
+                if (available == false) {
+                    alert("Please enable GPS service on your device.");
+                } else {
+                    $ionicLoading.show({ template: 'Looking for Your location. Please wait .. <br> Distance: ' + window.localStorage.getItem("distance"), noBackdrop: true, duration: 3000 });
+                $location.path('/startScreen/-1');
+
+                }
+            }, function (error) { 
+                alert("Error, check your internet connection or gps device!"); 
+            });
 
         }
-
+       
+             
+            
         $scope.changeStyle = function () {
             $scope.myStyle = {
                 'height': $scope.visina
 
             }
         }
+
     })

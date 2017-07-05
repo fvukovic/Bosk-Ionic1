@@ -24,7 +24,7 @@
         <button class="change" ng-click="funkcija()"> <p  style="font-size:17px">{{naslov}}</p> </button>
         <br>
         <a class="dodani_buttoni" ng-click="changeLocation();funkcija()" ng-show="!showDiv">Read GPS coordinates</a>
-        <a ng-show="!showDiv" href="#/lokacije" ng-click=" funkcija()" class="dodani_buttoni">Show a list of locations</a>
+        <a ng-show="!showDiv" href="#/regije" ng-click=" funkcija()" class="dodani_buttoni">Show a list of locations</a>
        <ion-list>
           <ion-radio ng-value="'100'" name="a" ng-show="!showDiv" class="myButton" ng-click="setDistance('100');funkcija()" >Show results in 100m range</ion-radio>
           <ion-radio ng-model="choice" name="a" ng-value="'500'" ng-show="!showDiv" ng-show="!showDiv" ng-click="setDistance('500');funkcija()" class="myButton"> Show results in 500m range</ion-radio>

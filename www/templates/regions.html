@@ -20,7 +20,7 @@
  
     <br>
       
-     <a  ng-repeat="grad in gradovi" ng-click="pickCity({{grad['id']}},{{grad['latitude']}},{{grad['longitude']}},'{{grad['title']}}')" >
+     <a ui-sref="app.location({regijaId:{{grad['id']}}})"  ng-repeat="grad in regije"   >
       <div class="list list-inset hotel" id="card" >
        <h3 style="height:100%; font-size: 25px;float:left;margin-top:12px;margin-left: 15px;"> {{grad["title"]}}</h3> 
       
@@ -29,7 +29,7 @@ right: 0;" src="img/gumb_strelica.png">
 
      </div>
      </a>
-  <br><br>    
+     <br><br> 
 
   </ion-content>
 </ion-view>

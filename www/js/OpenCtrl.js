@@ -1,8 +1,8 @@
 angular.module('Bosk')
     .controller('OpenCtrl', function ($scope, $timeout, $cordovaSQLite , $location, $ionicSideMenuDelegate, $ionicHistory, $cordovaDeviceOrientation, $http) {
       
-        window.localStorage.setItem("id","1");
-        window.localStorage.setItem("lokacija","Zagreb");
+        window.localStorage.setItem("id","-2");
+        window.localStorage.setItem("lokacija","Whole Croatia");
         window.localStorage.setItem("lat","45.815399");
         window.localStorage.setItem("long","15.966568");
          window.localStorage.setItem("distance","5000");
@@ -14,7 +14,7 @@ angular.module('Bosk')
              function (data) { alert("error") }); 
 
 */ 
-  
+        
 
         $timeout(funkcija, 4000);
         function funkcija() {
