@@ -4,7 +4,7 @@ angular.module('Bosk')
         window.localStorage.setItem("category", "2");
 
 
-        $scope.enterCity = function (id) { 
+        $scope.enterCity = function (id) {
             window.localStorage.setItem("gradId", id);
         }
 
@@ -23,7 +23,7 @@ angular.module('Bosk')
             });
         }
 
-        if (window.localStorage.getItem("id") != "-1") {
+        if (window.localStorage.getItem("id") > 0) {
             var request = $http({
                 method: "POST",
                 url: 'http://glutenfree.hr/rest/categories.php',
@@ -35,7 +35,7 @@ angular.module('Bosk')
                 $scope.hotels = data;
                 console.log(data);
             });
-        } else {
+        } if (window.localStorage.getItem("id") == -1) {
             var request = $http({
                 method: "POST",
                 url: 'http://glutenfree.hr/rest/distance.php',
