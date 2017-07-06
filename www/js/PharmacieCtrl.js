@@ -3,6 +3,11 @@ angular.module('Bosk')
         $scope.hotels;
         window.localStorage.setItem("category","4");
 
+           $scope.enterCity = function(id){ 
+           window.localStorage.setItem("gradId",id);
+        }
+
+
              if (window.localStorage.getItem("id") == "-2") {
 
             var request = $http({

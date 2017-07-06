@@ -17,6 +17,11 @@ angular.module('Bosk')
             });
         }
 
+            // Enter city id of the seleceted location
+
+        $scope.enterCity = function(id){ 
+           window.localStorage.setItem("gradId",id);
+        }
 
         window.localStorage.setItem("category", "1");
         if (window.localStorage.getItem("id") != "-1") {

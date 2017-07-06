@@ -18,6 +18,11 @@ angular.module('Bosk')
             });
         }
 
+           $scope.enterCity = function(id){ 
+           window.localStorage.setItem("gradId",id);
+        }
+
+
         if(window.localStorage.getItem("id")!="-1"){
         var request =$http({            
             method: "POST",
