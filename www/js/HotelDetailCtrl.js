@@ -46,7 +46,7 @@ cordova.InAppBrowser.open(adress, '_system');
                         });
     }
     
-    if(window.localStorage.getItem("id") == "-1"){
+    if(window.localStorage.getItem("id")>0){
    var request =$http({            
             method: "POST",
             url: 'http://glutenfree.hr/rest/categories.php',
