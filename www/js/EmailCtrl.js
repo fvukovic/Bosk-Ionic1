@@ -1,16 +1,14 @@
 angular.module('Bosk')
     .controller('EmailCtrl', function ($scope, $http) {
-        $scope.email = "";
-        $scope.message = "";
+        $scope.email ;
+        $scope.message ;
         
 
         $scope.sendEmail = function () {
-            if ($scope.email == "" || $scope.message == "") {
-                alert("Email or message can not be empty!");
-                return;
-            }
+            
             $scope.email = document.getElementById("email").value;
             $scope.message = document.getElementById("message").value;
+            alert($scope.email+$scope.message);
             var request = $http({
 
                 method: "POST",

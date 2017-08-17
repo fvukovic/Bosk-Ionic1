@@ -6,9 +6,9 @@
   <br>
   <form style="margin: 10px;" >
   <ion-label  style="color:#777A80;">Your e-mail:  </ion-label>
-  <input type="email" id="email" class="upit"  rows="2"></textarea>
+  <input type="email" id="email" ng-model="email" class="upit"  rows="2"></textarea>
   <ion-label style="color:#777A80;">Your inquery:  </ion-label>
-  <textarea class="upit" id="message"  rows="10"></textarea>
+  <textarea class="upit" ng-model="message" id="message"  rows="10"></textarea>
   <button id="send1" ng-click="sendEmail()"> Send inquery </button>
   <a style="text-decoration:none" href="tel:+38551344298" ><div id="call1"> Call us at + 385 51 344 298 </div></a>
   

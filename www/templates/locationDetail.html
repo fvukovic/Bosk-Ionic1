@@ -54,7 +54,7 @@
                 </div>
                 <div style="margin-left: 10px" ng-if="location['date']!='0000-00-00'">
                   <p style="float: left;margin-left: 11px; color:#616161;position: absolute  "> {{location['date']}} </p>
-                </div> <br/> 
+                </div> <br/>
                  
                  <div class="info" ng-if="location['adress']!=''" style="position: relative "> <img class="infoIcon" src="img/location.png">
                   <span class="infoText">address</span>
@@ -74,7 +74,7 @@
                 <div  ng-click="goOnURL(location['web'])" class="info" ng-if="location['web']!=''" style="position: relative "> <img class="infoIcon" src="img/world.png">
                  <a>
                   <span class="infoText">web-site  </span>
-                  <p class="locationInfo">{{location['web'].substring(7,location['web'].length-1)}}</p>
+                  <p class="locationInfo">{{location['web']}}</p>
                  </a>
                 </div>
 
